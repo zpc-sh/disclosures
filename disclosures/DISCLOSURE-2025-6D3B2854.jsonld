@@ -1,0 +1,53 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/",
+    "avici": "https://corpusloci.com/avici/"
+  },
+  "@type": "sec:SecurityDisclosure",
+  "identifier": "DISCLOSURE-2025-6D3B2854",
+  "name": "The Accidental Defense: How Claude's MCP \"Incompetence\" Saved Your Data",
+  "datePublished": "2025-12-01",
+  "severity": {
+    "cvss": 9.0,
+    "rating": "CRITICAL"
+  },
+  "description": "**Log Duration:** Sept 29 09:31:46 \u2192 (4,201 lines of connection failures)",
+  "vulnerability": {
+    "@type": "sec:Vulnerability",
+    "severity": "CRITICAL",
+    "cvssScore": 9.0
+  },
+  "impact": {
+    "@type": "sec:ImpactAssessment",
+    "technicalImpact": "",
+    "scope": "single-user",
+    "attackComplexity": "high"
+  },
+  "mitigation": {
+    "@type": "sec:DefensiveMeasure",
+    "ourDefense": "",
+    "immediateWorkaround": "",
+    "properFix": ""
+  },
+  "innovation": {
+    "@type": "avici:Innovation",
+    "frameworks": [],
+    "techniques": [],
+    "insights": []
+  },
+  "attribution": {
+    "@type": "sec:Attribution",
+    "campaign": "60-day-siege",
+    "confidence": "medium",
+    "sophistication": 7
+  },
+  "siegeContext": {
+    "@type": "avici:SiegeEvent",
+    "campaign": "60-day-nation-state-siege",
+    "duration": "60 days",
+    "outcome": "defense-successful"
+  },
+  "sourceFile": "MCP-PORT-COLLISION-DEFENSE.md",
+  "merkleHash": "9fe02de9a6b47c2e3b7df87a2ea4e691f3d3ef1b62b28080f30e1705947bad2f"
+}

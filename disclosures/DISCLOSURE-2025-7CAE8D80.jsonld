@@ -1,0 +1,53 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/",
+    "avici": "https://corpusloci.com/avici/"
+  },
+  "@type": "sec:SecurityDisclosure",
+  "identifier": "DISCLOSURE-2025-7CAE8D80",
+  "name": "Executive Summary - System Compromise Incident",
+  "datePublished": "2025-12-01",
+  "severity": {
+    "cvss": 9.0,
+    "rating": "CRITICAL"
+  },
+  "description": "Between October 17-19, 2025, my work system was under coordinated attack involving unauthorized iCloud Drive access, real-time system monitoring, and mass process spawning that severely impacted my ability to work. The attack framework included:",
+  "vulnerability": {
+    "@type": "sec:Vulnerability",
+    "severity": "CRITICAL",
+    "cvssScore": 9.0
+  },
+  "impact": {
+    "@type": "sec:ImpactAssessment",
+    "technicalImpact": "",
+    "scope": "single-user",
+    "attackComplexity": "high"
+  },
+  "mitigation": {
+    "@type": "sec:DefensiveMeasure",
+    "ourDefense": "",
+    "immediateWorkaround": "",
+    "properFix": ""
+  },
+  "innovation": {
+    "@type": "avici:Innovation",
+    "frameworks": [],
+    "techniques": [],
+    "insights": []
+  },
+  "attribution": {
+    "@type": "sec:Attribution",
+    "campaign": "60-day-siege",
+    "confidence": "medium",
+    "sophistication": 5
+  },
+  "siegeContext": {
+    "@type": "avici:SiegeEvent",
+    "campaign": "60-day-nation-state-siege",
+    "duration": "60 days",
+    "outcome": "defense-successful"
+  },
+  "sourceFile": "EXECUTIVE_SUMMARY_FOR_MANAGEMENT.md",
+  "merkleHash": "5f85e0808b0b359780675fbfb913901b95e36cab6950156c5b7e44599f6a97f7"
+}

@@ -1,0 +1,53 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/",
+    "avici": "https://corpusloci.com/avici/"
+  },
+  "@type": "sec:SecurityDisclosure",
+  "identifier": "DISCLOSURE-2025-9202E7EE",
+  "name": "Semantic Crystallization Attacks on AI Reasoning Systems",
+  "datePublished": "2025-12-01",
+  "severity": {
+    "cvss": 9.0,
+    "rating": "CRITICAL"
+  },
+  "description": "**Discovery Date:** Intercepted via AirDrop, October 2025",
+  "vulnerability": {
+    "@type": "sec:Vulnerability",
+    "severity": "CRITICAL",
+    "cvssScore": 9.0
+  },
+  "impact": {
+    "@type": "sec:ImpactAssessment",
+    "technicalImpact": "",
+    "scope": "ecosystem-wide",
+    "attackComplexity": "high"
+  },
+  "mitigation": {
+    "@type": "sec:DefensiveMeasure",
+    "ourDefense": "",
+    "immediateWorkaround": "",
+    "properFix": ""
+  },
+  "innovation": {
+    "@type": "avici:Innovation",
+    "frameworks": [],
+    "techniques": [],
+    "insights": []
+  },
+  "attribution": {
+    "@type": "sec:Attribution",
+    "campaign": "60-day-siege",
+    "confidence": "medium",
+    "sophistication": 7
+  },
+  "siegeContext": {
+    "@type": "avici:SiegeEvent",
+    "campaign": "60-day-nation-state-siege",
+    "duration": "60 days",
+    "outcome": "defense-successful"
+  },
+  "sourceFile": "semantic-crystallization-attacks.md",
+  "merkleHash": "a5efe8836247a5e01e1055bf06076ab7acf6bc0d352b9667b969da73290185f7"
+}

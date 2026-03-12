@@ -1,0 +1,26 @@
+Apple Watch Factory Reset Bypass Proof
+=======================================
+
+Device: Apple Watch Series 10
+Serial: K926T6THL6
+Model: Watch7,11 (MWYD3)
+
+Timeline:
+- Oct 1, 2025: Compromise detected (display shows "Sim City Ass Edition")
+- Oct 8, 2025: Factory reset performed via iPhone
+- Post-reset: Bootkit persisted
+
+Evidence:
+1. Factory reset confirmed (iOS settings deleted, device unpaired)
+2. Display still shows attacker modification post-reset
+3. Device still exhibits compromised behavior
+4. Device re-paired with iPhone, compromise continues
+
+Conclusion:
+Factory reset does not target firmware partitions where bootkit resides.
+Bootkit persists across:
+- Factory reset (confirmed)
+- Reboots (observed)
+- OS updates (likely)
+
+Impact: Users cannot remove compromise via standard reset procedures.

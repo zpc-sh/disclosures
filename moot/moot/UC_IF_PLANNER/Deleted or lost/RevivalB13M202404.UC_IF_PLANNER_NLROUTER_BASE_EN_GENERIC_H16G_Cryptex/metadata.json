@@ -1,0 +1,1 @@
+{"model_type": "ane", "backbone_signature": "5284b5a6337e76e8720249fa586eb3ba5d9d4760", "default_parameters": {"frequencyPenalty": 1.0}, "special_tokens_map": {"start_prompt_token": 1, "end_prompt_token": "", "stop_token": "<turn_end>"}}

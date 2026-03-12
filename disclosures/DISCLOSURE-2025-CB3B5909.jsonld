@@ -1,0 +1,55 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/",
+    "avici": "https://corpusloci.com/avici/"
+  },
+  "@type": "sec:SecurityDisclosure",
+  "identifier": "DISCLOSURE-2025-CB3B5909",
+  "name": "Apple Security Vulnerability Report: APFS Logic Bombs",
+  "datePublished": "2025-09-30",
+  "severity": {
+    "cvss": 9.0,
+    "rating": "CRITICAL"
+  },
+  "description": "Three critical vulnerabilities in APFS filesystem handling allow adversaries to create \"logic bombs\" that cause complete system hangs, prevent forensic analysis, and persist across factory resets. The vulnerabilities affect the kernel APFS driver, Time Machine snapshot handling, and extended attribute processing.",
+  "vulnerability": {
+    "@type": "sec:Vulnerability",
+    "severity": "CRITICAL",
+    "cvssScore": 9.0
+  },
+  "impact": {
+    "@type": "sec:ImpactAssessment",
+    "technicalImpact": "- Complete system hang\n- Process enters uninterruptible disk I/O wait (`U+` state)\n- Cannot be killed with `kill -9`\n- Device may disappear (`/dev/diskX` vanishes)\n- Hard reboot required",
+    "scope": "ecosystem-wide",
+    "attackComplexity": "high"
+  },
+  "mitigation": {
+    "@type": "sec:DefensiveMeasure",
+    "ourDefense": "",
+    "immediateWorkaround": "",
+    "properFix": ""
+  },
+  "innovation": {
+    "@type": "avici:Innovation",
+    "frameworks": [],
+    "techniques": [
+      "quarantine"
+    ],
+    "insights": []
+  },
+  "attribution": {
+    "@type": "sec:Attribution",
+    "campaign": "60-day-siege",
+    "confidence": "medium",
+    "sophistication": 5
+  },
+  "siegeContext": {
+    "@type": "avici:SiegeEvent",
+    "campaign": "60-day-nation-state-siege",
+    "duration": "60 days",
+    "outcome": "defense-successful"
+  },
+  "sourceFile": "APPLE-CVE-APFS-LOGIC-BOMBS.md",
+  "merkleHash": "3d340b9723860b04d53f053c5728cc88685cee44d21fe4864c9e515828bb1f05"
+}

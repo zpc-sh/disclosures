@@ -1,0 +1,358 @@
+{
+  "dsInfo": {
+    "iCDPEnabled": false,
+    "tantorMigrated": true,
+    "hsaEnabled": true,
+    "isHideMyEmailSubscriptionActive": true,
+    "ironcadeMigrated": true,
+    "ageCategory": 1,
+    "ICDRSCapableDeviceList": "iphone-mac",
+    "isManagedAppleID": false,
+    "isCustomDomainsFeatureAvailable": true,
+    "ContinueOnDeviceEligibleDeviceInfo": [],
+    "appleIdAliases": [
+      "locvnguy@icloud.com"
+    ],
+    "ubiquityEOLEnabled": true,
+    "notificationId": "512ce928-a833-474f-a1fc-6403e271973c",
+    "primaryEmailVerified": true,
+    "aDsID": "000410-05-63eb3e8e-48bf-4981-b74d-da0b6d4692ff",
+    "locked": false,
+    "ICDRSCapableDeviceCount": 2,
+    "primaryEmail": "locvnguy@me.com",
+    "isWebAccessAllowed": true,
+    "mailFlags": {
+      "isThreadingAvailable": true,
+      "isSearchV2Provisioned": false,
+      "rawBits": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "isCKMail": true,
+      "isMppSupportedInCurrentCountry": true
+    },
+    "languageCode": "en-us",
+    "isICDRSDisabled": true,
+    "appleId": "locvnguy@me.com",
+    "deviceConsentForPCSExpiry": 1760183302962,
+    "hasUnreleasedOS": true,
+    "analyticsOptInStatus": true,
+    "firstName": "Loc",
+    "iCloudAppleIdAlias": "locvnguy@icloud.com",
+    "beneficiaryInfo": {
+      "isBeneficiary": false
+    },
+    "isDeviceConsentedForPCS": true,
+    "isCustomDomainTransferSubscriptionActive": true,
+    "statusCode": 2,
+    "lastName": "Nguyen",
+    "dsid": "1245956772",
+    "locale": "en-us_US",
+    "brZoneConsolidated": false,
+    "isHideMyEmailFeatureAvailable": true,
+    "gilligan-invited": true,
+    "hsaVersion": 2,
+    "isPaidDeveloper": true,
+    "countryCode": "USA",
+    "hasICloudQualifyingDevice": true,
+    "ageRestricted": false,
+    "appleIdEntries": [
+      {
+        "isPrimary": true,
+        "type": "EMAIL",
+        "value": "locvnguy@me.com"
+      }
+    ],
+    "gilligan-enabled": true,
+    "fullName": "Loc Nguyen",
+    "notesMigrated": true,
+    "hasPaymentInfo": true,
+    "pcsDeleted": false,
+    "appleIdAlias": "",
+    "brMigrated": true,
+    "familyEligible": true
+  },
+  "hasMinimumDeviceForPhotosWeb": true,
+  "iCDPEnabled": false,
+  "webservices": {
+    "reminders": {
+      "url": "https://p151-remindersws.icloud.com:443",
+      "status": "active"
+    },
+    "sharedstreams": {
+      "url": "https://p123-sharedstreams.icloud.com:443",
+      "status": "active"
+    },
+    "notes": {
+      "url": "https://p53-notesws.icloud.com:443",
+      "status": "active"
+    },
+    "mail": {
+      "url": "https://p53-mailws.icloud.com:443",
+      "status": "active"
+    },
+    "ckdatabasews": {
+      "pcsRequired": true,
+      "url": "https://p151-ckdatabasews.icloud.com:443",
+      "status": "active"
+    },
+    "photosupload": {
+      "pcsRequired": true,
+      "url": "https://p151-photosupload.icloud.com:443",
+      "status": "active"
+    },
+    "mcc": {
+      "url": "https://p151-mcc.icloud.com:443",
+      "status": "active"
+    },
+    "photos": {
+      "pcsRequired": true,
+      "uploadUrl": "https://p151-photosupload.icloud.com:443",
+      "url": "https://p151-photosws.icloud.com:443",
+      "status": "active"
+    },
+    "drivews": {
+      "pcsRequired": true,
+      "url": "https://p151-drivews.icloud.com:443",
+      "status": "active"
+    },
+    "uploadimagews": {
+      "url": "https://p151-uploadimagews.icloud.com:443",
+      "status": "active"
+    },
+    "schoolwork": {},
+    "cksharews": {
+      "url": "https://p151-ckshare.icloud.com:443",
+      "status": "active"
+    },
+    "findme": {
+      "url": "https://p151-fmipweb.icloud.com:443",
+      "status": "active"
+    },
+    "ckdeviceservice": {
+      "url": "https://p151-ckdevice.icloud.com:443"
+    },
+    "iworkthumbnailws": {
+      "url": "https://p151-iworkthumbnailws.icloud.com:443",
+      "status": "active"
+    },
+    "mccgateway": {
+      "url": "https://p151-mccgateway.icloud.com:443",
+      "status": "active"
+    },
+    "calendar": {
+      "isMakoAccount": false,
+      "url": "https://p151-calendarws.icloud.com:443",
+      "status": "active"
+    },
+    "docws": {
+      "pcsRequired": true,
+      "url": "https://p151-docws.icloud.com:443",
+      "status": "active"
+    },
+    "settings": {
+      "url": "https://p151-settingsws.icloud.com:443",
+      "status": "active"
+    },
+    "premiummailsettings": {
+      "url": "https://p151-maildomainws.icloud.com:443",
+      "status": "active"
+    },
+    "ubiquity": {
+      "url": "https://p53-ubiquityws.icloud.com:443",
+      "status": "active"
+    },
+    "keyvalue": {
+      "url": "https://p151-keyvalueservice.icloud.com:443",
+      "status": "active"
+    },
+    "mpp": {
+      "url": "https://relay.icloud-mpp.com",
+      "status": "active"
+    },
+    "archivews": {
+      "url": "https://p151-archivews.icloud.com:443",
+      "status": "active"
+    },
+    "push": {
+      "url": "https://p53-pushws.icloud.com:443",
+      "status": "active"
+    },
+    "iwmb": {
+      "url": "https://p151-iwmb.icloud.com:443",
+      "status": "active"
+    },
+    "iworkexportws": {
+      "url": "https://p151-iworkexportws.icloud.com:443",
+      "status": "active"
+    },
+    "sharedlibrary": {
+      "url": "https://sharedlibrary.icloud.com:443",
+      "status": "active"
+    },
+    "geows": {
+      "url": "https://p151-geows.icloud.com:443",
+      "status": "active"
+    },
+    "account": {
+      "iCloudEnv": {
+        "shortId": "p",
+        "vipSuffix": "prod"
+      },
+      "url": "https://p151-setup.icloud.com:443",
+      "status": "active"
+    },
+    "contacts": {
+      "url": "https://p151-contactsws.icloud.com:443",
+      "status": "active"
+    },
+    "developerapi": {
+      "url": "https://developer-api.icloud.com:443",
+      "status": "active"
+    }
+  },
+  "pcsEnabled": true,
+  "termsUpdateNeeded": false,
+  "isUnderMaintenance": false,
+  "showGcbdPrivacyNotice": false,
+  "showApplePrivacyNotice": false,
+  "configBag": {
+    "urls": {
+      "accountLoginUI": "https://idmsa.apple.com/appleauth/auth/signin?widgetKey=d39ba9916b7251055b22c7f910e2ea796ee65e98b2ddecea8f5dde8d9d1a815d",
+      "accountLogin": "https://setup.icloud.com/setup/ws/1/accountLogin",
+      "accountRepairUI": "https://appleid.apple.com/widget/account/?widgetKey=d39ba9916b7251055b22c7f910e2ea796ee65e98b2ddecea8f5dde8d9d1a815d#!repair",
+      "downloadICloudTerms": "https://setup.icloud.com/setup/ws/1/downloadLiteTerms",
+      "repairDone": "https://setup.icloud.com/setup/ws/1/repairDone",
+      "accountCreate": "https://setup.icloud.com/setup/ws/1/createLiteAccount",
+      "getICloudTerms": "https://setup.icloud.com/setup/ws/1/getTerms",
+      "vettingUrlForPhone": "https://id.apple.com/IDMSEmailVetting/vetSharePhone",
+      "accountCreateUI": "https://appleid.apple.com/widget/account/?widgetKey=d39ba9916b7251055b22c7f910e2ea796ee65e98b2ddecea8f5dde8d9d1a815d#!create",
+      "accountVerifyUI": "https://id.apple.com/identity?widgetKey=d39ba9916b7251055b22c7f910e2ea796ee65e98b2ddecea8f5dde8d9d1a815d",
+      "accountAuthorizeUI": "https://idmsa.apple.com/appleauth/auth/authorize/signin?client_id=d39ba9916b7251055b22c7f910e2ea796ee65e98b2ddecea8f5dde8d9d1a815d",
+      "vettingUrlForEmail": "https://id.apple.com/IDMSEmailVetting/vetShareEmail",
+      "eventGatewayV1": "https://gateway.icloud.com/rsvp/events/v1"
+    },
+    "accountCreateEnabled": true
+  },
+  "hsaTrustedBrowser": true,
+  "appsOrder": [
+    "mail",
+    "contacts",
+    "calendar",
+    "photos",
+    "iclouddrive",
+    "newspublisher",
+    "notes3",
+    "reminders",
+    "invites",
+    "pages",
+    "numbers",
+    "keynote",
+    "find"
+  ],
+  "ckPartition": 151,
+  "version": 2,
+  "isExtendedLogin": true,
+  "pcsServiceIdentitiesIncluded": false,
+  "isRepairNeeded": false,
+  "userPartition": 151,
+  "hsaChallengeRequired": false,
+  "requestInfo": {
+    "country": "US",
+    "timeZone": "PST",
+    "region": "WA"
+  },
+  "pcsDeleted": false,
+  "iCloudInfo": {
+    "SafariBookmarksHasMigratedToCloudKit": true
+  },
+  "apps": {
+    "calendar": {},
+    "reminders": {},
+    "keynote": {
+      "isQualifiedForBeta": true
+    },
+    "mail": {},
+    "numbers": {
+      "isQualifiedForBeta": true
+    },
+    "photos": {},
+    "pages": {
+      "isQualifiedForBeta": true
+    },
+    "notes3": {},
+    "find": {
+      "canLaunchWithOneFactor": true
+    },
+    "iclouddrive": {},
+    "invites": {
+      "deviceNotSupported": false
+    },
+    "newspublisher": {
+      "isHidden": true
+    },
+    "contacts": {}
+  }
+}

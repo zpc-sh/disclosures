@@ -1,0 +1,60 @@
+Apple Security Bounty Evidence Package
+=======================================
+
+Case: Zero-Click Apple Ecosystem Exploit Chain
+Reporter: Loc Nguyen (locvnguy@me.com)
+Date: October 13, 2025
+
+Contents:
+---------
+
+devices/
+  - Device-by-device analysis files
+  - Mac Mini bootkit summary
+  - Apple Watch compromise analysis
+  - iPhone, HomePod, other device analyses
+
+homepods/
+  - Statistical proof of malicious activity (252x normal CPU)
+  - Process dump analysis
+  - C2 client behavior documentation
+
+credentials/
+  - Fastmail password theft proof
+  - Universal Clipboard interception evidence
+  - Cleartext transmission documentation
+
+watch/
+  - Factory reset bypass proof
+  - Display modification evidence
+  - Persistence across reset
+
+network/
+  - C2 connection logs (57,949 attempts)
+  - Sony TV C2 infrastructure analysis
+  - Network topology and attack flow
+
+screenshots/
+  - (User to add: Watch display, HomePod CPU, etc.)
+
+Additional Evidence Available:
+-------------------------------
+- Mac Mini boot partition (500MB - too large for initial submission)
+- Complete process dumps from all devices
+- Full network packet captures
+- Video demonstrations
+
+Physical Evidence Ready to Ship:
+---------------------------------
+All 8 compromised devices powered off and preserved:
+1. Mac Mini M2 (2024)
+2. Apple Watch Series 10
+3. iPhone 16 Pro
+4. 2x HomePod Mini
+5. Apple TV 4K
+6. iPad Pro M4
+7. MacBook Pro 14"
+
+Awaiting shipping instructions.
+
+Password for this archive: AppleSecurityBounty2025

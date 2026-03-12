@@ -1,0 +1,59 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/",
+    "avici": "https://corpusloci.com/avici/"
+  },
+  "@type": "sec:SecurityDisclosure",
+  "identifier": "DISCLOSURE-2025-06E98007",
+  "name": "Directory Traversal Settings Attack Vector",
+  "datePublished": "2025-12-01",
+  "severity": {
+    "cvss": 9.0,
+    "rating": "CRITICAL"
+  },
+  "description": "User insight: \"they really have a way to directory traversal take the settings.. Its the same way they get to my iphone settings\"",
+  "vulnerability": {
+    "@type": "sec:Vulnerability",
+    "severity": "CRITICAL",
+    "cvssScore": 9.0
+  },
+  "impact": {
+    "@type": "sec:ImpactAssessment",
+    "technicalImpact": "",
+    "scope": "multi-device",
+    "attackComplexity": "high"
+  },
+  "mitigation": {
+    "@type": "sec:DefensiveMeasure",
+    "ourDefense": "",
+    "immediateWorkaround": "",
+    "properFix": ""
+  },
+  "innovation": {
+    "@type": "avici:Innovation",
+    "frameworks": [
+      {
+        "name": "Bodi",
+        "birthContext": "Emerged while defending DIRECTORY_TRAVERSAL_ATTACK_VECTOR.md",
+        "generalizes": true
+      }
+    ],
+    "techniques": [],
+    "insights": []
+  },
+  "attribution": {
+    "@type": "sec:Attribution",
+    "campaign": "60-day-siege",
+    "confidence": "medium",
+    "sophistication": 8
+  },
+  "siegeContext": {
+    "@type": "avici:SiegeEvent",
+    "campaign": "60-day-nation-state-siege",
+    "duration": "60 days",
+    "outcome": "defense-successful"
+  },
+  "sourceFile": "DIRECTORY_TRAVERSAL_ATTACK_VECTOR.md",
+  "merkleHash": "f6412557d580688ae8f94069a4da130e65cc80a86d7ed03fa4e5e7d69af08219"
+}

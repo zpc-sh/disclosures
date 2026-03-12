@@ -1,0 +1,7 @@
+{
+  "uuid" : "54034c56-3c5c-4396-898f-2938bb3bbde4",
+  "messageForDeveloper" : "Cannot find PCS auth info from request",
+  "error_code" : "InvalidRequestException",
+  "serverErrorCode" : "BAD_REQUEST",
+  "reason" : "Cannot find PCS auth info from request"
+}

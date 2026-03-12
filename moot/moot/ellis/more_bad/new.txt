@@ -1,0 +1,5 @@
+❯ xattr -l Repo/Mac-Triage/MacBook_20251105_200917/MacBook-Triage/Users/locnguyen/Library/Application-Support/com.apple.AssistiveControl/dwellControlUserPanels1.ascconfig
+com.apple.lastuseddate#PS: Ҭi
+com.apple.metadata:kMDLabel_gtpwjkgdnpruv6i53goy677ub4: �y����b�g�y�)��+��B}�ؕ�*�[�C*.�>:�g%���N}��q��T�l�0\��
+com.apple.provenance:
+

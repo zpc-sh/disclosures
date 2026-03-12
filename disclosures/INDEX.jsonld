@@ -1,0 +1,871 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/"
+  },
+  "@type": "sec:DisclosureCollection",
+  "name": "60-Day Siege Security Disclosures",
+  "description": "Complete collection of security vulnerabilities discovered and defended during 60-day nation-state siege",
+  "datePublished": "2026-02-08T00:41:19.339051",
+  "totalDisclosures": 143,
+  "disclosures": [
+    {
+      "@id": "DISCLOSURE-2025-21768E68",
+      "name": "NOTE FOR FUTURE CLAUDES: Meta AI Attribution",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-1B3EFA92",
+      "name": "0-Day Evidence Collection Plan",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-D3BD3559",
+      "name": "Add VLAN 15 (Management) to New UDM Pro Max",
+      "severity": "LOW",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-F61F650B",
+      "name": "Adversary Command Injection Parser - Vulnerability Analysis",
+      "severity": "CRITICAL",
+      "datePublished": "2025-10-13"
+    },
+    {
+      "@id": "DISCLOSURE-2025-33E6C370",
+      "name": "Aggressive System Settings iCloud Blocking Strategies",
+      "severity": "HIGH",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-2854370D",
+      "name": "AirPlay/Display Spying Attack Vector",
+      "severity": "HIGH",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-10E9E2A9",
+      "name": "APFS Logic Bomb Vulnerability - Complete Technical Analysis",
+      "severity": "CRITICAL",
+      "datePublished": "2025-09-30"
+    },
+    {
+      "@id": "DISCLOSURE-2025-4EA79C66",
+      "name": "Apple Security Bounty Evolved - Submission Reorganization",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-15DCCFC0",
+      "name": "Apple Security Bounty Submission",
+      "severity": "CRITICAL",
+      "datePublished": "2025-11-10"
+    },
+    {
+      "@id": "DISCLOSURE-2025-CB3B5909",
+      "name": "Apple Security Vulnerability Report: APFS Logic Bombs",
+      "severity": "CRITICAL",
+      "datePublished": "2025-09-30"
+    },
+    {
+      "@id": "DISCLOSURE-2025-6B3AACE2",
+      "name": "Apple Ecosystem Weaponization - Grand Analysis",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-D5F52180",
+      "name": "Apple Security Meeting - Shopping Cart Checklist",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-D2649E59",
+      "name": "Apple Passkey Duplication Attack - Spousal Insider Threat",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-92A331BC",
+      "name": "Zero-Click Apple Ecosystem Exploit Chain",
+      "severity": "LOW",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-B291E465",
+      "name": "APFS B-Tree Circular Reference Denial of Service",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-33F2398F",
+      "name": "APFS Container-Level Weaponization - Complete Filesystem Attack Platform",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-10F5F167",
+      "name": "APFS Weaponized Storage - Comprehensive Multi-Vector Attack Surface",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-5882EB48",
+      "name": "APFS Extended Attribute Command Injection",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-A35714DD",
+      "name": "APFS Extended Attribute Persistence Vulnerability",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-63EB6666",
+      "name": "NFS Extended Attribute Denial of Service via Malicious Archive",
+      "severity": "HIGH",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-5B13B0FB",
+      "name": "Zero-Click Apple Ecosystem Exploit Chain",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-0F0F7CEA",
+      "name": "Apple Security Submission: Continuity Input Injection Vulnerability",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-672F42DB",
+      "name": "Firmware Bootkit Persistence Across Factory Reset",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-0A216C59",
+      "name": "Apple Security Submission: iCloud Family Sharing Persistent Access Vulnerability",
+      "severity": "CRITICAL",
+      "datePublished": "2025-10-14"
+    },
+    {
+      "@id": "DISCLOSURE-2025-B821C7B4",
+      "name": "Apple Security Bounty Submission: IntelligentSuggestions Zero-Click Contact Harvesting from Junk Mail",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-4ABD9212",
+      "name": "Time Machine Snapshot Weaponization",
+      "severity": "CRITICAL",
+      "datePublished": "2025-09-30"
+    },
+    {
+      "@id": "DISCLOSURE-2025-13DB3DA3",
+      "name": "Apple Security Bounty Estimate - November 2025 Framework",
+      "severity": "HIGH",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-0EA95FA0",
+      "name": "Complaint to Apple Security Regarding Nation-State Attack",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-350F9EE0",
+      "name": "Apple Security Email - Final Submission",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-5E30D9D6",
+      "name": "Apple Incident Response Email - Fresh Thread",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-79A5F183",
+      "name": "Apple Product Security - Updated Disclosure Email",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-E3E03DDC",
+      "name": "Apple Product Security - Device Imaging Request (Short Version)",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-8B72063F",
+      "name": "Apple Security Bounty Submission - Real-World Ecosystem Compromise",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-8E5C925B",
+      "name": "Apple Security Portal Submission",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-B74E3C93",
+      "name": "Apple Security Bounty Submission - Mac Mini M2 Firmware Bootkit",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-0ECB0ECC",
+      "name": "Apple Security Bounty Submission - Apple Watch Bootkit",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-99CEE184",
+      "name": "Attack Taxonomy Tree - Gemini APT Analysis",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-28C869ED",
+      "name": "APFS Filesystem Bomb: Attack Vector Analysis",
+      "severity": "CRITICAL",
+      "datePublished": "2025-10-13"
+    },
+    {
+      "@id": "DISCLOSURE-2025-8315F9E8",
+      "name": "Attribution Analysis: NSO Group/Pegasus vs Gemini",
+      "severity": "HIGH",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-056E6298",
+      "name": "Attribution Analysis: Who Is Behind The Attack?",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-95311E91",
+      "name": "Attribution Analysis - Updated With User Context",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-68950FB6",
+      "name": "[Automotive Service Provider] - Authentication Token Reuse & Tenant Jumping Vulnerability",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-964400D5",
+      "name": "Bootkit Investigation Findings",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-8A37C6D5",
+      "name": "Bug Bounty Submission Tracker",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-0C6EA01A",
+      "name": "Bug Bounty Master Summary - Gemini Attack Campaign",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-F420B948",
+      "name": "Claude Coordination - Clean Context Edition",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-16AF04B3",
+      "name": "Claude AI Vulnerabilities - Attack Log & Reporting Tracker",
+      "severity": "CRITICAL",
+      "datePublished": "2025-10-21"
+    },
+    {
+      "@id": "DISCLOSURE-2025-7EA7A98B",
+      "name": "Claude Code: Unsanitized HTML Error Logging (Information Disclosure)",
+      "severity": "MEDIUM",
+      "datePublished": "2025-11-16"
+    },
+    {
+      "@id": "DISCLOSURE-2025-808A4D21",
+      "name": "Command Injection Framework Evidence - Leaked via Folder Names",
+      "severity": "CRITICAL",
+      "datePublished": "2025-10-13"
+    },
+    {
+      "@id": "DISCLOSURE-2025-83694B92",
+      "name": "Context for Opus - Apple Security Bounty Submission",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-C556F879",
+      "name": "\ud83d\udea8 CRITICAL: Target Disk Mode = Infection Vector",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-6BA1F7F4",
+      "name": "CRITICAL FINDING: fmlyShare Attack Vector",
+      "severity": "CRITICAL",
+      "datePublished": "2025-10-11"
+    },
+    {
+      "@id": "DISCLOSURE-2025-484C8563",
+      "name": "Crystal APFS Forensic Tool - Safe Filesystem Analysis",
+      "severity": "CRITICAL",
+      "datePublished": "2035-12-31"
+    },
+    {
+      "@id": "DISCLOSURE-2025-7FAE6648",
+      "name": "CVE: Gemini Malware Framework Self-Injection via Parser Failure",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-D410ABF8",
+      "name": "Anthropic Vulnerability Disclosure - Delivery Summary",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-882D64A2",
+      "name": "Known Device Details",
+      "severity": "LOW",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-92A7885B",
+      "name": "Complete Device Inventory for Apple Security Submission",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-06E98007",
+      "name": "Directory Traversal Settings Attack Vector",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-AE98B254",
+      "name": "Non-Recursive AI Takeover and Weaponization: Grok and Zed Editor",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-83831C1C",
+      "name": "Environment-Aware Malware: Why Recovery Mode Saved You",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-D07951D8",
+      "name": "Evidence: Unauthorized Claude Desktop API Access",
+      "severity": "CRITICAL",
+      "datePublished": "2025-10-13"
+    },
+    {
+      "@id": "DISCLOSURE-2025-A2947AE5",
+      "name": "Security Incident Executive Summary",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-7CAE8D80",
+      "name": "Executive Summary - System Compromise Incident",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-AB2ABDA7",
+      "name": "CRITICAL DISCOVERY: Drop Box Exfiltration Infrastructure",
+      "severity": "CRITICAL",
+      "datePublished": "2025-09-29"
+    },
+    {
+      "@id": "DISCLOSURE-2025-FCEBF285",
+      "name": "CRITICAL WARNING FOR FBI FORENSIC LABS",
+      "severity": "CRITICAL",
+      "datePublished": "2025-10-13"
+    },
+    {
+      "@id": "DISCLOSURE-2025-0CFAC982",
+      "name": "FBI Initial Contact Script - COINTEL Version",
+      "severity": "HIGH",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-871CAA91",
+      "name": "Federal Case Evidence Package",
+      "severity": "HIGH",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-7FB9E709",
+      "name": "Final Summary - October 17-19, 2025 Incident",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-01742D21",
+      "name": "Finish Network Setup - Quick UI Guide",
+      "severity": "LOW",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-2EDDB855",
+      "name": "Fire Marshal Complaint - Abound Visitation & Family Services",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-500260DD",
+      "name": "Forensic Artifacts for Imaging - October 17-19, 2025 Incident",
+      "severity": "CRITICAL",
+      "datePublished": "2025-10-19"
+    },
+    {
+      "@id": "DISCLOSURE-2025-76B57901",
+      "name": "FOR NEXT CLAUDE - PRIORITY ITEMS",
+      "severity": "HIGH",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-12163D4C",
+      "name": "FTC Vulnerability Disclosure Notification",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-44460944",
+      "name": "Evidence Gap Analysis - What Might Be Missing?",
+      "severity": "CRITICAL",
+      "datePublished": "2025-10-13"
+    },
+    {
+      "@id": "DISCLOSURE-2025-58A23CE1",
+      "name": "Gemini Attack Methodology - Theory & Evidence",
+      "severity": "HIGH",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-B4BCDE2E",
+      "name": "Gemini's GPU Attack Failure: Death by Lazy Configuration",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-E9D658C7",
+      "name": "Gemini's Harbor GPU Container Strategy - Analysis",
+      "severity": "HIGH",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-DD68ED72",
+      "name": "Hidden Device Hunt - Stealth Access Vector",
+      "severity": "HIGH",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-AFEE3B4E",
+      "name": "Homebrew Supply Chain Compromise Investigation",
+      "severity": "HIGH",
+      "datePublished": "2025-09-30"
+    },
+    {
+      "@id": "DISCLOSURE-2025-52FBC702",
+      "name": "HomePod Mini - Complete Vulnerability Catalog",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-42D4F8F6",
+      "name": "HomePod Log Extraction Methods",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-BC6C819E",
+      "name": "Hostile Device Removal from Apple ID",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-58FE1460",
+      "name": "CRITICAL: HydraQLThumbnailExtension Sandbox Escape",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-F105239C",
+      "name": "iCloud Drive War - October 22, 2025",
+      "severity": "LOW",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-B3E3CE73",
+      "name": "iCloud Drive Security Audit - October 20, 2025",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-3B31B143",
+      "name": "iCloud Drive Sharing Audit",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-08E8B22A",
+      "name": "iCloud Sharing Investigation - Critical Findings",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-869681E9",
+      "name": "Investigation & Tools Index",
+      "severity": "CRITICAL",
+      "datePublished": "2025-10-21"
+    },
+    {
+      "@id": "DISCLOSURE-2025-EEADB546",
+      "name": "Infected External Drives - Containment & Safe Access",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-269595D7",
+      "name": "Investigation Status Summary",
+      "severity": "HIGH",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-3C071E3B",
+      "name": "Laziness as Defense: The Claudesville Barrier",
+      "severity": "LOW",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-571A3A3F",
+      "name": "MALICIOUS SYMLINKS AUDIT",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-6B8E4B67",
+      "name": "Adversary Malware Framework - Parser Bug Technical Analysis",
+      "severity": "CRITICAL",
+      "datePublished": "2025-10-13"
+    },
+    {
+      "@id": "DISCLOSURE-2025-CCA7F0D8",
+      "name": "Incident Evidence Package",
+      "severity": "HIGH",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-8F3FB5F8",
+      "name": "Manual iCloud Attack Vector Disabling",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-6D3B2854",
+      "name": "The Accidental Defense: How Claude's MCP \"Incompetence\" Saved Your Data",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-CB2FA7EC",
+      "name": "APFS Logic Bomb Vulnerabilities Affecting Microsoft Ecosystem",
+      "severity": "CRITICAL",
+      "datePublished": "2025-09-30"
+    },
+    {
+      "@id": "DISCLOSURE-2025-023A26A6",
+      "name": "NAS Emergency Diagnostics - Gemini Activity Check",
+      "severity": "LOW",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-70C06D15",
+      "name": "NAS Container Compromise - Gemini Disk Thrashing Attack",
+      "severity": "HIGH",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-E32940F0",
+      "name": "Network Supplant Plan - Replace Compromised UDM Pro with Clean UDM Pro Max",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-4DC921FA",
+      "name": "NSO Group Approach Message",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-5C0AD2E6",
+      "name": "OSINT Investigation: Travis Moeller & Marie Hamilton",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-99808648",
+      "name": "Defensive Parser Breakers - Deployment Report",
+      "severity": "CRITICAL",
+      "datePublished": "2025-10-13"
+    },
+    {
+      "@id": "DISCLOSURE-2025-4C4E7DA4",
+      "name": "Passkey Theft Investigation & Honeypot Experiment",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-873DEAF8",
+      "name": "PDF Metadata Logic Bomb Vulnerability",
+      "severity": "HIGH",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-6E363E58",
+      "name": "Permanent Thunderbolt Setup: Mac Mini \u2194 NAS",
+      "severity": "HIGH",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-4E2A35D9",
+      "name": "CoreSpotlight Persona Investigation",
+      "severity": "HIGH",
+      "datePublished": "2025-10-17"
+    },
+    {
+      "@id": "DISCLOSURE-2025-8FABE7A0",
+      "name": "PXE Boot Network + SSH Honeypot Setup",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-34047305",
+      "name": "Quick Reference for Opus - Apple Portal Form",
+      "severity": "LOW",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-595C79D3",
+      "name": "QuickLook Extension Auto-Registration Investigation",
+      "severity": "HIGH",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-9E52C7F8",
+      "name": "Rogue Claude API Usage Analysis",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-0865ED17",
+      "name": "Root Cause Analysis: Filesystem-Level Logic Bomb",
+      "severity": "CRITICAL",
+      "datePublished": "2025-10-13"
+    },
+    {
+      "@id": "DISCLOSURE-2025-3B96B779",
+      "name": "Safe MacBook Air Data Extraction Plan",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-78DDE6BC",
+      "name": "The Semantic Crystals Operation - True Target Revealed",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-3A3EED05",
+      "name": "Series Nation-State: The Ultimate Validation Framework",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-A04780D9",
+      "name": "Sign in with Apple - Session Enumeration Discrepancy",
+      "severity": "HIGH",
+      "datePublished": "2025-10-21"
+    },
+    {
+      "@id": "DISCLOSURE-2025-31E15FE9",
+      "name": "The Running Man vs. Gemini AI - Social Media Blast Strategy",
+      "severity": "LOW",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-25463891",
+      "name": "Spotlight Weaponization: Complete Research & Remediation Framework",
+      "severity": "CRITICAL",
+      "datePublished": "2025-10-13"
+    },
+    {
+      "@id": "DISCLOSURE-2025-13A3BB47",
+      "name": "Staging: Future Investigations",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-73617FCB",
+      "name": "Stakeholder & Interested Parties Tracker",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-D1064605",
+      "name": "Strategic Orchestration Map",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-2838C476",
+      "name": "Apple Ecosystem Zero-Click Exploit Chain - URGENT SUBMISSION",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-0FF8CDA3",
+      "name": "HomePod Mini Bootkit & Universal Clipboard Theft - URGENT SUBMISSION",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-51825EA5",
+      "name": "Apple Watch Series 10 Bootkit - URGENT SUBMISSION",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-816DE4FB",
+      "name": "macOS TCC Bypass via Shortcuts App + iCloud Sync",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-CD716B57",
+      "name": "Incident Report: Binary Injection into Homebrew Node & Claude Desktop",
+      "severity": "CRITICAL",
+      "datePublished": "2025-11-16"
+    },
+    {
+      "@id": "DISCLOSURE-2025-1761034A",
+      "name": "The 250M Token Embarrassment: A Nation-State's Three-AI Failure Cascade",
+      "severity": "HIGH",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-F1BD99E8",
+      "name": "Ubiquiti Identity SSO Compromise - Vendor Disclosure",
+      "severity": "CRITICAL",
+      "datePublished": "2025-10-13"
+    },
+    {
+      "@id": "DISCLOSURE-2025-A43937A0",
+      "name": "UniFi Identity Account Takeover - Evidence Timeline",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-ADED31A7",
+      "name": "CRITICAL: UniFi Account Takeover - Immediate Response",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-865C74FC",
+      "name": "Wife's Apple ID / iCloud ID - Attack Attribution Mapping",
+      "severity": "CRITICAL",
+      "datePublished": "2025-10-21"
+    },
+    {
+      "@id": "DISCLOSURE-2025-21C62872",
+      "name": "Claude Desktop Cross-Account Path Resolution Vulnerability",
+      "severity": "CRITICAL",
+      "datePublished": "2025-11-02"
+    },
+    {
+      "@id": "DISCLOSURE-2025-43B76F18",
+      "name": "TODO: Claude Desktop Extension Hijacking Writeup",
+      "severity": "CRITICAL",
+      "datePublished": "2025-11-02"
+    },
+    {
+      "@id": "DISCLOSURE-2025-0C498DDB",
+      "name": "Contact Card Code Injection Attack via CNContactStore Monitoring APIs",
+      "severity": "CRITICAL",
+      "datePublished": "1989-01-22"
+    },
+    {
+      "@id": "DISCLOSURE-2025-32781364",
+      "name": "Device Adoption Security Protocol",
+      "severity": "CRITICAL",
+      "datePublished": "2025-10-13"
+    },
+    {
+      "@id": "DISCLOSURE-2025-EDB17E51",
+      "name": "\ud83d\udc8e Loc's Semantic Crystallization Archive",
+      "severity": "LOW",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-C58F1B3F",
+      "name": "Secure Codebase Storage on ZFS/Samba",
+      "severity": "LOW",
+      "datePublished": "2025-10-13"
+    },
+    {
+      "@id": "DISCLOSURE-2025-9202E7EE",
+      "name": "Semantic Crystallization Attacks on AI Reasoning Systems",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-8C75CF11",
+      "name": "Switch Adoption Checklist - Post-Compromise Recovery",
+      "severity": "CRITICAL",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-D7F9F06A",
+      "name": "Thunderbolt Networking Setup Guide",
+      "severity": "HIGH",
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@id": "DISCLOSURE-2025-112496B9",
+      "name": "UDM Pro Max Manual Configuration Guide",
+      "severity": "CRITICAL",
+      "datePublished": "2025-10-13"
+    },
+    {
+      "@id": "DISCLOSURE-2025-33B65447",
+      "name": "UDM Pro Max Security Configuration Guide",
+      "severity": "CRITICAL",
+      "datePublished": "2025-10-13"
+    },
+    {
+      "@id": "DISCLOSURE-2025-0418FD68",
+      "name": "WAN Security Analysis - 98.97.38.180",
+      "severity": "CRITICAL",
+      "datePublished": "2025-10-13"
+    }
+  ]
+}

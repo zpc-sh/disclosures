@@ -1,0 +1,54 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/",
+    "avici": "https://corpusloci.com/avici/"
+  },
+  "@type": "sec:SecurityDisclosure",
+  "identifier": "DISCLOSURE-2025-0A216C59",
+  "name": "Apple Security Submission: iCloud Family Sharing Persistent Access Vulnerability",
+  "datePublished": "2025-10-14",
+  "severity": {
+    "cvss": 9.0,
+    "rating": "CRITICAL"
+  },
+  "description": "**Submission Type:** Critical Security Vulnerability",
+  "vulnerability": {
+    "@type": "sec:Vulnerability",
+    "severity": "CRITICAL",
+    "cvssScore": 9.0
+  },
+  "impact": {
+    "@type": "sec:ImpactAssessment",
+    "technicalImpact": "",
+    "scope": "ecosystem-wide",
+    "attackComplexity": "zero-click"
+  },
+  "mitigation": {
+    "@type": "sec:DefensiveMeasure",
+    "ourDefense": "",
+    "immediateWorkaround": "",
+    "properFix": ""
+  },
+  "innovation": {
+    "@type": "avici:Innovation",
+    "frameworks": [],
+    "techniques": [],
+    "insights": []
+  },
+  "attribution": {
+    "@type": "sec:Attribution",
+    "campaign": "60-day-siege",
+    "confidence": "high",
+    "threatActor": "NSO Group tools (Vietnam-based)",
+    "sophistication": 8
+  },
+  "siegeContext": {
+    "@type": "avici:SiegeEvent",
+    "campaign": "60-day-nation-state-siege",
+    "duration": "60 days",
+    "outcome": "defense-successful"
+  },
+  "sourceFile": "APPLE-SUBMISSION-ICLOUD-FAMILY-SHARING-PERSISTENT-ACCESS.md",
+  "merkleHash": "e1a9fb7f898473ca606ece6c72849acea2bf4e5b322bc6bd1a5a16c4d6ad71da"
+}

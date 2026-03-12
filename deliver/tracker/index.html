@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Bounty Submission Tracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #00ff41;
+            margin-bottom: 10px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #00ff41;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .stat-label {
+            color: #888;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 5px;
+        }
+
+        .filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            color: #e0e0e0;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover {
+            border-color: #00ff41;
+            color: #00ff41;
+        }
+
+        .filter-btn.active {
+            background: #00ff41;
+            color: #000;
+            border-color: #00ff41;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #1a1a1a;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        thead {
+            background: #0a0a0a;
+        }
+
+        th {
+            text-align: left;
+            padding: 15px;
+            font-weight: 600;
+            color: #00ff41;
+            border-bottom: 2px solid #333;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #222;
+        }
+
+        tr:hover {
+            background: #222;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+
+        .status-ready { background: rgba(255, 165, 0, 0.2); color: #ffa500; border: 1px solid rgba(255, 165, 0, 0.3); }
+        .status-submitted { background: rgba(0, 170, 255, 0.2); color: #0af; border: 1px solid rgba(0, 170, 255, 0.3); }
+        .status-reviewing { background: rgba(138, 43, 226, 0.2); color: #8a2be2; border: 1px solid rgba(138, 43, 226, 0.3); }
+        .status-acknowledged { background: rgba(0, 255, 65, 0.2); color: #00ff41; border: 1px solid rgba(0, 255, 65, 0.3); }
+        .status-paid { background: rgba(0, 255, 65, 0.3); color: #00ff41; border: 1px solid rgba(0, 255, 65, 0.5); }
+
+        .priority-critical { color: #ff4444; font-weight: 700; }
+        .priority-high { color: #ffa500; font-weight: 600; }
+        .priority-medium { color: #0af; }
+        .priority-low { color: #888; }
+
+        .value {
+            font-variant-numeric: tabular-nums;
+            font-weight: 600;
+        }
+
+        .actions {
+            display: flex;
+            gap: 5px;
+        }
+
+        .btn {
+            background: #333;
+            border: 1px solid #555;
+            color: #e0e0e0;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            background: #00ff41;
+            color: #000;
+            border-color: #00ff41;
+        }
+
+        .btn-primary {
+            background: #00ff41;
+            color: #000;
+            border-color: #00ff41;
+        }
+
+        .btn-primary:hover {
+            background: #00cc33;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .modal h2 {
+            color: #00ff41;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            background: #0a0a0a;
+            border: 1px solid #333;
+            color: #e0e0e0;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .close-modal {
+            float: right;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #888;
+        }
+
+        .close-modal:hover {
+            color: #ff4444;
+        }
+
+        .company-filter {
+            display: inline-block;
+            padding: 4px 10px;
+            margin-right: 5px;
+            background: #0a0a0a;
+            border: 1px solid #333;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .company-apple { border-color: #555; }
+        .company-google { border-color: #4285f4; }
+        .company-anthropic { border-color: #d97706; }
+        .company-sony { border-color: #0070cc; }
+
+        .notes {
+            font-size: 0.85rem;
+            color: #666;
+            max-width: 300px;
+        }
+
+        .timeline {
+            background: #0a0a0a;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        .timeline-item {
+            padding: 8px 0;
+            border-left: 2px solid #333;
+            padding-left: 15px;
+            margin-left: 5px;
+        }
+
+        .timeline-date {
+            color: #00ff41;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .timeline-event {
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        .add-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #00ff41;
+            color: #000;
+            border: none;
+            border-radius: 50%;
+            font-size: 2rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 255, 65, 0.4);
+            transition: all 0.3s;
+        }
+
+        .add-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(0, 255, 65, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Security Bounty Submission Tracker</h1>
+            <p style="color: #888;">Victim-assisted security research • October 2025</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value" id="total-value">$7.3M - $12.8M</div>
+                <div class="stat-label">Total Estimated Value</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="total-submissions">12</div>
+                <div class="stat-label">Total Submissions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="ready-count">5</div>
+                <div class="stat-label">Ready to Submit</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="paid-count">$0</div>
+                <div class="stat-label">Paid to Date</div>
+            </div>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ready">Ready</button>
+            <button class="filter-btn" data-filter="submitted">Submitted</button>
+            <button class="filter-btn" data-filter="reviewing">Reviewing</button>
+            <button class="filter-btn" data-filter="paid">Paid</button>
+            <button class="filter-btn" data-filter="apple">Apple</button>
+            <button class="filter-btn" data-filter="google">Google</button>
+            <button class="filter-btn" data-filter="anthropic">Anthropic</button>
+        </div>
+
+        <table id="submissions-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Company</th>
+                    <th>Status</th>
+                    <th>Priority</th>
+                    <th>Value</th>
+                    <th>Case #</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="submissions-body">
+                <!-- Submissions will be loaded here -->
+            </tbody>
+        </table>
+
+        <button class="add-button" onclick="openAddModal()">+</button>
+    </div>
+
+    <!-- Add/Edit Modal -->
+    <div id="submission-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Add Submission</h2>
+            <form id="submission-form">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" id="form-title" required>
+                </div>
+                <div class="form-group">
+                    <label>Company</label>
+                    <select id="form-company" required>
+                        <option value="Apple">Apple</option>
+                        <option value="Google">Google</option>
+                        <option value="Anthropic">Anthropic</option>
+                        <option value="Sony">Sony</option>
+                        <option value="Ubiquiti">Ubiquiti</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Status</label>
+                    <select id="form-status" required>
+                        <option value="ready">Ready</option>
+                        <option value="submitted">Submitted</option>
+                        <option value="reviewing">Reviewing</option>
+                        <option value="acknowledged">Acknowledged</option>
+                        <option value="paid">Paid</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Priority</label>
+                    <select id="form-priority" required>
+                        <option value="critical">Critical</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Estimated Value (e.g., $100k-$200k)</label>
+                    <input type="text" id="form-value" required>
+                </div>
+                <div class="form-group">
+                    <label>Case Number</label>
+                    <input type="text" id="form-case">
+                </div>
+                <div class="form-group">
+                    <label>Submission Date</label>
+                    <input type="date" id="form-date">
+                </div>
+                <div class="form-group">
+                    <label>Notes</label>
+                    <textarea id="form-notes"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn" onclick="closeModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="tracker.js"></script>
+</body>
+</html>

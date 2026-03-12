@@ -1,0 +1,56 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/",
+    "avici": "https://corpusloci.com/avici/"
+  },
+  "@type": "sec:SecurityDisclosure",
+  "identifier": "DISCLOSURE-2025-D7F9F06A",
+  "name": "Thunderbolt Networking Setup Guide",
+  "datePublished": "2025-12-01",
+  "severity": {
+    "cvss": 7.0,
+    "rating": "HIGH"
+  },
+  "description": "**Speed:** Up to 40 Gbps (Thunderbolt 3/4) or 20 Gbps (Thunderbolt 2)",
+  "vulnerability": {
+    "@type": "sec:Vulnerability",
+    "severity": "HIGH",
+    "cvssScore": 7.0
+  },
+  "impact": {
+    "@type": "sec:ImpactAssessment",
+    "technicalImpact": "",
+    "scope": "single-user",
+    "attackComplexity": "high"
+  },
+  "mitigation": {
+    "@type": "sec:DefensiveMeasure",
+    "ourDefense": "",
+    "immediateWorkaround": "",
+    "properFix": ""
+  },
+  "innovation": {
+    "@type": "avici:Innovation",
+    "frameworks": [],
+    "techniques": [
+      "compression",
+      "quarantine"
+    ],
+    "insights": []
+  },
+  "attribution": {
+    "@type": "sec:Attribution",
+    "campaign": "60-day-siege",
+    "confidence": "medium",
+    "sophistication": 5
+  },
+  "siegeContext": {
+    "@type": "avici:SiegeEvent",
+    "campaign": "60-day-nation-state-siege",
+    "duration": "60 days",
+    "outcome": "defense-successful"
+  },
+  "sourceFile": "thunderbolt-networking-setup.md",
+  "merkleHash": "40f77cc90455395427eb30baee047a6ffcb5f89755b48df1840a4385dc0ffd42"
+}

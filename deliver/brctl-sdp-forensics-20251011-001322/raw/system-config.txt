@@ -1,0 +1,239 @@
+brctl: dumping
+    containers:   <iCloud.com.apple.systemconfiguration>
+    from:         running bird
+dump taken at 2025-10-11 00:13:26.817-0700 [account=1245956772] [inCarry=No] [home=/Users/locnguyen]
+
+database version: 34000
+database ID: F11D2747-5C48-41EC-B8CD-B3738105B254
+fsType: FPFS
+
+boot_history (startup 148845.5s ago)
+-----------------------------------------------------
+server_truth
+  [2025-10-05 15:31:51.000] OS:25A362 CloudDocs:4257.0.23 BirdSchema:34000 DBSchema:34000 DeviceID:318678
+  [2025-10-05 12:56:52.000] OS:24F74 CloudDocs:3437.120.20 BirdSchema:32104 DBSchema:32104 DeviceID:318678
+client_truth
+  [2025-10-05 15:31:52.000] OS:25A362 CloudDocs:4257.0.23 BirdSchema:34000 DBSchema:34000 DeviceID:318678
+  [2025-10-05 12:56:52.000] OS:24F74 CloudDocs:3437.120.20 BirdSchema:32104 DBSchema:32104 DeviceID:318678
+backup_detector
+  [318686|318712|1] OS:25A362 CloudDocs:4257.0.23 DBSchema:34000
+
+server_state
+-----------------------------------------------------
+last-sync:2025-10-10 23:39:26.508 nextRank:79719 minUsedTime:1759705180 shared-db{last-sync:2025-10-10 15:31:47.347, caught-up, token:unkown-token-size:9 (AQAAAZnQQB+b)}
+
+client_state
+-----------------------------------------------------
+{
+    availableQuota = 1072469172214;
+    clientRanks = "nextNotifRank:309875 nextPackageItemRank:1 nextItemRowID:66885";
+    containerMetadataSync = "<0xbc571e340>: serverChangeToken:<CKServerChangeToken: 0xbc4d1d440; data=HwoDCPsRGAAiFgjgjZX2ztbzkbEBEIKeoMPOv5DrigEoAEgA> requestID:2 lastSyncDate:2025-10-09 02:34:36";
+    currentUserRecordID = "<CKRecordID: 0xbc57e9f20; recordName=_e54b4ce603c8321d4507e959b9c660e5, zoneID=_defaultZone:__defaultOwner__>";
+    hasCompletedPCSMigration = 1;
+    lastQuotaFetchDate = "2025-10-05 19:57:23 +0000";
+    "most-recent-item-creation-date" = "2025-10-11 06:39:20 +0000";
+    nonPurgeableSpace = 78643200;
+    periodicSyncDate = "2025-10-10 22:31:25 +0000";
+    purgeableSpace =     {
+        3 = 0;
+        1 = 0;
+        2 = 0;
+    };
+    purgeableSpaceDate = "2025-10-11 01:41:19 +0000";
+    sideCarSync = "side-car-state{last-sync:(null), needs-sync:NO, requestID:0, changeToken:(null)}";
+    stage = "gc:1760163299";
+    syncUpBudget = "<BRCSyncBudgetThrottle {  m:0.5  h:0.5  d:0.5  }>";
+    zoneHealthSync = "zone-health-state{last-sync:2025-10-05 12:57:03.034, needs-syncdown:NO, requestID:0, changeToken:unkown-token-size:35 (HwoCCDMYACIWCLWDlcPTu6GkigEQvo+Z6Z2ox76HASgASAA=)}";
+}
+
+devices:
+    o "i{2}d" (1)
+    o "i{4}e" (2)
+    o "M{9}o" (3)
+    o "M{9}o" (4)
+    o "i{9}4" (5)
+    o "i{2}c" (6)
+    o "i{6}o" (7)
+    o "m{1}p" (8)
+    o "m{7})" (9)
+    o "M{6}i" (10)
+    o "M{13})" (11)
+    o "M{9}1" (12)
+    o "M{6}i" (13)
+    o "N{4}C" (14)
+    o "M{5}k" (15)
+    o "L{19})" (16)
+    o "L{15}o" (17)
+    o "M{13})" (18)
+    o "m{4})" (19)
+    o "L{19})" (20)
+    o "m{7})" (21)
+    o "m{3}4" (22)
+    o "M{12}l" (23)
+    o "m{6})" (24)
+    o "N{5}k" (25)
+    o "N{11}d" (26)
+    o "L{8}d" (27)
+    o "W{5}s 98" (28)
+    o "m1" (29)
+    o "L{15}d" (30)
+    o "L{8}d" (31)
+    o "M{10}r" (32)
+    o "i{11}o" (33)
+    o "L{7}c" (34)
+    o "N{9})" (35)
+    o "L{8}c" (36)
+    o "A{4}s" (37)
+    o "L{19})" (38)
+    o "L{12}i" (39)
+    o "M{16})" (40)
+    o "M{13}d" (41)
+    o "L{19})" (42)
+    o "m{11}i.org" (43)
+    o "M{11}X" (44)
+    o "M{12})" (45)
+    o "i{4}d" (46)
+    o "i{6})" (47)
+    o "D{13}J" (48)
+    o "L{15}r" (49)
+    o "M{9}r" (50)
+
+users:
+    o "_addf6e2c7658d5b96f90a59318d830c3" N{6}o (1)
+
+system
+-----------------------------------------------------
+    + network: online
+    + disk:    healthy ([0;1;32mAPFS[0m)
+    + power:   healthy
+    + optimize storage: enabled
+    + device name:   M{9}r
+    + cellular: enabled
+
+scheduler
+-----------------------------------------------------
+    + items:                 client:[0;1;30m63 thousand (63159)[0m, server: [0;1;30m62 thousand (62937)[0m
+                             warning: [31moutput may be truncated[39m
+    + push environment:      production
+    + push token:            {length = 32, bytes = 0x0a5fd512 550e6adf d9dad1cc 8e9b4369 ... dbc9bb95 5a761cfc }
+    + global sync up budget: budget available {  0:34:33s ago  m:0.0% (0.5)  h:0.0% (0.5)  d:0.0% (0.5)  }
+    + periodic sync:         idle
+    + available quota:       [0;1;30m1072 GB (1072469172214)[0m
+    + container-metadata:    idle 
+    + sharedb:               has-synced-down 
+    + zone-health:           idle 
+    + side-car:              idle 
+    + pcs-migration:         complete
+
+<NSError:0xbc45c9e90(BRCloudDocsErrorDomain:30) - {
+    NSDescription = "Client zone not found: 'iCloud.com.apple.systemconfiguration'";
+}>
+
+client_pkg_upload_items
+================
+
+
+22 xpc clients:
+ o com.apple.BKAgentService[70667]
+ o com.apple.dt.Xcode[89213]
+ o com.apple.appkit.xpc.openAndSavePanelService[2059]
+ o com.apple.appkit.xpc.openAndSavePanelService[89611]
+ o com.apple.quicklook.ThumbnailsAgent[761]
+ o com.apple.finder[753]
+ o com.apple.appkit.xpc.openAndSavePanelService[2059]
+ o com.apple.accountsd[668]
+ o WeatherWidget[799]
+ o com.apple.mail[2728]
+ o com.apple.finder[753]
+ o com.apple.appkit.xpc.openAndSavePanelService[71887]
+ o com.apple.siriactionsd[647]
+ o com.apple.CloudDocs.iCloudDriveFileProvider[828]
+ o com.apple.quicklook.ThumbnailsAgent[761]
+ o com.apple.brctl[2113]
+ o com.apple.CloudDocs.iCloudDriveFileProvider[828]
+ o WeatherMenu[910]
+ o CoreServicesUIAgent[616]
+ o com.apple.appkit.xpc.openAndSavePanelService[89611]
+ o com.apple.appkit.xpc.openAndSavePanelService[71887]
+ o com.apple.spotlight[819]
+
+
+0 misc operations:
+
+Named Throttle History
+-----------------------------------------------------
+
+Pending Aggregated Telemetry
+-----------------------------------------------------
+
+analytics metrics
+-----------------------------------------------------
+FSEventToSyncUp: (
+)
+UserDownload: (
+)
+SyncHealthReport:
+uploadError: none
+syncUpError: none
+downloadError: none
+syncUpSharedZoneError: none
+syncUpPrivateZoneError: none
+syncDownSharedZoneError: none
+syncDownPrivateZoneError: none
+
+Aggregated Telemetry:
+none
+
+global progress {none}
+-----------------------------------------------------
+    upload {none}
+    upload version sizes (0):
+    {}
+    
+apps monitor
+-----------------------------------------------------
+    app library IDs by App ID
+    =======================
+    {
+        "com.apple.Automator" = "{(\n    \"com.apple.Automator\"\n)}";
+        "com.apple.Preview" = "{(\n    \"com.apple.Preview\"\n)}";
+        "com.apple.QuickTimePlayerX" = "{(\n    \"com.apple.QuickTimePlayerX\"\n)}";
+        "com.apple.ScriptEditor2" = "{(\n    \"com.apple.ScriptEditor2\"\n)}";
+        "com.apple.TextEdit" = "{(\n    \"com.apple.TextEdit\"\n)}";
+        "com.apple.VoiceOver" = "{(\n    \"com.apple.VoiceOver.Braille\"\n)}";
+        "com.apple.iBooksX" = "{(\n    \"com.apple.iBooks.cloudData\",\n    \"iCloud.com.apple.iBooks.iTunesU\",\n    \"iCloud.com.apple.iBooks\"\n)}";
+        "com.apple.kbd" = "{(\n    \"com.apple.TextInput\"\n)}";
+        "com.apple.mail" = "{(\n    \"com.apple.mail.preferences\",\n    \"com.apple.mail\"\n)}";
+        "com.apple.passd" = "{(\n    \"com.apple.shoebox\"\n)}";
+        "com.apple.shortcuts" = "{(\n    \"iCloud.is.workflow.my.workflows\"\n)}";
+        "com.readdle.PDFExpert-Mac" = "{(\n    \"3L68KQB4HG.com.readdle.CommonDocuments\"\n)}";
+        "net.whatsapp.WhatsApp" = "{(\n    \"57T9237FN3.net.whatsapp.WhatsApp\",\n    \"iCloud.net.whatsapp.WhatsApp\"\n)}";
+    }
+    
+    app IDs by app library IDs
+    =======================
+    {
+        "3L68KQB4HG.com.readdle.CommonDocuments" = "{(\n    \"com.readdle.PDFExpert-Mac\"\n)}";
+        "57T9237FN3.net.whatsapp.WhatsApp" = "{(\n    \"net.whatsapp.WhatsApp\"\n)}";
+        "com.apple.Automator" = "{(\n    \"com.apple.Automator\"\n)}";
+        "com.apple.Preview" = "{(\n    \"com.apple.Preview\"\n)}";
+        "com.apple.QuickTimePlayerX" = "{(\n    \"com.apple.QuickTimePlayerX\"\n)}";
+        "com.apple.ScriptEditor2" = "{(\n    \"com.apple.ScriptEditor2\"\n)}";
+        "com.apple.TextEdit" = "{(\n    \"com.apple.TextEdit\"\n)}";
+        "com.apple.TextInput" = "{(\n    \"com.apple.kbd\"\n)}";
+        "com.apple.VoiceOver.Braille" = "{(\n    \"com.apple.VoiceOver\"\n)}";
+        "com.apple.iBooks.cloudData" = "{(\n    \"com.apple.iBooksX\"\n)}";
+        "com.apple.mail" = "{(\n    \"com.apple.mail\"\n)}";
+        "com.apple.mail.preferences" = "{(\n    \"com.apple.mail\"\n)}";
+        "com.apple.shoebox" = "{(\n    \"com.apple.passd\"\n)}";
+        "iCloud.com.apple.iBooks" = "{(\n    \"com.apple.iBooksX\"\n)}";
+        "iCloud.com.apple.iBooks.iTunesU" = "{(\n    \"com.apple.iBooksX\"\n)}";
+        "iCloud.is.workflow.my.workflows" = "{(\n    \"com.apple.shortcuts\"\n)}";
+        "iCloud.net.whatsapp.WhatsApp" = "{(\n    \"net.whatsapp.WhatsApp\"\n)}";
+    }
+
+Special Sync Contexts
+-----------------------------------------------------
++ com.apple.SharedDocs
+    + Submitted BGSystemTasks: (
+    )

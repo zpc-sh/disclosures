@@ -1,0 +1,114 @@
+{
+  "storage" : "model.espresso.weights",
+  "analyses" : {
+    "N8Espresso30analysis_to_preserve_mil_typesE" : {
+      "multiply_12__y__literal" : {
+        "compute_path" : 1
+      },
+      "dequant_3_classic_cpu_casted_to_fp16" : {
+        "compute_path" : 1
+      },
+      "gathered_embeddings_classic_cpu_pre_casted_to_fp32" : {
+        "compute_path" : 1
+      },
+      "dequant_3_classic_cpu" : {
+        "compute_path" : 0
+      },
+      "multiply_12" : {
+        "compute_path" : 1
+      },
+      "gathered_embeddings_classic_cpu" : {
+        "compute_path" : 0
+      }
+    },
+    "N8Espresso23analysis_debug_metadataE" : {
+      "bundle" : "",
+      "product" : "",
+      "version" : "",
+      "path" : "",
+      "mldb_token" : "",
+      "use_case" : "",
+      "name" : ""
+    }
+  },
+  "properties" : {
+    "ane_compiler_batch" : "1",
+    "useValueInference" : "1"
+  },
+  "format_version" : 200,
+  "metadata_in_weights" : [
+
+  ],
+  "layers" : [
+    {
+      "bottom" : "dequant_3_classic_cpu",
+      "mil_original_compute_path" : 1,
+      "weights" : {
+
+      },
+      "destination_compute_path" : 1,
+      "debug_info" : "at unknown location",
+      "top" : "dequant_3_classic_cpu_casted_to_fp16",
+      "type" : "cast",
+      "name" : "dequant_3_classic_cpu_casted_to_fp16"
+    },
+    {
+      "top" : "multiply_12__y__literal",
+      "w" : 1024,
+      "h" : 1,
+      "name" : "multiply_12__y__literal",
+      "nd_rank" : 3,
+      "type" : "load_constant",
+      "k" : 1,
+      "bottom" : "",
+      "debug_info" : "at model.mil:25924:12",
+      "n" : 1,
+      "weights" : {
+
+      },
+      "constant_blob" : 1
+    },
+    {
+      "bottom" : "dequant_3_classic_cpu_casted_to_fp16,multiply_12__y__literal",
+      "alpha" : 1,
+      "operation" : 1,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "at model.mil:25924:12",
+      "top" : "multiply_12",
+      "type" : "elementwise",
+      "name" : "multiply_12",
+      "beta" : 0
+    },
+    {
+      "size_of_axes" : 1,
+      "bottom" : "multiply_12",
+      "axes_0" : 0,
+      "weights" : {
+
+      },
+      "nd_axis" : 0,
+      "debug_info" : "at model.mil:25925:12",
+      "top" : "gathered_embeddings_classic_cpu_pre_casted_to_fp32",
+      "type" : "expand_dims",
+      "name" : "gathered_embeddings_classic_cpu_pre_casted_to_fp32"
+    },
+    {
+      "bottom" : "gathered_embeddings_classic_cpu_pre_casted_to_fp32",
+      "mil_original_compute_path" : 0,
+      "weights" : {
+
+      },
+      "destination_compute_path" : 0,
+      "debug_info" : "at unknown location",
+      "top" : "gathered_embeddings_classic_cpu",
+      "type" : "cast",
+      "name" : "gathered_embeddings_classic_cpu",
+      "attributes" : {
+        "is_output" : 1
+      }
+    }
+  ]
+}

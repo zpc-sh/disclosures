@@ -1,0 +1,54 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/",
+    "avici": "https://corpusloci.com/avici/"
+  },
+  "@type": "sec:SecurityDisclosure",
+  "identifier": "DISCLOSURE-2025-D3BD3559",
+  "name": "Add VLAN 15 (Management) to New UDM Pro Max",
+  "datePublished": "2025-12-01",
+  "severity": {
+    "cvss": 3.0,
+    "rating": "LOW"
+  },
+  "description": "**Problem:** NAS is on 10.10.15.2 (VLAN 15), but new UDM only has VLAN 45 (10.10.45.0)",
+  "vulnerability": {
+    "@type": "sec:Vulnerability",
+    "severity": "LOW",
+    "cvssScore": 3.0
+  },
+  "impact": {
+    "@type": "sec:ImpactAssessment",
+    "technicalImpact": "",
+    "scope": "single-user",
+    "attackComplexity": "high"
+  },
+  "mitigation": {
+    "@type": "sec:DefensiveMeasure",
+    "ourDefense": "",
+    "immediateWorkaround": "",
+    "properFix": ""
+  },
+  "innovation": {
+    "@type": "avici:Innovation",
+    "frameworks": [],
+    "techniques": [],
+    "insights": []
+  },
+  "attribution": {
+    "@type": "sec:Attribution",
+    "campaign": "60-day-siege",
+    "confidence": "high",
+    "threatActor": "NSO Group tools (Vietnam-based)",
+    "sophistication": 5
+  },
+  "siegeContext": {
+    "@type": "avici:SiegeEvent",
+    "campaign": "60-day-nation-state-siege",
+    "duration": "60 days",
+    "outcome": "defense-successful"
+  },
+  "sourceFile": "ADD-VLAN-15-TO-UDM.md",
+  "merkleHash": "c772b90e0d5e7a7302e37e1542ec143d8bfc167546c2da948427ccbd58382008"
+}

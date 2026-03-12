@@ -1,0 +1,46 @@
+{
+  "layer_shapes" : {
+    "multiply_12__y__literal" : {
+      "k" : 1,
+      "w" : 1024,
+      "n" : 1,
+      "_rank" : 3,
+      "h" : 1
+    },
+    "dequant_3_classic_cpu_casted_to_fp16" : {
+      "k" : 8,
+      "w" : 1024,
+      "n" : 1,
+      "_rank" : 3,
+      "h" : 1
+    },
+    "multiply_12" : {
+      "k" : 8,
+      "w" : 1024,
+      "n" : 1,
+      "_rank" : 3,
+      "h" : 1
+    },
+    "dequant_3_classic_cpu" : {
+      "k" : 8,
+      "w" : 1024,
+      "n" : 1,
+      "_rank" : 3,
+      "h" : 1
+    },
+    "gathered_embeddings_classic_cpu_pre_casted_to_fp32" : {
+      "k" : 8,
+      "w" : 1024,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 1
+    },
+    "gathered_embeddings_classic_cpu" : {
+      "k" : 8,
+      "w" : 1024,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 1
+    }
+  }
+}

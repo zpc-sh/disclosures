@@ -1,0 +1,55 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/",
+    "avici": "https://corpusloci.com/avici/"
+  },
+  "@type": "sec:SecurityDisclosure",
+  "identifier": "DISCLOSURE-2025-15DCCFC0",
+  "name": "Apple Security Bounty Submission",
+  "datePublished": "2025-11-10",
+  "severity": {
+    "cvss": 3.1,
+    "rating": "CRITICAL"
+  },
+  "description": "**Title:** Zero-Click iMessage PNG Exploit via ICC Profile Leading to Unauthorized CloudKit Sync and System Compromise - **BYPASSES LOCKDOWN MODE**",
+  "vulnerability": {
+    "@type": "sec:Vulnerability",
+    "severity": "CRITICAL",
+    "cvssScore": 3.1
+  },
+  "impact": {
+    "@type": "sec:ImpactAssessment",
+    "technicalImpact": "",
+    "scope": "single-user",
+    "attackComplexity": "zero-click"
+  },
+  "mitigation": {
+    "@type": "sec:DefensiveMeasure",
+    "ourDefense": "",
+    "immediateWorkaround": "",
+    "properFix": ""
+  },
+  "innovation": {
+    "@type": "avici:Innovation",
+    "frameworks": [],
+    "techniques": [
+      "quarantine"
+    ],
+    "insights": []
+  },
+  "attribution": {
+    "@type": "sec:Attribution",
+    "campaign": "60-day-siege",
+    "confidence": "medium",
+    "sophistication": 8
+  },
+  "siegeContext": {
+    "@type": "avici:SiegeEvent",
+    "campaign": "60-day-nation-state-siege",
+    "duration": "60 days",
+    "outcome": "defense-successful"
+  },
+  "sourceFile": "APPLE-BUG-BOUNTY-LOCKDOWN-MODE-BYPASS.md",
+  "merkleHash": "0604c1602364209db44c73dd4492f6de35a03a80896a52a41d3ce3c87f181fe3"
+}

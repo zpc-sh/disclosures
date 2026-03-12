@@ -1,0 +1,53 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/",
+    "avici": "https://corpusloci.com/avici/"
+  },
+  "@type": "sec:SecurityDisclosure",
+  "identifier": "DISCLOSURE-2025-92A331BC",
+  "name": "Zero-Click Apple Ecosystem Exploit Chain",
+  "datePublished": "2025-12-01",
+  "severity": {
+    "cvss": 3.0,
+    "rating": "LOW"
+  },
+  "description": "**Reporter:** Loc Nguyen (locvnguy@me.com)",
+  "vulnerability": {
+    "@type": "sec:Vulnerability",
+    "severity": "LOW",
+    "cvssScore": 3.0
+  },
+  "impact": {
+    "@type": "sec:ImpactAssessment",
+    "technicalImpact": "",
+    "scope": "ecosystem-wide",
+    "attackComplexity": "zero-click"
+  },
+  "mitigation": {
+    "@type": "sec:DefensiveMeasure",
+    "ourDefense": "",
+    "immediateWorkaround": "",
+    "properFix": ""
+  },
+  "innovation": {
+    "@type": "avici:Innovation",
+    "frameworks": [],
+    "techniques": [],
+    "insights": []
+  },
+  "attribution": {
+    "@type": "sec:Attribution",
+    "campaign": "60-day-siege",
+    "confidence": "medium",
+    "sophistication": 8
+  },
+  "siegeContext": {
+    "@type": "avici:SiegeEvent",
+    "campaign": "60-day-nation-state-siege",
+    "duration": "60 days",
+    "outcome": "defense-successful"
+  },
+  "sourceFile": "APPLE-PORTAL-SUBMISSION.md",
+  "merkleHash": "d9e13ab9c9a4b1c31e3ed1815de7047fcefab30d2e92f3720a1607407a14ef9c"
+}

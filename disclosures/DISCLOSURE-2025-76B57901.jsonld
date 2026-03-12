@@ -1,0 +1,55 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/",
+    "avici": "https://corpusloci.com/avici/"
+  },
+  "@type": "sec:SecurityDisclosure",
+  "identifier": "DISCLOSURE-2025-76B57901",
+  "name": "FOR NEXT CLAUDE - PRIORITY ITEMS",
+  "datePublished": "2025-12-01",
+  "severity": {
+    "cvss": 7.0,
+    "rating": "HIGH"
+  },
+  "description": "**Date:** October 18, 2025",
+  "vulnerability": {
+    "@type": "sec:Vulnerability",
+    "severity": "HIGH",
+    "cvssScore": 7.0
+  },
+  "impact": {
+    "@type": "sec:ImpactAssessment",
+    "technicalImpact": "",
+    "scope": "single-user",
+    "attackComplexity": "high"
+  },
+  "mitigation": {
+    "@type": "sec:DefensiveMeasure",
+    "ourDefense": "",
+    "immediateWorkaround": "",
+    "properFix": ""
+  },
+  "innovation": {
+    "@type": "avici:Innovation",
+    "frameworks": [],
+    "techniques": [
+      "quarantine"
+    ],
+    "insights": []
+  },
+  "attribution": {
+    "@type": "sec:Attribution",
+    "campaign": "60-day-siege",
+    "confidence": "medium",
+    "sophistication": 7
+  },
+  "siegeContext": {
+    "@type": "avici:SiegeEvent",
+    "campaign": "60-day-nation-state-siege",
+    "duration": "60 days",
+    "outcome": "defense-successful"
+  },
+  "sourceFile": "FOR_NEXT_CLAUDE.md",
+  "merkleHash": "fd07c364076b7c4c723ed72eec1499dee8c624ec19701f508e70d8905234feda"
+}

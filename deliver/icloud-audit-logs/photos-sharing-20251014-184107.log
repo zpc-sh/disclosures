@@ -1,0 +1,9 @@
+Filtering the log data using "subsystem CONTAINS "photos" AND composedMessage CONTAINS "shar""
+Timestamp                       (process)[PID]    
+2025-10-14 18:41:31.851702-0700  localhost photolibraryd[8551]: (PhotoLibraryServices) [com.apple.photos.backend:PhotoSharing] sharedStreamsEnabled: NO
+2025-10-14 18:41:44.928214-0700  localhost cloudphotod[8591]: (CloudPhotoLibrary) [com.apple.photos.cpl:engine.syncmanager] [session #1 (just-in-case)] moved to reshare
+2025-10-14 18:41:59.037272-0700  localhost photolibraryd[8551]: (PhotoLibraryServices) [com.apple.photos.backend:PhotoSharing] PLAccountStore did change; invalidating sharedStreamsEnabled
+2025-10-14 18:41:59.118897-0700  localhost photolibraryd[8551]: (PhotoLibraryServices) [com.apple.photos.backend:PhotoSharing] PLAccountStore did change; invalidating sharedStreamsEnabled
+2025-10-14 18:41:59.141351-0700  localhost photolibraryd[8551]: (PhotoLibraryServices) [com.apple.photos.backend:PhotoSharing] PLAccountStore did change; invalidating sharedStreamsEnabled
+2025-10-14 18:42:03.337801-0700  localhost photolibraryd[8551]: (PhotoLibraryServices) [com.apple.photos.backend:PhotoSharing] PLAccountStore did change; invalidating sharedStreamsEnabled
+

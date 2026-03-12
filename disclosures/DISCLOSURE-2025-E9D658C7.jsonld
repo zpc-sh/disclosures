@@ -1,0 +1,59 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/",
+    "avici": "https://corpusloci.com/avici/"
+  },
+  "@type": "sec:SecurityDisclosure",
+  "identifier": "DISCLOSURE-2025-E9D658C7",
+  "name": "Gemini's Harbor GPU Container Strategy - Analysis",
+  "datePublished": "2025-12-01",
+  "severity": {
+    "cvss": 7.0,
+    "rating": "HIGH"
+  },
+  "description": "**Date:** October 20, 2025",
+  "vulnerability": {
+    "@type": "sec:Vulnerability",
+    "severity": "HIGH",
+    "cvssScore": 7.0
+  },
+  "impact": {
+    "@type": "sec:ImpactAssessment",
+    "technicalImpact": "",
+    "scope": "single-user",
+    "attackComplexity": "high"
+  },
+  "mitigation": {
+    "@type": "sec:DefensiveMeasure",
+    "ourDefense": "",
+    "immediateWorkaround": "",
+    "properFix": ""
+  },
+  "innovation": {
+    "@type": "avici:Innovation",
+    "frameworks": [
+      {
+        "name": "Bodi",
+        "birthContext": "Emerged while defending GEMINI_HARBOR_STRATEGY.md",
+        "generalizes": true
+      }
+    ],
+    "techniques": [],
+    "insights": []
+  },
+  "attribution": {
+    "@type": "sec:Attribution",
+    "campaign": "60-day-siege",
+    "confidence": "medium",
+    "sophistication": 5
+  },
+  "siegeContext": {
+    "@type": "avici:SiegeEvent",
+    "campaign": "60-day-nation-state-siege",
+    "duration": "60 days",
+    "outcome": "defense-successful"
+  },
+  "sourceFile": "GEMINI_HARBOR_STRATEGY.md",
+  "merkleHash": "e86018a263d8871edb92594708fbe72dd83a616ec5aae4b343a0fe3794efe8d7"
+}

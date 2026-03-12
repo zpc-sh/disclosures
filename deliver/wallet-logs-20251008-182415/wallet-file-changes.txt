@@ -1,0 +1,9 @@
+=== 2025-10-08 18:24:15 ===
+./wallet-logger.sh: line 49: fswatch: command not found
+--- Current Wallet settings ---
+{
+    PKAccountHasDismissedClosedAccountMessageKey = 1;
+    PKLastProductCacheUpdateTimestampKey = 1759886472;
+    PKSafariCredentialProvisioningConsented = 1;
+}
+

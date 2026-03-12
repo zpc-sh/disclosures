@@ -1,0 +1,47 @@
+=== KEYCHAIN SCAN — Fri Mar  6 14:17:41 PST 2026 ===
+
+--- Current user keychains ---
+    "/Users/locnguyen/Library/Keychains/login.keychain-db"
+    "/Library/Keychains/System.keychain"
+
+--- Default keychain ---
+    "/Users/locnguyen/Library/Keychains/login.keychain-db"
+
+--- Login keychain path ---
+~/Library/Keychains/ = /Users/locnguyen/Library/Keychains/
+total 344
+drwxr-xr-x   5 locnguyen  staff     160 Mar  6 14:01 .
+drwx------+ 86 locnguyen  staff    2752 Mar  6 13:17 ..
+-r--r--r--   1 locnguyen  staff       0 Dec 10 04:27 .fl34AC2A0A
+drwx------  12 locnguyen  staff     384 Mar  6 13:42 B266B371-EBD4-5E3E-A5C6-83988D8F6DFB
+-rw-r--r--@  1 locnguyen  staff  174980 Mar  6 14:01 login.keychain-db
+
+--- System keychain ---
+total 6616
+drwxr-xr-x   9 root  wheel      288 Mar  6 13:45 .
+drwxr-xr-x  67 root  wheel     2144 Mar  6 12:56 ..
+-r--r--r--@  1 root  wheel        0 Dec 10 04:26 .fl043D1EDD
+-r--r--r--   1 root  wheel        0 Dec 10 04:26 .fl947E1BDB
+-rw-r--r--   1 root  wheel    72680 Mar  6 13:45 System.keychain
+-rw-r--r--@  1 root  wheel    82612 Mar  6 12:38 apsd.keychain
+-rw-------   1 root  wheel     4096 Dec 10 04:26 system-keychain-2.db
+-rw-------   1 root  wheel    32768 Mar  6 13:42 system-keychain-2.db-shm
+-rw-------   1 root  wheel  2327832 Dec 10 04:27 system-keychain-2.db-wal
+
+--- All mounted volumes — keychain search ---
+  FOUND: /Volumes/Store/SECUREKTRUST/Deleted or lost/SECUREPKITRUSTSTOREASSETS_SECUREPKITRUSTSTORE_Cryptex.dmg/SystemRootCertificates.keychain
+-rwxrwxrwx@ 1 locnguyen  staff  337580 Jul  1  2024 /Volumes/Store/SECUREKTRUST/Deleted or lost/SECUREPKITRUSTSTOREASSETS_SECUREPKITRUSTSTORE_Cryptex.dmg/SystemRootCertificates.keychain
+  FOUND: /Volumes/Store/SECUREKTRUST/Reconstructed/Documents/keychain/file000000.keychain
+-rw-r--r--@ 1 locnguyen  staff  337580 Mar  6 13:50 /Volumes/Store/SECUREKTRUST/Reconstructed/Documents/keychain/file000000.keychain
+  FOUND: /Volumes/Store/mba_bk/Existing/Data/Library/Keychains/System.keychain
+-rw-r--r--  1 locnguyen  staff  85236 Mar  2 13:24 /Volumes/Store/mba_bk/Existing/Data/Library/Keychains/System.keychain
+  FOUND: /Volumes/Store/mba_bk/Existing/Data/Library/Keychains/apsd.keychain
+-rw-r--r--@ 1 locnguyen  staff  106872 Mar  2 18:37 /Volumes/Store/mba_bk/Existing/Data/Library/Keychains/apsd.keychain
+  FOUND: /Volumes/Store/mba_bk/Existing/Data/private/var/db/com.apple.almigration.keychain
+-rw-r--r--  1 locnguyen  staff  27168 Feb 28 05:36 /Volumes/Store/mba_bk/Existing/Data/private/var/db/com.apple.almigration.keychain
+  FOUND: /Volumes/Store/mba_bk/Existing/Data/private/var/db/ConfigurationProfiles/Store/MCXPrivate.keychain
+-rw-r--r--  1 locnguyen  staff  20460 Feb 28 05:35 /Volumes/Store/mba_bk/Existing/Data/private/var/db/ConfigurationProfiles/Store/MCXPrivate.keychain
+  FOUND: /Volumes/Store/mba_bk/Existing/Data/Users/locnguyen/Library/Keychains/login.keychain-db
+-rw-r--r--@ 1 locnguyen  staff  227416 Mar  2 18:37 /Volumes/Store/mba_bk/Existing/Data/Users/locnguyen/Library/Keychains/login.keychain-db
+  FOUND: /Volumes/Store/mba_bk/Existing/Data/Users/locnguyen/Library/Keychains/metadata.keychain-db
+-rw-------  1 locnguyen  staff  23816 Feb 28 19:19 /Volumes/Store/mba_bk/Existing/Data/Users/locnguyen/Library/Keychains/metadata.keychain-db

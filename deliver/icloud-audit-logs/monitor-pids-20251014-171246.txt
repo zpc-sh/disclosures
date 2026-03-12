@@ -1,0 +1,4 @@
+CloudKit Sharing=83251
+Passwords/Keychain Sharing=83252
+Photos Sharing=83253
+Calendar Sharing=83254

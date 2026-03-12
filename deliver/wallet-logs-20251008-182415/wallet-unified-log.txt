@@ -1,0 +1,37 @@
+2025-10-08 18:24:15 | Filtering the log data using "process == "passd" OR process == "PassKitCore" OR process == "WalletSettingsExtension" OR composedMessage CONTAINS "Wallet" OR composedMessage CONTAINS "passd""
+2025-10-08 18:29:51 | Timestamp               Ty Process[PID:TID]
+2025-10-08 18:29:51 | 2025-10-08 18:29:51.808 Df WalletSettingsExtension[18571:2a2d6] [com.apple.launchservices:db] NotifyToken::RegisterDispatch(user.uid.501.com.apple.LaunchServices.database) fired for session key <private>
+2025-10-08 18:30:51 | 2025-10-08 18:30:51.866 Df WalletSettingsExtension[18571:30656] [com.apple.accounts:core] "ACMonitoredAccountStore: Fetching accounts of account type com.apple.account.CardDAV..."
+2025-10-08 18:30:51 | 2025-10-08 18:30:51.866 A  WalletSettingsExtension[18571:30656] (Accounts) accounts/accounts-with-types
+2025-10-08 18:30:51 | 2025-10-08 18:30:51.867 Df WalletSettingsExtension[18571:30656] [com.apple.xpc:connection] [0xa8f3e43c0] activating connection: mach=true listener=false peer=false name=com.apple.accountsd.accountmanager
+2025-10-08 18:30:51 | 2025-10-08 18:30:51.873 Df WalletSettingsExtension[18571:30d67] [com.apple.accounts:core] "ACMonitoredAccountStore: Fetched Accounts"
+2025-10-08 18:31:22 | 2025-10-08 18:31:22.269 Df WalletSettingsExtension[18571:30d67] [com.apple.xpc:connection] [0xa8f3e43c0] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+2025-10-08 18:31:22 | 2025-10-08 18:31:22.269 Df WalletSettingsExtension[18571:30656] [com.apple.accounts:core] "The connection to ACDAccountStore was invalidated."
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.496 Df passd[1835:3e467] [com.apple.xpc.activity:Client] _xpc_activity_dispatch: beginning dispatch, activity name PDCloudStoreClientID.PDPassChangesActivityIdentifier, seqno 2
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.496 Df passd[1835:3e467] [com.apple.xpc.activity:Client] _xpc_activity_dispatch: PDCloudStoreClientID.PDPassChangesActivityIdentifier (0x74f632760): found an activity with matching seqno 2
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.496 Df passd[1835:3e467] [com.apple.xpc.activity:Client] _xpc_activity_begin_running: PDCloudStoreClientID.PDPassChangesActivityIdentifier (0x74f632760) seqno: 2.
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.496 Df passd[1835:4bcbc] [com.apple.xpc.activity:Client] _xpc_activity_dispatch: lower half, activity name PDCloudStoreClientID.PDPassChangesActivityIdentifier (0x74f632760), seqno from top half was 2
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.496 Df passd[1835:4bcbc] [com.apple.xpc:connection] [0x74f792d00] Channel returned listener port: 0x6107
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.496 Df passd[1835:4bcbc] [com.apple.xpc.activity:Client] _xpc_activity_set_state: PDCloudStoreClientID.PDPassChangesActivityIdentifier (0x74f632760), 2
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.496 Df passd[1835:4bcbc] [com.apple.xpc.activity:Client] _xpc_activity_set_state: send new state to CTS: PDCloudStoreClientID.PDPassChangesActivityIdentifier (0x74f632760), 2
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.497 Df passd[1835:4bcbc] [com.apple.xpc.activity:Client] _xpc_activity_set_state_from_cts: PDCloudStoreClientID.PDPassChangesActivityIdentifier (0x74f632760), set activity state to 2
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.497 Df passd[1835:4bcbc] [com.apple.xpc.activity:Client] __XPC_ACTIVITY_CALLING_HANDLER__: PDCloudStoreClientID.PDPassChangesActivityIdentifier (0x74f632760), current state 2, pending state 0
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.498 Df passd[1835:4bcbc] [com.apple.passkit:General] Beginning Scheduled Activity: <private> for Client: PDCloudStoreClientID
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.499 Df passd[1835:4bcbc] [com.apple.passkit:CloudStore] Background cloud store setup activity fired with identifier <private>.
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.501 Df passd[1835:4bcbc] [com.apple.passkit:CloudStore] Performing scheduled background pass changes processing
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.501 Df passd[1835:4bcbc] [com.apple.xpc.activity:Client] _xpc_activity_set_state: PDCloudStoreClientID.PDPassChangesActivityIdentifier (0x74f632760), 5
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.501 Df passd[1835:4bcbc] [com.apple.xpc.activity:Client] __XPC_ACTIVITY_CALLING_HANDLER__ returned from handler: PDCloudStoreClientID.PDPassChangesActivityIdentifier (0x74f632760), current state 2, pending state 5
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.501 Df passd[1835:4bcbc] [com.apple.xpc.activity:Client] _xpc_activity_set_state: PDCloudStoreClientID.PDPassChangesActivityIdentifier (0x74f632760), 1
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.501 Df passd[1835:4bcbc] [com.apple.xpc.activity:Client] _xpc_activity_set_state: send new state to CTS: PDCloudStoreClientID.PDPassChangesActivityIdentifier (0x74f632760), 5
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.501 Df passd[1835:4bcbc] [com.apple.xpc.activity:Client] _xpc_activity_set_state: send new state to CTS: PDCloudStoreClientID.PDPassChangesActivityIdentifier (0x74f632760), 1
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.502 Df passd[1835:3e467] [com.apple.passkit:CloudStore] [PDPassCloudStore(Sync)] won't process pending changes because container is readonly: perodic check-in
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.502 Df passd[1835:4bcbc] [com.apple.passkit:CloudStore] [PDPassCloudStore(SyncSecure)] processing pending changes requested: perodic check-in
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.502 Df passd[1835:4bcbc] [com.apple.passkit:CloudStore] [PDPassCloudStore(SyncSecure)] checking sync preconditions
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.502 Df passd[1835:4bcbc] [com.apple.passkit:CloudStore] [PDPassCloudStore(SyncSecure)] sync preconditions are met
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.503 Df passd[1835:3e467] [com.apple.xpc.activity:Client] _xpc_activity_set_state_from_cts: PDCloudStoreClientID.PDPassChangesActivityIdentifier (0x74f632760), set activity state to 1
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.503 Df passd[1835:3e467] [com.apple.xpc.activity:Client] _xpc_activity_end_running: PDCloudStoreClientID.PDPassChangesActivityIdentifier (0x74f632760) seqno: 2.
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.507 Df passd[1835:4bcbc] [com.apple.passkit:CloudStore] [PDCardCloudManager] fetched 0 change events
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.507 Df passd[1835:4bcbc] [com.apple.passkit:CloudStore] [PDCardCloudManager] will try to process pending chages batch
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.507 Df passd[1835:4bcbc] [com.apple.passkit:CloudStore] [PDCardCloudManager] no more change batches to process
+2025-10-08 18:31:55 | 2025-10-08 18:31:55.507 Df passd[1835:4bcbc] [com.apple.passkit:CloudStore] [PDPassCloudStore(SyncSecure)] because:perodic check-in did process pending changes:1 (null)
+2025-10-08 18:32:04 | 

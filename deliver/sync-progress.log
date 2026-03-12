@@ -1,0 +1,94 @@
+[1;33m=== Big Boy Code Sync to iCloud ===[0m
+Using paid storage + giving them something to read
+
+[0;34mStarting selective sync...[0m
+
+[1;33mSyncing: kyozo-client[0m
+  Description: Kyozo client (4.4G)
+  Source size: 4.4G
+static/diagram.webp
+static/ice-as-a-service.webp
+
+sent 3621015 bytes  received 8752 bytes  40738125 bytes/sec
+total size is 3569740  speedup is 0.98
+  [0;32m✓ Synced to iCloud: 4.4M[0m
+
+[1;33mSyncing: lang[0m
+  Description: Language implementation (3.6G)
+  Source size: 3.6G
+work/spec_requests/contexts/
+work/spec_requests/contexts/spec.jsonld
+
+sent 27381897 bytes  received 45784 bytes  52634198 bytes/sec
+total size is 27134393  speedup is 0.99
+  [0;32m✓ Synced to iCloud:  31M[0m
+
+[1;33mSyncing: ellex-lang[0m
+  Description: Ellex language (10G)
+  Source size:  10G
+vim_plugin/plugin/
+vim_plugin/syntax/
+
+sent 15466452 bytes  received 15688 bytes  58181661 bytes/sec
+total size is 15374533  speedup is 0.99
+  [0;32m✓ Synced to iCloud:  16M[0m
+
+[1;33mSyncing: pactis_client[0m
+  Description: Pactis client (11G)
+  Source size:  11G
+scripts/normalize-spaces.sh
+scripts/release.sh
+
+sent 34490435 bytes  received 87020 bytes  38076704 bytes/sec
+total size is 33981016  speedup is 0.98
+  [0;32m✓ Synced to iCloud:  43M[0m
+
+[1;33mSyncing: kyozo_cloud[0m
+  Description: Kyozo cloud (2.3G)
+  Source size: 2.3G
+test/support/fixtures/accounts_fixtures.ex
+test/support/fixtures/workspaces_fixtures.ex
+
+sent 147359900 bytes  received 49066 bytes  107043036 bytes/sec
+total size is 147042896  speedup is 1.00
+  [0;32m✓ Synced to iCloud: 145M[0m
+
+[1;33mSyncing: kyozo_store[0m
+  Description: Kyozo store (1.6G)
+  Source size: 1.6G
+test/support/fixtures/accounts_fixtures.ex
+test/support/fixtures/workspaces_fixtures.ex
+
+sent 87415514 bytes  received 75166 bytes  67088934 bytes/sec
+total size is 86867366  speedup is 0.99
+  [0;32m✓ Synced to iCloud:  89M[0m
+
+[1;33mSyncing: dash[0m
+  Description: Claudesville/DASH (744M)
+  Source size: 744M
+test/support/conn_case.ex
+test/support/data_case.ex
+
+sent 22839417 bytes  received 4480 bytes  99711466 bytes/sec
+total size is 22813852  speedup is 1.00
+  [0;32m✓ Synced to iCloud:  22M[0m
+
+[0;32m=== Sync Complete ===[0m
+
+Summary:
+  Repos synced: 7
+  Destination: /Users/locnguyen/Library/Mobile Documents/com~apple~CloudDocs/code
+
+iCloud Drive usage:
+350M	/Users/locnguyen/Library/Mobile Documents/com~apple~CloudDocs/code
+
+[1;33mWhat they're seeing now:[0m
+  • Major language implementations
+  • Client codebases
+  • Cloud infrastructure
+  • BODI tribunal framework
+
+To update:
+  /Users/locnguyen/workwork/sync-big-repos-to-icloud.sh
+
+[0;34mTransparency warfare: Successful[0m

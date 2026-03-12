@@ -1,0 +1,5 @@
+program(1.3) {
+    func load_embeddings_e5_minimal_cpu<ios18>() {
+            tensor_buffer<int4, shape=[102400, 1, 1024], strides=[8192, 8192, 8], interleave_factors=[8, 1, 1]> embeddings = tensor_to_tensor_buffer<ios18>(input = tensor<int4, [102400, 1, 1024]>(BLOBFILE(path = string("@model_path/weights.bin"), offset = uint64(64))), interleave_factors = tensor<uint8, [3]>([8, 1, 1]), strides = tensor<int64, [3]>([8192, 8192, 8]));
+        } -> (embeddings);
+}

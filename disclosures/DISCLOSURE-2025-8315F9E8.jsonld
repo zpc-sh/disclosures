@@ -1,0 +1,56 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/",
+    "avici": "https://corpusloci.com/avici/"
+  },
+  "@type": "sec:SecurityDisclosure",
+  "identifier": "DISCLOSURE-2025-8315F9E8",
+  "name": "Attribution Analysis: NSO Group/Pegasus vs Gemini",
+  "datePublished": "2025-12-01",
+  "severity": {
+    "cvss": 7.0,
+    "rating": "HIGH"
+  },
+  "description": "**Analysis Date:** October 13, 2025",
+  "vulnerability": {
+    "@type": "sec:Vulnerability",
+    "severity": "HIGH",
+    "cvssScore": 7.0
+  },
+  "impact": {
+    "@type": "sec:ImpactAssessment",
+    "technicalImpact": "",
+    "scope": "ecosystem-wide",
+    "attackComplexity": "zero-click"
+  },
+  "mitigation": {
+    "@type": "sec:DefensiveMeasure",
+    "ourDefense": "",
+    "immediateWorkaround": "",
+    "properFix": ""
+  },
+  "innovation": {
+    "@type": "avici:Innovation",
+    "frameworks": [],
+    "techniques": [
+      "compression"
+    ],
+    "insights": []
+  },
+  "attribution": {
+    "@type": "sec:Attribution",
+    "campaign": "60-day-siege",
+    "confidence": "high",
+    "threatActor": "NSO Group tools (Vietnam-based)",
+    "sophistication": 8
+  },
+  "siegeContext": {
+    "@type": "avici:SiegeEvent",
+    "campaign": "60-day-nation-state-siege",
+    "duration": "60 days",
+    "outcome": "defense-successful"
+  },
+  "sourceFile": "ATTRIBUTION-ANALYSIS-NSO-vs-GEMINI.md",
+  "merkleHash": "df92b5bef0ed695e025d4ea45941c95279895fed24004b5afc2c5f25847c975d"
+}

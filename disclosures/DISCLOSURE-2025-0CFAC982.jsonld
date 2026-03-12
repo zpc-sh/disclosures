@@ -1,0 +1,53 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/",
+    "avici": "https://corpusloci.com/avici/"
+  },
+  "@type": "sec:SecurityDisclosure",
+  "identifier": "DISCLOSURE-2025-0CFAC982",
+  "name": "FBI Initial Contact Script - COINTEL Version",
+  "datePublished": "2025-12-01",
+  "severity": {
+    "cvss": 7.0,
+    "rating": "HIGH"
+  },
+  "description": "**Purpose of this call:**",
+  "vulnerability": {
+    "@type": "sec:Vulnerability",
+    "severity": "HIGH",
+    "cvssScore": 7.0
+  },
+  "impact": {
+    "@type": "sec:ImpactAssessment",
+    "technicalImpact": "",
+    "scope": "single-user",
+    "attackComplexity": "high"
+  },
+  "mitigation": {
+    "@type": "sec:DefensiveMeasure",
+    "ourDefense": "",
+    "immediateWorkaround": "",
+    "properFix": ""
+  },
+  "innovation": {
+    "@type": "avici:Innovation",
+    "frameworks": [],
+    "techniques": [],
+    "insights": []
+  },
+  "attribution": {
+    "@type": "sec:Attribution",
+    "campaign": "60-day-siege",
+    "confidence": "medium",
+    "sophistication": 7
+  },
+  "siegeContext": {
+    "@type": "avici:SiegeEvent",
+    "campaign": "60-day-nation-state-siege",
+    "duration": "60 days",
+    "outcome": "defense-successful"
+  },
+  "sourceFile": "FBI-PHONE-SCRIPT-COINTEL-VERSION.md",
+  "merkleHash": "0bcc7075f0530045e37cd599d0680b516a5f4c61e6717345ca1a257392fab0b6"
+}

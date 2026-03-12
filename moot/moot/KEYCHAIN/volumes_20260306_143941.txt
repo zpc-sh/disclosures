@@ -1,0 +1,85 @@
+=== KEYCHAIN SCAN — Fri Mar  6 14:39:41 PST 2026 ===
+
+--- Current user keychains ---
+    "/Users/locnguyen/Library/Keychains/login.keychain-db"
+    "/Library/Keychains/System.keychain"
+
+--- Default keychain ---
+    "/Users/locnguyen/Library/Keychains/login.keychain-db"
+
+--- Login keychain path ---
+~/Library/Keychains/ = /Users/locnguyen/Library/Keychains/
+total 328
+drwxr-xr-x   5 locnguyen  staff     160 Mar  6 14:38 .
+drwx------+ 86 locnguyen  staff    2752 Mar  6 13:17 ..
+-r--r--r--   1 locnguyen  staff       0 Dec 10 04:27 .fl34AC2A0A
+drwx------  12 locnguyen  staff     384 Mar  6 13:42 B266B371-EBD4-5E3E-A5C6-83988D8F6DFB
+-rw-r--r--@  1 locnguyen  staff  166224 Mar  6 14:38 login.keychain-db
+
+--- System keychain ---
+total 6616
+drwxr-xr-x   9 root  wheel      288 Mar  6 13:45 .
+drwxr-xr-x  67 root  wheel     2144 Mar  6 12:56 ..
+-r--r--r--@  1 root  wheel        0 Dec 10 04:26 .fl043D1EDD
+-r--r--r--   1 root  wheel        0 Dec 10 04:26 .fl947E1BDB
+-rw-r--r--   1 root  wheel    72680 Mar  6 13:45 System.keychain
+-rw-r--r--@  1 root  wheel    82612 Mar  6 12:38 apsd.keychain
+-rw-------   1 root  wheel     4096 Dec 10 04:26 system-keychain-2.db
+-rw-------   1 root  wheel    32768 Mar  6 13:42 system-keychain-2.db-shm
+-rw-------   1 root  wheel  2327832 Dec 10 04:27 system-keychain-2.db-wal
+
+--- All mounted volumes — keychain search ---
+  FOUND: /Volumes/Store/SECUREKTRUST/Deleted or lost/SECUREPKITRUSTSTOREASSETS_SECUREPKITRUSTSTORE_Cryptex.dmg/SystemRootCertificates.keychain
+-rwxrwxrwx@ 1 locnguyen  staff  337580 Jul  1  2024 /Volumes/Store/SECUREKTRUST/Deleted or lost/SECUREPKITRUSTSTOREASSETS_SECUREPKITRUSTSTORE_Cryptex.dmg/SystemRootCertificates.keychain
+  FOUND: /Volumes/Store/SECUREKTRUST/Reconstructed/Documents/keychain/file000000.keychain
+-rw-r--r--@ 1 locnguyen  staff  337580 Mar  6 13:50 /Volumes/Store/SECUREKTRUST/Reconstructed/Documents/keychain/file000000.keychain
+  FOUND: /Volumes/Store/mba_bk/Existing/Data/Library/Keychains/System.keychain
+-rw-r--r--  1 locnguyen  staff  85236 Mar  2 13:24 /Volumes/Store/mba_bk/Existing/Data/Library/Keychains/System.keychain
+  FOUND: /Volumes/Store/mba_bk/Existing/Data/Library/Keychains/apsd.keychain
+-rw-r--r--@ 1 locnguyen  staff  106872 Mar  2 18:37 /Volumes/Store/mba_bk/Existing/Data/Library/Keychains/apsd.keychain
+  FOUND: /Volumes/Store/mba_bk/Existing/Data/private/var/db/com.apple.almigration.keychain
+-rw-r--r--  1 locnguyen  staff  27168 Feb 28 05:36 /Volumes/Store/mba_bk/Existing/Data/private/var/db/com.apple.almigration.keychain
+  FOUND: /Volumes/Store/mba_bk/Existing/Data/private/var/db/ConfigurationProfiles/Store/MCXPrivate.keychain
+-rw-r--r--  1 locnguyen  staff  20460 Feb 28 05:35 /Volumes/Store/mba_bk/Existing/Data/private/var/db/ConfigurationProfiles/Store/MCXPrivate.keychain
+  FOUND: /Volumes/Store/mba_bk/Existing/Data/Users/locnguyen/Library/Keychains/login.keychain-db
+-rw-r--r--@ 1 locnguyen  staff  227416 Mar  2 18:37 /Volumes/Store/mba_bk/Existing/Data/Users/locnguyen/Library/Keychains/login.keychain-db
+  FOUND: /Volumes/Store/mba_bk/Existing/Data/Users/locnguyen/Library/Keychains/metadata.keychain-db
+-rw-------  1 locnguyen  staff  23816 Feb 28 19:19 /Volumes/Store/mba_bk/Existing/Data/Users/locnguyen/Library/Keychains/metadata.keychain-db
+
+--- All diskutil list ---
+/dev/disk0 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *500.3 GB   disk0
+   1:             Apple_APFS_ISC Container disk1         524.3 MB   disk0s1
+   2:                 Apple_APFS Container disk3         494.4 GB   disk0s2
+   3:        Apple_APFS_Recovery Container disk2         5.4 GB     disk0s3
+
+/dev/disk3 (synthesized):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      APFS Container Scheme -                      +494.4 GB   disk3
+                                 Physical Store disk0s2
+   1:                APFS Volume Macintosh HD            11.2 GB    disk3s1
+   2:                APFS Volume Preboot                 6.3 GB     disk3s2
+   3:                APFS Volume Recovery                1.1 GB     disk3s3
+   4:                APFS Volume Data                    308.5 GB   disk3s5
+   5:                APFS Volume VM                      20.5 KB    disk3s6
+
+/dev/disk4 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *2.0 TB     disk4
+   1:                        EFI EFI                     209.7 MB   disk4s1
+   2:                 Apple_APFS Container disk5         2.0 TB     disk4s2
+
+/dev/disk5 (synthesized):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      APFS Container Scheme -                      +2.0 TB     disk5
+                                 Physical Store disk4s2
+   1:                APFS Volume Macintosh HD            12.2 GB    disk5s1
+   2:              APFS Snapshot com.apple.os.update-... 12.2 GB    disk5s1s1
+   3:                APFS Volume Store                   582.9 GB   disk5s2
+   4:                APFS Volume Macintosh HD - Data     139.0 GB   disk5s3
+   5:                APFS Volume Preboot                 8.1 GB     disk5s5
+   6:                APFS Volume Recovery                1.2 GB     disk5s6
+   7:                APFS Volume VM                      20.5 KB    disk5s7
+   8:                APFS Volume Time                    1.1 MB     disk5s8
+

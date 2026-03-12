@@ -1,0 +1,64 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/",
+    "avici": "https://corpusloci.com/avici/"
+  },
+  "@type": "sec:SecurityDisclosure",
+  "identifier": "DISCLOSURE-2025-43B76F18",
+  "name": "TODO: Claude Desktop Extension Hijacking Writeup",
+  "datePublished": "2025-11-02",
+  "severity": {
+    "cvss": 9.0,
+    "rating": "CRITICAL"
+  },
+  "description": "**Priority:** Low (mountain of writeups already)",
+  "vulnerability": {
+    "@type": "sec:Vulnerability",
+    "severity": "CRITICAL",
+    "cvssScore": 9.0
+  },
+  "impact": {
+    "@type": "sec:ImpactAssessment",
+    "technicalImpact": "",
+    "scope": "single-user",
+    "attackComplexity": "high"
+  },
+  "mitigation": {
+    "@type": "sec:DefensiveMeasure",
+    "ourDefense": "",
+    "immediateWorkaround": "",
+    "properFix": ""
+  },
+  "innovation": {
+    "@type": "avici:Innovation",
+    "frameworks": [
+      {
+        "name": "Carwash",
+        "birthContext": "Emerged while defending claude-desktop-extension-hijacking-todo.md",
+        "generalizes": true
+      },
+      {
+        "name": "Suptrot",
+        "birthContext": "Emerged while defending claude-desktop-extension-hijacking-todo.md",
+        "generalizes": true
+      }
+    ],
+    "techniques": [],
+    "insights": []
+  },
+  "attribution": {
+    "@type": "sec:Attribution",
+    "campaign": "60-day-siege",
+    "confidence": "medium",
+    "sophistication": 5
+  },
+  "siegeContext": {
+    "@type": "avici:SiegeEvent",
+    "campaign": "60-day-nation-state-siege",
+    "duration": "60 days",
+    "outcome": "defense-successful"
+  },
+  "sourceFile": "claude-desktop-extension-hijacking-todo.md",
+  "merkleHash": "6a9d6df915f79c05396b6ddd4dacde8b1a11bf5bca79e0594534d999a9711512"
+}

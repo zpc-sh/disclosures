@@ -1,0 +1,5 @@
+{
+  "uuid" : "0d8a86d4-7122-4c2f-bd68-87f2de572a67",
+  "serverErrorCode" : "AUTHENTICATION_FAILED",
+  "reason" : "no auth method found"
+}

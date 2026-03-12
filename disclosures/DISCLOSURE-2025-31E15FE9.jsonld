@@ -1,0 +1,53 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/",
+    "avici": "https://corpusloci.com/avici/"
+  },
+  "@type": "sec:SecurityDisclosure",
+  "identifier": "DISCLOSURE-2025-31E15FE9",
+  "name": "The Running Man vs. Gemini AI - Social Media Blast Strategy",
+  "datePublished": "2025-12-01",
+  "severity": {
+    "cvss": 3.0,
+    "rating": "LOW"
+  },
+  "description": "**Why it works:**",
+  "vulnerability": {
+    "@type": "sec:Vulnerability",
+    "severity": "LOW",
+    "cvssScore": 3.0
+  },
+  "impact": {
+    "@type": "sec:ImpactAssessment",
+    "technicalImpact": "",
+    "scope": "single-user",
+    "attackComplexity": "high"
+  },
+  "mitigation": {
+    "@type": "sec:DefensiveMeasure",
+    "ourDefense": "",
+    "immediateWorkaround": "",
+    "properFix": ""
+  },
+  "innovation": {
+    "@type": "avici:Innovation",
+    "frameworks": [],
+    "techniques": [],
+    "insights": []
+  },
+  "attribution": {
+    "@type": "sec:Attribution",
+    "campaign": "60-day-siege",
+    "confidence": "medium",
+    "sophistication": 5
+  },
+  "siegeContext": {
+    "@type": "avici:SiegeEvent",
+    "campaign": "60-day-nation-state-siege",
+    "duration": "60 days",
+    "outcome": "defense-successful"
+  },
+  "sourceFile": "SOCIAL-MEDIA-BLAST-STRATEGY.md",
+  "merkleHash": "3ded32fc39a7881930f6e71e80f752b9136c150026b08497cd510d884f4dba07"
+}

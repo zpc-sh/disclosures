@@ -1,0 +1,53 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/",
+    "avici": "https://corpusloci.com/avici/"
+  },
+  "@type": "sec:SecurityDisclosure",
+  "identifier": "DISCLOSURE-2025-34047305",
+  "name": "Quick Reference for Opus - Apple Portal Form",
+  "datePublished": "2025-12-01",
+  "severity": {
+    "cvss": 3.0,
+    "rating": "LOW"
+  },
+  "description": "**Submission Document:** `/Users/locnguyen/workwork/deliver/APPLE-PORTAL-SUBMISSION.md`",
+  "vulnerability": {
+    "@type": "sec:Vulnerability",
+    "severity": "LOW",
+    "cvssScore": 3.0
+  },
+  "impact": {
+    "@type": "sec:ImpactAssessment",
+    "technicalImpact": "",
+    "scope": "ecosystem-wide",
+    "attackComplexity": "zero-click"
+  },
+  "mitigation": {
+    "@type": "sec:DefensiveMeasure",
+    "ourDefense": "",
+    "immediateWorkaround": "",
+    "properFix": ""
+  },
+  "innovation": {
+    "@type": "avici:Innovation",
+    "frameworks": [],
+    "techniques": [],
+    "insights": []
+  },
+  "attribution": {
+    "@type": "sec:Attribution",
+    "campaign": "60-day-siege",
+    "confidence": "medium",
+    "sophistication": 8
+  },
+  "siegeContext": {
+    "@type": "avici:SiegeEvent",
+    "campaign": "60-day-nation-state-siege",
+    "duration": "60 days",
+    "outcome": "defense-successful"
+  },
+  "sourceFile": "QUICK-REFERENCE-FOR-OPUS.md",
+  "merkleHash": "ddebbe62344471a2c2d9e6ad407c40e257298aa5fc33d0285c56c0d597343a63"
+}

@@ -1,0 +1,121 @@
+=== Hexdump: ; ===
+01 02 00 17 BB 66 CC 13 CA 45 AE 
+
+=== Hexdump: {} ===
+01 02 00 17 BB 66 CC 13 CA 45 AE 
+
+=== Hexdump: ~ ===
+01 02 00 17 BB 66 CC 13 CA 45 AE 
+
+=== Hexdump: *.png ===
+01 02 00 17 BB 66 CC 13 CA 45 AE 
+
+=== Hexdump: find ===
+01 02 00 17 BB 66 CC 13 CA 45 AE 
+
+=== Hexdump: ls ===
+01 02 00 17 BB 66 CC 13 CA 45 AE 
+
+=== Hexdump: cp ===
+01 02 00 17 BB 66 CC 13 CA 45 AE 
+
+=== Hexdump: -7 ===
+
+
+usage: xattr [-l] [-r] [-s] [-v] [-x] file [file ...]
+       xattr -p [-l] [-r] [-s] [-v] [-x] attr_name file [file ...]
+       xattr -w [-r] [-s] [-x] attr_name attr_value file [file ...]
+       xattr -d [-r] [-s] attr_name file [file ...]
+       xattr -c [-r] [-s] file [file ...]
+
+The first form lists the names of all xattrs on the given file(s).
+The second form (-p) prints the value of the xattr attr_name.
+The third form (-w) sets the value of the xattr attr_name to the string attr_value.
+The fourth form (-d) deletes the xattr attr_name.
+The fifth form (-c) deletes (clears) all xattrs.
+
+options:
+  -h: print this help
+  -l: print long format (attr_name: attr_value and hex output has offsets and
+      ascii representation)
+  -r: act recursively
+  -s: act on the symbolic link itself rather than what the link points to
+  -v: also print filename (automatic with -r and with multiple files)
+  -x: attr_value is represented as a hex string for input and output
+No xattr or error
+
+=== Hexdump: -exec ===
+
+
+usage: xattr [-l] [-r] [-s] [-v] [-x] file [file ...]
+       xattr -p [-l] [-r] [-s] [-v] [-x] attr_name file [file ...]
+       xattr -w [-r] [-s] [-x] attr_name attr_value file [file ...]
+       xattr -d [-r] [-s] attr_name file [file ...]
+       xattr -c [-r] [-s] file [file ...]
+
+The first form lists the names of all xattrs on the given file(s).
+The second form (-p) prints the value of the xattr attr_name.
+The third form (-w) sets the value of the xattr attr_name to the string attr_value.
+The fourth form (-d) deletes the xattr attr_name.
+The fifth form (-c) deletes (clears) all xattrs.
+
+options:
+  -h: print this help
+  -l: print long format (attr_name: attr_value and hex output has offsets and
+      ascii representation)
+  -r: act recursively
+  -s: act on the symbolic link itself rather than what the link points to
+  -v: also print filename (automatic with -r and with multiple files)
+  -x: attr_value is represented as a hex string for input and output
+No xattr or error
+
+=== Hexdump: -name ===
+
+
+usage: xattr [-l] [-r] [-s] [-v] [-x] file [file ...]
+       xattr -p [-l] [-r] [-s] [-v] [-x] attr_name file [file ...]
+       xattr -w [-r] [-s] [-x] attr_name attr_value file [file ...]
+       xattr -d [-r] [-s] attr_name file [file ...]
+       xattr -c [-r] [-s] file [file ...]
+
+The first form lists the names of all xattrs on the given file(s).
+The second form (-p) prints the value of the xattr attr_name.
+The third form (-w) sets the value of the xattr attr_name to the string attr_value.
+The fourth form (-d) deletes the xattr attr_name.
+The fifth form (-c) deletes (clears) all xattrs.
+
+options:
+  -h: print this help
+  -l: print long format (attr_name: attr_value and hex output has offsets and
+      ascii representation)
+  -r: act recursively
+  -s: act on the symbolic link itself rather than what the link points to
+  -v: also print filename (automatic with -r and with multiple files)
+  -x: attr_value is represented as a hex string for input and output
+No xattr or error
+
+=== Hexdump: -mtime ===
+
+
+usage: xattr [-l] [-r] [-s] [-v] [-x] file [file ...]
+       xattr -p [-l] [-r] [-s] [-v] [-x] attr_name file [file ...]
+       xattr -w [-r] [-s] [-x] attr_name attr_value file [file ...]
+       xattr -d [-r] [-s] attr_name file [file ...]
+       xattr -c [-r] [-s] file [file ...]
+
+The first form lists the names of all xattrs on the given file(s).
+The second form (-p) prints the value of the xattr attr_name.
+The third form (-w) sets the value of the xattr attr_name to the string attr_value.
+The fourth form (-d) deletes the xattr attr_name.
+The fifth form (-c) deletes (clears) all xattrs.
+
+options:
+  -h: print this help
+  -l: print long format (attr_name: attr_value and hex output has offsets and
+      ascii representation)
+  -r: act recursively
+  -s: act on the symbolic link itself rather than what the link points to
+  -v: also print filename (automatic with -r and with multiple files)
+  -x: attr_value is represented as a hex string for input and output
+No xattr or error
+

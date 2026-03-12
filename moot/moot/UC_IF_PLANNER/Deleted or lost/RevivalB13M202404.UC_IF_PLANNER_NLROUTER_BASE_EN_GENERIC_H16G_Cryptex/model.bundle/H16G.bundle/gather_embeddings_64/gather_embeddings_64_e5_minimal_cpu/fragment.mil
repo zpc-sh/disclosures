@@ -1,0 +1,8 @@
+program(1.3) {
+    func gather_embeddings_64_e5_minimal_cpu<ios18>(tensor_buffer<int4, shape=[102400, 1, 1024], strides=[8192, 8192, 8], interleave_factors=[8, 1, 1]> in_embeddings, tensor<int32, [1, 64], [alignments = tensor<uint64, [2]>([1, 1])]> in_new_token_ids) {
+            tensor<int32, [64, 1]> transpose_22 = transpose(perm = tensor<int32, [2]>([1, 0]), x = in_new_token_ids)[groupId = dict<uint32, uint64>({{9, 0}}), milId = uint64(22437)];
+            tensor<int4, [102400, 1, 1024]> in_embeddings_data3 = tensor_buffer_to_tensor(input = in_embeddings)[groupId = dict<uint32, uint64>({{9, 0}}), milId = uint64(22438)];
+            tensor<int4, [64, 1, 1024]> gather_nd_7 = gather_nd(batch_dims = int32(0), indices = transpose_22, validate_indices = bool(false), x = in_embeddings_data3)[groupId = dict<uint32, uint64>({{9, 0}}), milId = uint64(22439)];
+            tensor<fp16, [64, 1, 1024], [alignments = tensor<uint64, [3]>([1, 1, 1])]> dequant_4_e5_minimal_cpu = dequantize(input = gather_nd_7, scale = fp16(0x1p+0), zero_point = int4(0))[groupId = dict<uint32, uint64>({{9, 0}}), milId = uint64(22440)];
+        } -> (dequant_4_e5_minimal_cpu);
+}

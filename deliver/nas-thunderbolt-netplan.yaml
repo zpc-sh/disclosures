@@ -1,0 +1,23 @@
+# Netplan configuration for Thunderbolt network
+# File: /etc/netplan/99-thunderbolt.yaml
+# Purpose: Persistent Thunderbolt network to Mac Mini
+
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    # Thunderbolt interface - may be named:
+    # - thunderbolt0
+    # - enp0s13f0u1
+    # - usb0
+    # Run 'ip link' to find exact name
+    thunderbolt0:
+      dhcp4: no
+      dhcp6: no
+      addresses:
+        - 169.254.1.2/16
+      # Optional: Add route to Mac Mini explicitly
+      routes:
+        - to: 169.254.1.1/32
+          via: 0.0.0.0
+          scope: link

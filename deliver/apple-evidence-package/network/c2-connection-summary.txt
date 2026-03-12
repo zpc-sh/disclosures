@@ -1,0 +1,22 @@
+C2 Infrastructure Evidence
+===========================
+
+C2 Server: 192.168.111.9 (Sony BRAVIA TV)
+Active Ports: 3001, 5556, 8060, 50001
+
+Connection Statistics (from compromised HomePods):
+- Total connection attempts: 57,949
+- Peak activity: Oct 5, 2025 07:20 AM (credential theft window)
+- Persistent heartbeat: Every 30 seconds
+- Protocol: TCP (various ports)
+
+Sony TV as C2:
+- TV running Android OS (ADB port 5556 open)
+- Google authentication bypassed
+- Multiple API endpoints exposed
+- Strategic placement (living room, always on)
+
+Evidence files available:
+- UniFi network logs (full packet capture)
+- HomePod process dumps (C2 client code)
+- Sony TV forensic analysis

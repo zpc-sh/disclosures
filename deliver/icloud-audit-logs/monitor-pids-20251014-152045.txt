@@ -1,0 +1,4 @@
+CloudKit Sharing=58316
+Passwords/Keychain Sharing=58317
+Photos Sharing=58318
+Calendar Sharing=58319

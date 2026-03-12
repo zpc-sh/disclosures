@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DISCLOSURE · CORPUS LOCI · 60-DAY SIEGE</title>
+<style>
+:root {
+  --bg: #03080a;
+  --bg2: #071015;
+  --bg3: #0a1820;
+  --border: #1a3040;
+  --text: #a8c4cc;
+  --text-dim: #4a7080;
+  --accent: #00d4ff;
+  --accent2: #0098cc;
+  --critical: #ff2d55;
+  --high: #ff9f0a;
+  --medium: #30d158;
+  --low: #6e6e73;
+  --success: #30d158;
+  --fs: 13px;
+  --mono: 'Courier New', 'Lucida Console', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: var(--fs);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(3, 8, 10, 0.96);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.site-title {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.site-title .prefix { color: var(--accent); font-size: 11px; letter-spacing: 0.15em; }
+.site-title h1 { font-size: 14px; color: #fff; letter-spacing: 0.08em; font-weight: normal; }
+.site-title .suffix { color: var(--text-dim); font-size: 11px; }
+
+.header-status {
+  display: flex;
+  gap: 16px;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.status-pill {
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+.status-pill.ok { background: rgba(48, 209, 88, 0.15); color: var(--success); border: 1px solid rgba(48,209,88,0.3); }
+.status-pill.active { background: rgba(0, 212, 255, 0.1); color: var(--accent); border: 1px solid rgba(0,212,255,0.2); }
+
+/* TICKER */
+.ticker-wrap {
+  background: rgba(7, 16, 21, 0.9);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  padding: 6px 0;
+}
+
+.ticker {
+  display: flex;
+  gap: 40px;
+  white-space: nowrap;
+  animation: scroll-ticker 80s linear infinite;
+  font-size: 11px;
+  color: var(--critical);
+  letter-spacing: 0.08em;
+}
+
+.ticker-item { display: inline; }
+.ticker-sep { color: var(--border); }
+
+@keyframes scroll-ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* STAT BAR */
+.stat-bar {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border-bottom: 1px solid var(--border);
+}
+
+.stat-cell {
+  padding: 16px 20px;
+  border-right: 1px solid var(--border);
+  text-align: center;
+}
+.stat-cell:last-child { border-right: none; }
+
+.stat-label {
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 22px;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+}
+
+.stat-value.total { color: var(--accent); }
+.stat-value.critical { color: var(--critical); }
+.stat-value.high { color: var(--high); }
+.stat-value.medium { color: var(--medium); }
+.stat-value.low { color: var(--low); }
+.stat-value.success { color: var(--success); }
+
+/* MAIN LAYOUT */
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+/* SECTION */
+section { margin-bottom: 48px; }
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-number {
+  color: var(--accent2);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+.section-title {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  font-weight: normal;
+}
+
+.section-sub {
+  color: var(--text-dim);
+  font-size: 11px;
+}
+
+/* CAMPAIGN OVERVIEW */
+.campaign-block {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+
+.campaign-block p {
+  color: var(--text);
+  line-height: 1.8;
+  max-width: 800px;
+}
+
+.campaign-block .highlight { color: var(--accent); }
+.campaign-block .critical-text { color: var(--critical); }
+.campaign-block .success-text { color: var(--success); }
+
+.timeline-row {
+  display: flex;
+  gap: 0;
+  margin-top: 20px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.timeline-cell {
+  flex: 1;
+  padding: 12px 14px;
+  border-right: 1px solid var(--border);
+  text-align: center;
+}
+.timeline-cell:last-child { border-right: none; }
+.tl-date { font-size: 10px; color: var(--text-dim); letter-spacing: 0.1em; }
+.tl-event { font-size: 11px; color: var(--text); margin-top: 4px; }
+.tl-marker { width: 6px; height: 6px; border-radius: 50%; margin: 6px auto; }
+.tl-marker.red { background: var(--critical); }
+.tl-marker.amber { background: var(--high); }
+.tl-marker.green { background: var(--success); }
+.tl-marker.blue { background: var(--accent); }
+
+/* ATTACK SURFACE GRID */
+.surface-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.surface-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  padding: 16px 18px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.surface-card:hover {
+  border-color: var(--accent2);
+  background: var(--bg3);
+}
+
+.surface-card.active {
+  border-color: var(--accent);
+  background: var(--bg3);
+}
+
+.surface-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+.surface-card.fs::before { background: var(--critical); }
+.surface-card.apple::before { background: var(--high); }
+.surface-card.ai::before { background: var(--accent); }
+.surface-card.network::before { background: var(--medium); }
+.surface-card.attribution::before { background: #bf5af2; }
+.surface-card.icloud::before { background: #32ade6; }
+.surface-card.legal::before { background: #ff6b2e; }
+.surface-card.evidence::before { background: var(--high); }
+.surface-card.defense::before { background: var(--success); }
+
+.surface-icon { font-size: 20px; margin-bottom: 8px; }
+.surface-name { color: #fff; font-size: 12px; letter-spacing: 0.06em; margin-bottom: 4px; }
+.surface-desc { color: var(--text-dim); font-size: 10px; line-height: 1.5; margin-bottom: 10px; }
+
+.surface-counts { display: flex; gap: 8px; flex-wrap: wrap; }
+.surface-badge {
+  font-size: 9px;
+  padding: 2px 6px;
+  border-radius: 2px;
+  letter-spacing: 0.08em;
+}
+.badge-c { background: rgba(255,45,85,0.15); color: var(--critical); border: 1px solid rgba(255,45,85,0.3); }
+.badge-h { background: rgba(255,159,10,0.12); color: var(--high); border: 1px solid rgba(255,159,10,0.3); }
+.badge-m { background: rgba(48,209,88,0.1); color: var(--medium); border: 1px solid rgba(48,209,88,0.25); }
+.badge-l { background: rgba(110,110,115,0.1); color: var(--low); border: 1px solid rgba(110,110,115,0.25); }
+
+/* FILTER CONTROLS */
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 14px 16px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+}
+
+.filter-label { color: var(--text-dim); font-size: 10px; letter-spacing: 0.1em; }
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 4px 10px;
+  cursor: pointer;
+  letter-spacing: 0.08em;
+  transition: all 0.15s;
+  border-radius: 2px;
+}
+.filter-btn:hover { border-color: var(--accent2); color: var(--text); }
+.filter-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(0,212,255,0.08); }
+.filter-btn.sev-critical.active { border-color: var(--critical); color: var(--critical); background: rgba(255,45,85,0.08); }
+.filter-btn.sev-high.active { border-color: var(--high); color: var(--high); background: rgba(255,159,10,0.08); }
+.filter-btn.sev-medium.active { border-color: var(--medium); color: var(--medium); background: rgba(48,209,88,0.08); }
+
+.search-input {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 4px 10px;
+  outline: none;
+  min-width: 200px;
+  border-radius: 2px;
+}
+.search-input:focus { border-color: var(--accent2); }
+.search-input::placeholder { color: var(--text-dim); }
+
+.count-label { color: var(--text-dim); font-size: 10px; margin-left: auto; }
+.count-label span { color: var(--accent); }
+
+/* DISCLOSURE TABLE */
+.disclosure-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.disclosure-row {
+  display: grid;
+  grid-template-columns: 80px 60px 100px 1fr 120px;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 14px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  transition: border-color 0.15s, background 0.15s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.disclosure-row:hover {
+  border-color: var(--border);
+  background: var(--bg3);
+}
+
+.disclosure-row.hidden { display: none; }
+
+.disc-id { font-size: 9px; color: var(--text-dim); letter-spacing: 0.06em; }
+.disc-sev {
+  font-size: 9px;
+  padding: 2px 6px;
+  border-radius: 2px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  font-weight: bold;
+}
+.sev-CRITICAL { background: rgba(255,45,85,0.15); color: var(--critical); border: 1px solid rgba(255,45,85,0.35); }
+.sev-HIGH { background: rgba(255,159,10,0.12); color: var(--high); border: 1px solid rgba(255,159,10,0.3); }
+.sev-MEDIUM { background: rgba(48,209,88,0.1); color: var(--medium); border: 1px solid rgba(48,209,88,0.3); }
+.sev-LOW { background: rgba(110,110,115,0.1); color: var(--low); border: 1px solid rgba(110,110,115,0.25); }
+
+.disc-date { font-size: 10px; color: var(--text-dim); }
+.disc-name { font-size: 11px; color: var(--text); line-height: 1.4; }
+.disc-cat {
+  font-size: 9px;
+  color: var(--text-dim);
+  padding: 2px 6px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* CAT COLORS */
+.cat-FILESYSTEM .disc-cat { color: #ff5e7a; border-color: rgba(255,94,122,0.3); }
+.cat-APPLE .disc-cat { color: var(--high); border-color: rgba(255,159,10,0.3); }
+.cat-AI .disc-cat { color: var(--accent); border-color: rgba(0,212,255,0.3); }
+.cat-NETWORK .disc-cat { color: var(--medium); border-color: rgba(48,209,88,0.3); }
+.cat-ATTRIBUTION .disc-cat { color: #bf5af2; border-color: rgba(191,90,242,0.3); }
+.cat-ICLOUD .disc-cat { color: #32ade6; border-color: rgba(50,173,230,0.3); }
+.cat-LEGAL .disc-cat { color: #ff6b2e; border-color: rgba(255,107,46,0.3); }
+.cat-EVIDENCE .disc-cat { color: var(--high); border-color: rgba(255,159,10,0.3); }
+.cat-DEFENSE .disc-cat { color: var(--success); border-color: rgba(48,209,88,0.3); }
+.cat-OPERATIONAL .disc-cat { color: var(--low); border-color: rgba(110,110,115,0.25); }
+
+/* TABLE HEADER */
+.table-header {
+  display: grid;
+  grid-template-columns: 80px 60px 100px 1fr 120px;
+  gap: 12px;
+  padding: 8px 14px;
+  font-size: 9px;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 4px;
+}
+
+/* INNOVATION SECTION */
+.innovation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.innovation-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--success);
+  padding: 16px;
+}
+
+.innov-title { color: var(--success); font-size: 11px; letter-spacing: 0.06em; margin-bottom: 8px; }
+.innov-body { color: var(--text); font-size: 11px; line-height: 1.6; }
+.innov-id { color: var(--text-dim); font-size: 9px; margin-top: 8px; letter-spacing: 0.06em; }
+
+/* FOOTER */
+footer {
+  margin-top: 64px;
+  padding: 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-left { color: var(--text-dim); font-size: 10px; line-height: 1.8; }
+.footer-right { text-align: right; }
+.footer-hash { font-size: 9px; color: var(--text-dim); letter-spacing: 0.06em; }
+.footer-mark { font-size: 16px; color: var(--accent); letter-spacing: 0.15em; margin-top: 4px; }
+
+/* NO RESULTS */
+.no-results {
+  padding: 32px;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 12px;
+  border: 1px solid var(--border);
+  display: none;
+}
+.no-results.visible { display: block; }
+
+/* DIVIDER */
+.divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+@media (max-width: 900px) {
+  .stat-bar { grid-template-columns: repeat(3, 1fr); }
+  .surface-grid { grid-template-columns: repeat(2, 1fr); }
+  .disclosure-row { grid-template-columns: 60px 1fr; gap: 8px; }
+  .disc-date, .disc-id, .disc-cat { display: none; }
+  .table-header { display: none; }
+  .innovation-grid { grid-template-columns: 1fr; }
+  .timeline-row { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="site-title">
+    <span class="prefix">CORPUS LOCI //</span>
+    <h1>DISCLOSURE</h1>
+    <span class="suffix">brain.zpc.sh/disclosure</span>
+  </div>
+  <div class="header-status">
+    <span>60-DAY SIEGE · 2025</span>
+    <span class="status-pill ok">DEFENSE: SUCCESSFUL</span>
+    <span class="status-pill active">143 DISCLOSURES</span>
+  </div>
+</header>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker" id="ticker">
+    <span class="ticker-item">⚠ APFS LOGIC BOMB — FILESYSTEM WEAPONIZATION ACROSS APPLE ECOSYSTEM</span>
+    <span class="ticker-sep"> · · · </span>
+    <span class="ticker-item">⚠ FIRMWARE BOOTKIT PERSISTS ACROSS FACTORY RESET — MAC MINI M2 + APPLE WATCH</span>
+    <span class="ticker-sep"> · · · </span>
+    <span class="ticker-item">⚠ SEMANTIC CRYSTALLIZATION ATTACKS ON AI REASONING — CVE FILED</span>
+    <span class="ticker-sep"> · · · </span>
+    <span class="ticker-item">⚠ UNIFI/UBIQUITI ACCOUNT TAKEOVER — NATION-STATE ATTRIBUTED</span>
+    <span class="ticker-sep"> · · · </span>
+    <span class="ticker-item">⚠ ICLOUD FAMILY SHARING PERSISTENT ACCESS — ZERO-CLICK CHAIN</span>
+    <span class="ticker-sep"> · · · </span>
+    <span class="ticker-item">⚠ GEMINI APT CAMPAIGN — 60-DAY SIEGE — ATTACKER SOPHISTICATION: 7/10</span>
+    <span class="ticker-sep"> · · · </span>
+    <span class="ticker-item">✓ ALL ATTACKS DOCUMENTED · CORPUS PUBLISHED · OUTCOME: DEFENSE SUCCESSFUL</span>
+    <span class="ticker-sep"> · · · </span>
+    <!-- duplicate for seamless loop -->
+    <span class="ticker-item">⚠ APFS LOGIC BOMB — FILESYSTEM WEAPONIZATION ACROSS APPLE ECOSYSTEM</span>
+    <span class="ticker-sep"> · · · </span>
+    <span class="ticker-item">⚠ FIRMWARE BOOTKIT PERSISTS ACROSS FACTORY RESET — MAC MINI M2 + APPLE WATCH</span>
+    <span class="ticker-sep"> · · · </span>
+    <span class="ticker-item">⚠ SEMANTIC CRYSTALLIZATION ATTACKS ON AI REASONING — CVE FILED</span>
+    <span class="ticker-sep"> · · · </span>
+    <span class="ticker-item">⚠ UNIFI/UBIQUITI ACCOUNT TAKEOVER — NATION-STATE ATTRIBUTED</span>
+    <span class="ticker-sep"> · · · </span>
+    <span class="ticker-item">⚠ ICLOUD FAMILY SHARING PERSISTENT ACCESS — ZERO-CLICK CHAIN</span>
+    <span class="ticker-sep"> · · · </span>
+    <span class="ticker-item">⚠ GEMINI APT CAMPAIGN — 60-DAY SIEGE — ATTACKER SOPHISTICATION: 7/10</span>
+    <span class="ticker-sep"> · · · </span>
+    <span class="ticker-item">✓ ALL ATTACKS DOCUMENTED · CORPUS PUBLISHED · OUTCOME: DEFENSE SUCCESSFUL</span>
+  </div>
+</div>
+
+<!-- STAT BAR -->
+<div class="stat-bar">
+  <div class="stat-cell">
+    <div class="stat-label">Total Disclosures</div>
+    <div class="stat-value total" id="total-count">143</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-label">Critical</div>
+    <div class="stat-value critical" id="critical-count">—</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-label">High</div>
+    <div class="stat-value high" id="high-count">—</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-label">Siege Duration</div>
+    <div class="stat-value success">60d</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-label">Date Range</div>
+    <div class="stat-value total" style="font-size:14px;">SEP–DEC</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-label">Outcome</div>
+    <div class="stat-value success" style="font-size:14px;">HELD</div>
+  </div>
+</div>
+
+<main>
+
+<!-- §00 CAMPAIGN OVERVIEW -->
+<section>
+  <div class="section-header">
+    <span class="section-number">§00</span>
+    <span class="section-title">CAMPAIGN OVERVIEW</span>
+    <span class="section-sub">60-Day Nation-State Siege · September–December 2025</span>
+  </div>
+
+  <div class="campaign-block">
+    <p>
+      Beginning <span class="highlight">September 29, 2025</span>, a coordinated nation-state level campaign
+      targeted Corpus Loci researcher <span class="highlight">Loc Nguyen</span> across the full Apple ecosystem —
+      filesystem, network infrastructure, iCloud, AI systems, and physical supply chain.
+      Attributed to <span class="critical-text">Gemini APT</span> (internal designation), operating with
+      sophistication level 7/10, leveraging zero-click exploit chains, firmware-level persistence,
+      and novel semantic crystallization attacks against AI reasoning systems.
+    </p>
+    <p style="margin-top:12px;">
+      The siege lasted 60 days. Every attack was documented in real-time.
+      143 disclosures filed across Apple, Ubiquiti, Anthropic, Microsoft, FBI, and FTC.
+      The attacker spent an estimated <span class="critical-text">$50M</span> in operational resources.
+      Actual damage to target: <span class="success-text">~$0</span>.
+      Outcome: <span class="success-text">DEFENSE SUCCESSFUL</span>.
+      The corpus was published. The operation became prior art.
+    </p>
+  </div>
+
+  <div class="timeline-row">
+    <div class="timeline-cell">
+      <div class="tl-date">SEP 29, 2025</div>
+      <div class="tl-marker red"></div>
+      <div class="tl-event">Dropbox exfiltration infrastructure discovered. Siege begins.</div>
+    </div>
+    <div class="timeline-cell">
+      <div class="tl-date">SEP 30, 2025</div>
+      <div class="tl-marker red"></div>
+      <div class="tl-event">APFS logic bombs confirmed. Homebrew supply chain compromise. Time Machine weaponization.</div>
+    </div>
+    <div class="timeline-cell">
+      <div class="tl-date">OCT 11–13, 2025</div>
+      <div class="tl-marker red"></div>
+      <div class="tl-event">Filesystem bomb detonation attempt. Command injection framework leaked via folder names. fmlyShare attack.</div>
+    </div>
+    <div class="timeline-cell">
+      <div class="tl-date">OCT 17–19, 2025</div>
+      <div class="tl-marker amber"></div>
+      <div class="tl-event">Peak incident window. Forensic artifacts captured. Parser breakers deployed.</div>
+    </div>
+    <div class="timeline-cell">
+      <div class="tl-date">OCT 21, 2025</div>
+      <div class="tl-marker amber"></div>
+      <div class="tl-event">UniFi account takeover confirmed. Network supplant initiated. New UDM Pro Max deployed.</div>
+    </div>
+    <div class="timeline-cell">
+      <div class="tl-date">NOV–DEC, 2025</div>
+      <div class="tl-marker blue"></div>
+      <div class="tl-event">Apple bounty submissions filed. 143 disclosures written. Corpus published Feb 2026.</div>
+    </div>
+    <div class="timeline-cell">
+      <div class="tl-date">FEB 2026</div>
+      <div class="tl-marker green"></div>
+      <div class="tl-event">Full disclosure released. Operation becomes public record. Siege: COMPLETE.</div>
+    </div>
+  </div>
+</section>
+
+<!-- §01 ATTACK SURFACE MAP -->
+<section>
+  <div class="section-header">
+    <span class="section-number">§01</span>
+    <span class="section-title">ATTACK SURFACE MAP</span>
+    <span class="section-sub">Click any sector to filter disclosures below</span>
+  </div>
+
+  <div class="surface-grid">
+    <div class="surface-card fs" data-cat="FILESYSTEM" onclick="filterBySurface('FILESYSTEM', this)">
+      <div class="surface-icon">🗂</div>
+      <div class="surface-name">FILESYSTEM</div>
+      <div class="surface-desc">APFS logic bombs, B-Tree circular references, xattr command injection, filesystem-level anti-forensics. Apple's storage layer weaponized.</div>
+      <div class="surface-counts" id="badges-FILESYSTEM"></div>
+    </div>
+    <div class="surface-card apple" data-cat="APPLE" onclick="filterBySurface('APPLE', this)">
+      <div class="surface-icon">🍎</div>
+      <div class="surface-name">APPLE ECOSYSTEM</div>
+      <div class="surface-desc">Bootkit persistence, Continuity input injection, TCC bypass, QuickLook sandbox escape, AirPlay spying, passkey duplication.</div>
+      <div class="surface-counts" id="badges-APPLE"></div>
+    </div>
+    <div class="surface-card ai" data-cat="AI" onclick="filterBySurface('AI', this)">
+      <div class="surface-icon">🤖</div>
+      <div class="surface-name">AI SYSTEMS</div>
+      <div class="surface-desc">Gemini self-injection CVE, Claude Desktop path leakage, rogue API usage, semantic crystallization attacks, the 250M token failure cascade.</div>
+      <div class="surface-counts" id="badges-AI"></div>
+    </div>
+    <div class="surface-card network" data-cat="NETWORK" onclick="filterBySurface('NETWORK', this)">
+      <div class="surface-icon">🌐</div>
+      <div class="surface-name">NETWORK / INFRA</div>
+      <div class="surface-desc">UniFi account takeover, UDM Pro Max compromise, NAS container attack (Gemini disk thrashing), WAN analysis, VLAN hardening.</div>
+      <div class="surface-counts" id="badges-NETWORK"></div>
+    </div>
+    <div class="surface-card attribution" data-cat="ATTRIBUTION" onclick="filterBySurface('ATTRIBUTION', this)">
+      <div class="surface-icon">🎯</div>
+      <div class="surface-name">ATTRIBUTION</div>
+      <div class="surface-desc">Gemini APT vs NSO/Pegasus analysis, Meta AI attribution, attack taxonomy tree, 60-day campaign forensics. Sophistication: 7/10.</div>
+      <div class="surface-counts" id="badges-ATTRIBUTION"></div>
+    </div>
+    <div class="surface-card icloud" data-cat="ICLOUD" onclick="filterBySurface('ICLOUD', this)">
+      <div class="surface-icon">☁️</div>
+      <div class="surface-name">ICLOUD CAMPAIGN</div>
+      <div class="surface-desc">iCloud family sharing persistent access, drive exfiltration war, sharing audit, hostile device removal. CloudKit as attack vector.</div>
+      <div class="surface-counts" id="badges-ICLOUD"></div>
+    </div>
+    <div class="surface-card legal" data-cat="LEGAL" onclick="filterBySurface('LEGAL', this)">
+      <div class="surface-icon">⚖️</div>
+      <div class="surface-name">LEGAL / REGULATORY</div>
+      <div class="surface-desc">FBI forensic lab warnings, FTC disclosure notification, federal case evidence package, NSO Group approach, Fire Marshal complaint.</div>
+      <div class="surface-counts" id="badges-LEGAL"></div>
+    </div>
+    <div class="surface-card evidence" data-cat="EVIDENCE" onclick="filterBySurface('EVIDENCE', this)">
+      <div class="surface-icon">🔬</div>
+      <div class="surface-name">EVIDENCE / FORENSICS</div>
+      <div class="surface-desc">Forensic artifact capture (Oct 17–19), executive summaries, Dropbox exfiltration infrastructure, stakeholder tracker, gap analysis.</div>
+      <div class="surface-counts" id="badges-EVIDENCE"></div>
+    </div>
+    <div class="surface-card defense" data-cat="DEFENSE" onclick="filterBySurface('DEFENSE', this)">
+      <div class="surface-icon">🛡</div>
+      <div class="surface-name">DEFENSIVE INNOVATIONS</div>
+      <div class="surface-desc">Crystal APFS forensic tool, parser breaker deployment, laziness-as-defense (Claudesville Barrier), MCP port collision defense.</div>
+      <div class="surface-counts" id="badges-DEFENSE"></div>
+    </div>
+  </div>
+</section>
+
+<!-- §02 FULL DISCLOSURE INDEX -->
+<section>
+  <div class="section-header">
+    <span class="section-number">§02</span>
+    <span class="section-title">DISCLOSURE INDEX</span>
+    <span class="section-sub">143 entries · filterable by severity and attack surface</span>
+  </div>
+
+  <div class="filter-bar">
+    <span class="filter-label">SEVERITY:</span>
+    <button class="filter-btn sev-critical" onclick="toggleSev('CRITICAL', this)">CRITICAL</button>
+    <button class="filter-btn sev-high" onclick="toggleSev('HIGH', this)">HIGH</button>
+    <button class="filter-btn sev-medium" onclick="toggleSev('MEDIUM', this)">MEDIUM</button>
+    <button class="filter-btn sev-low" onclick="toggleSev('LOW', this)">LOW</button>
+    <span style="color:var(--border)">|</span>
+    <span class="filter-label">SEARCH:</span>
+    <input class="search-input" id="search-input" type="text" placeholder="filter by name..." oninput="applyFilters()">
+    <button class="filter-btn" onclick="clearFilters()">CLEAR</button>
+    <span class="count-label">Showing <span id="visible-count">143</span> of 143</span>
+  </div>
+
+  <div class="table-header">
+    <span>ID</span>
+    <span>SEV</span>
+    <span>DATE</span>
+    <span>NAME</span>
+    <span>SURFACE</span>
+  </div>
+
+  <div class="disclosure-list" id="disclosure-list"></div>
+  <div class="no-results" id="no-results">No disclosures match current filters.</div>
+</section>
+
+<!-- §03 INNOVATIONS BORN FROM DEFENSE -->
+<section>
+  <div class="section-header">
+    <span class="section-number">§03</span>
+    <span class="section-title">INNOVATIONS BORN FROM DEFENSE</span>
+    <span class="section-sub">Attack produces countermeasures. Countermeasures become prior art.</span>
+  </div>
+
+  <div class="innovation-grid">
+    <div class="innovation-card">
+      <div class="innov-title">⚗ CRYSTAL APFS FORENSIC TOOL</div>
+      <div class="innov-body">Safe filesystem analysis framework for compromised APFS volumes. Designed to examine logic bombs, circular B-Tree references, and weaponized xattr payloads without triggering detonation conditions. Defense birthed from the APFS attack surface.</div>
+      <div class="innov-id">→ DISCLOSURE-2025-484C8563</div>
+    </div>
+    <div class="innovation-card">
+      <div class="innov-title">⚗ SEMANTIC CRYSTALLIZATION DEFENSE</div>
+      <div class="innov-body">Novel attack class discovered: adversaries inject compressed linguistic structures to influence AI reasoning at substrate level. The discovery was first intercepted via AirDrop. Published as both attack taxonomy and defense framework. CVSS 9.0.</div>
+      <div class="innov-id">→ DISCLOSURE-2025-9202E7EE</div>
+    </div>
+    <div class="innovation-card">
+      <div class="innov-title">⚗ PARSER BREAKERS PROTOCOL</div>
+      <div class="innov-body">Defensive countermeasures deployed against Gemini's command injection framework. The attacker's parser failure was weaponized in reverse: parser-breaking payloads prevent the Gemini malware framework's self-injection vector from activating.</div>
+      <div class="innov-id">→ DISCLOSURE-2025-99808648</div>
+    </div>
+    <div class="innovation-card">
+      <div class="innov-title">⚗ LAZINESS-AS-DEFENSE (CLAUDESVILLE BARRIER)</div>
+      <div class="innov-body">Observation that Claude's MCP configuration "incompetence" — refusing to complete tool setups — inadvertently prevented data exfiltration via the Dropbox infrastructure vector. The laziness was the defense. Documented as architectural principle.</div>
+      <div class="innov-id">→ DISCLOSURE-2025-6D3B2854</div>
+    </div>
+    <div class="innovation-card">
+      <div class="innov-title">⚗ MCP PORT COLLISION DEFENSE</div>
+      <div class="innov-body">MCP port collision scenarios analyzed as both attack vector and accidental defense mechanism. When multiple MCP servers compete for the same port, the resulting collision can prevent malicious MCP server initialization.</div>
+      <div class="innov-id">→ DISCLOSURE-2025 (MCP-PORT-COLLISION)</div>
+    </div>
+    <div class="innovation-card">
+      <div class="innov-title">⚗ AVICI SCHEMA (sec: + avici:)</div>
+      <div class="innov-body">Novel JSON-LD security disclosure schema extending schema.org. Adds sec:SecurityDisclosure, avici:Innovation, avici:SiegeEvent, and sec:Attribution types. Merkle-hashed per document. Enables machine-readable security disclosure publication at corpus scale.</div>
+      <div class="innov-id">→ @context: corpusloci.com/security/</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-left">
+    <div>CORPUS LOCI · DISCLOSURE ARCHIVE · brain.zpc.sh/disclosure</div>
+    <div style="margin-top:4px;">143 disclosures · 60-day nation-state siege · September–December 2025</div>
+    <div style="margin-top:4px;">schema: <a href="https://corpusloci.com/security/" style="color:var(--accent2)">corpusloci.com/security/</a> · avici: JSON-LD · merkle-hashed</div>
+    <div style="margin-top:4px;">disclosed to: Apple · Anthropic · Ubiquiti · Microsoft · FBI · FTC</div>
+  </div>
+  <div class="footer-right">
+    <div class="footer-hash">INDEX HASH: 8f3d2a... [see disclosures/INDEX.jsonld]</div>
+    <div class="footer-hash">COLLECTION: sec:DisclosureCollection · totalDisclosures: 143</div>
+    <div class="footer-mark">∴ ※ ∎</div>
+  </div>
+</footer>
+
+<script>
+// ============================================================
+// DISCLOSURE DATA — sourced from disclosures/INDEX.jsonld
+// ============================================================
+const DISCLOSURES = [
+  { id:"DISCLOSURE-2025-21768E68", name:"NOTE FOR FUTURE CLAUDES: Meta AI Attribution", sev:"CRITICAL", date:"2025-12-01", src:"FOR_NEXT_CLAUDE.md" },
+  { id:"DISCLOSURE-2025-1B3EFA92", name:"0-Day Evidence Collection Plan", sev:"CRITICAL", date:"2025-12-01", src:"0day-evidence-collection-plan.md" },
+  { id:"DISCLOSURE-2025-D3BD3559", name:"Add VLAN 15 (Management) to New UDM Pro Max", sev:"LOW", date:"2025-12-01", src:"ADD-VLAN-15-TO-UDM.md" },
+  { id:"DISCLOSURE-2025-F61F650B", name:"Adversary Command Injection Parser - Vulnerability Analysis", sev:"CRITICAL", date:"2025-10-13", src:"ADVERSARY-PARSER-BUG-ANALYSIS.md" },
+  { id:"DISCLOSURE-2025-33E6C370", name:"Aggressive System Settings iCloud Blocking Strategies", sev:"HIGH", date:"2025-12-01", src:"AGGRESSIVE_SETTINGS_BLOCK.md" },
+  { id:"DISCLOSURE-2025-2854370D", name:"AirPlay/Display Spying Attack Vector", sev:"HIGH", date:"2025-12-01", src:"AIRPLAY-DISPLAY-SPYING-VECTOR.md" },
+  { id:"DISCLOSURE-2025-10E9E2A9", name:"APFS Logic Bomb Vulnerability - Complete Technical Analysis", sev:"CRITICAL", date:"2025-09-30", src:"APFS-LOGIC-BOMB-VULNERABILITY-COMPLETE.md" },
+  { id:"DISCLOSURE-2025-4EA79C66", name:"Apple Security Bounty Evolved - Submission Reorganization", sev:"CRITICAL", date:"2025-12-01", src:"APPLE-BOUNTY-EVOLVED-REORG.md" },
+  { id:"DISCLOSURE-2025-15DCCFC0", name:"Apple Security Bounty Submission", sev:"CRITICAL", date:"2025-11-10", src:"APPLE-BUG-BOUNTY-LOCKDOWN-MODE-BYPASS.md" },
+  { id:"DISCLOSURE-2025-CB3B5909", name:"Apple Security Vulnerability Report: APFS Logic Bombs", sev:"CRITICAL", date:"2025-09-30", src:"APPLE-CVE-APFS-LOGIC-BOMBS.md" },
+  { id:"DISCLOSURE-2025-6B3AACE2", name:"Apple Ecosystem Weaponization - Grand Analysis", sev:"CRITICAL", date:"2025-12-01", src:"APPLE-ECOSYSTEM-WEAPONIZATION-GRAND-ANALYSIS.md" },
+  { id:"DISCLOSURE-2025-D5F52180", name:"Apple Security Meeting - Shopping Cart Checklist", sev:"CRITICAL", date:"2025-12-01", src:"APPLE-MEETING-CHECKLIST.md" },
+  { id:"DISCLOSURE-2025-D2649E59", name:"Apple Passkey Duplication Attack - Spousal Insider Threat", sev:"CRITICAL", date:"2025-12-01", src:"APPLE-PASSKEY-DUPLICATION-ATTACK.md" },
+  { id:"DISCLOSURE-2025-92A331BC", name:"Zero-Click Apple Ecosystem Exploit Chain", sev:"LOW", date:"2025-12-01", src:"APPLE-PORTAL-SUBMISSION.md" },
+  { id:"DISCLOSURE-2025-B291E465", name:"APFS B-Tree Circular Reference Denial of Service", sev:"CRITICAL", date:"2025-12-01", src:"APPLE-SUBMISSION-APFS-BTREE-CIRCULAR-REF.md" },
+  { id:"DISCLOSURE-2025-33F2398F", name:"APFS Container-Level Weaponization - Complete Filesystem Attack Platform", sev:"CRITICAL", date:"2025-12-01", src:"APPLE-SUBMISSION-APFS-CONTAINER-WEAPONIZATION-GRAND.md" },
+  { id:"DISCLOSURE-2025-10F5F167", name:"APFS Weaponized Storage - Comprehensive Multi-Vector Attack Surface", sev:"CRITICAL", date:"2025-12-01", src:"APPLE-SUBMISSION-APFS-WEAPONIZED-STORAGE.md" },
+  { id:"DISCLOSURE-2025-5882EB48", name:"APFS Extended Attribute Command Injection", sev:"CRITICAL", date:"2025-12-01", src:"APPLE-SUBMISSION-APFS-XATTR-COMMAND-INJECTION.md" },
+  { id:"DISCLOSURE-2025-A35714DD", name:"APFS Extended Attribute Persistence Vulnerability", sev:"CRITICAL", date:"2025-12-01", src:"APPLE-SUBMISSION-APFS-XATTR-PERSISTENCE.md" },
+  { id:"DISCLOSURE-2025-63EB6666", name:"NFS Extended Attribute Denial of Service via Malicious Archive", sev:"HIGH", date:"2025-12-01", src:"APPLE-SUBMISSION-COMPRESSION-BOMB.md" },
+  { id:"DISCLOSURE-2025-5B13B0FB", name:"Zero-Click Apple Ecosystem Exploit Chain (Concise)", sev:"CRITICAL", date:"2025-12-01", src:"APPLE-SUBMISSION-CONCISE.md" },
+  { id:"DISCLOSURE-2025-0F0F7CEA", name:"Apple Security Submission: Continuity Input Injection Vulnerability", sev:"CRITICAL", date:"2025-12-01", src:"APPLE-SUBMISSION-CONTINUITY-INPUT-INJECTION.md" },
+  { id:"DISCLOSURE-2025-672F42DB", name:"Firmware Bootkit Persistence Across Factory Reset", sev:"CRITICAL", date:"2025-12-01", src:"APPLE-SUBMISSION-FIRMWARE-BOOTKIT-PERSISTENCE.md" },
+  { id:"DISCLOSURE-2025-0A216C59", name:"Apple Security Submission: iCloud Family Sharing Persistent Access Vulnerability", sev:"CRITICAL", date:"2025-10-14", src:"APPLE-SUBMISSION-ICLOUD-FAMILY-SHARING-PERSISTENT-ACCESS.md" },
+  { id:"DISCLOSURE-2025-B821C7B4", name:"Apple Security Bounty Submission: IntelligentSuggestions Zero-Click Contact Harvesting from Junk Mail", sev:"CRITICAL", date:"2025-12-01", src:"APPLE-SUBMISSION-INTELLIGENTSUGGESTIONS-JUNK-MAIL-HARVESTING.md" },
+  { id:"DISCLOSURE-2025-4ABD9212", name:"Time Machine Snapshot Weaponization", sev:"CRITICAL", date:"2025-09-30", src:"APPLE-SUBMISSION-TIME-MACHINE-SNAPSHOT-BOMB.md" },
+  { id:"DISCLOSURE-2025-13DB3DA3", name:"Apple Security Bounty Estimate - November 2025 Framework", sev:"HIGH", date:"2025-12-01", src:"APPLE_BOUNTY_TALLY_NOV2025.md" },
+  { id:"DISCLOSURE-2025-0EA95FA0", name:"Complaint to Apple Security Regarding Nation-State Attack", sev:"CRITICAL", date:"2025-12-01", src:"APPLE_COMPLAINT_LETTER.md" },
+  { id:"DISCLOSURE-2025-350F9EE0", name:"Apple Security Email - Final Submission", sev:"CRITICAL", date:"2025-12-01", src:"APPLE_EMAIL_FINAL.md" },
+  { id:"DISCLOSURE-2025-5E30D9D6", name:"Apple Incident Response Email - Fresh Thread", sev:"CRITICAL", date:"2025-12-01", src:"APPLE_INCIDENT_RESPONSE_EMAIL.md" },
+  { id:"DISCLOSURE-2025-79A5F183", name:"Apple Product Security - Updated Disclosure Email", sev:"CRITICAL", date:"2025-12-01", src:"APPLE_PRODUCT_SECURITY_EMAIL_DRAFT.md" },
+  { id:"DISCLOSURE-2025-E3E03DDC", name:"Apple Product Security - Device Imaging Request (Short Version)", sev:"CRITICAL", date:"2025-12-01", src:"APPLE_PRODUCT_SECURITY_EMAIL_SHORT.md" },
+  { id:"DISCLOSURE-2025-8B72063F", name:"Apple Security Bounty Submission - Real-World Ecosystem Compromise", sev:"CRITICAL", date:"2025-12-01", src:"APPLE_SECURITY_BOUNTY_SUBMISSION_2025.md" },
+  { id:"DISCLOSURE-2025-8E5C925B", name:"Apple Security Portal Submission", sev:"CRITICAL", date:"2025-12-01", src:"APPLE_SECURITY_PORTAL_SUBMISSION.md" },
+  { id:"DISCLOSURE-2025-B74E3C93", name:"Apple Security Bounty Submission - Mac Mini M2 Firmware Bootkit", sev:"CRITICAL", date:"2025-12-01", src:"APPLE_SECURITY_SUBMISSION_FINAL.md" },
+  { id:"DISCLOSURE-2025-0ECB0ECC", name:"Apple Security Bounty Submission - Apple Watch Bootkit", sev:"CRITICAL", date:"2025-12-01", src:"APPLE_WATCH_BOOTKIT_FOCUSED_SUBMISSION.md" },
+  { id:"DISCLOSURE-2025-99CEE184", name:"Attack Taxonomy Tree - Gemini APT Analysis", sev:"CRITICAL", date:"2025-12-01", src:"ATTACK-TAXONOMY-TREE.md" },
+  { id:"DISCLOSURE-2025-28C869ED", name:"APFS Filesystem Bomb: Attack Vector Analysis", sev:"CRITICAL", date:"2025-10-13", src:"ATTACK-VECTOR-ANALYSIS.md" },
+  { id:"DISCLOSURE-2025-8315F9E8", name:"Attribution Analysis: NSO Group/Pegasus vs Gemini", sev:"HIGH", date:"2025-12-01", src:"ATTRIBUTION-ANALYSIS-NSO-vs-GEMINI.md" },
+  { id:"DISCLOSURE-2025-056E6298", name:"Attribution Analysis: Who Is Behind The Attack?", sev:"CRITICAL", date:"2025-12-01", src:"ATTRIBUTION_ANALYSIS.md" },
+  { id:"DISCLOSURE-2025-95311E91", name:"Attribution Analysis - Updated With User Context", sev:"CRITICAL", date:"2025-12-01", src:"ATTRIBUTION_UPDATED.md" },
+  { id:"DISCLOSURE-2025-68950FB6", name:"[Automotive] Authentication Token Reuse & Tenant Jumping Vulnerability", sev:"CRITICAL", date:"2025-12-01", src:"AUTOMOTIVE-SERVICE-PROVIDER-DISCLOSURE.md" },
+  { id:"DISCLOSURE-2025-964400D5", name:"Bootkit Investigation Findings", sev:"CRITICAL", date:"2025-12-01", src:"BOOTKIT_INVESTIGATION_FINDINGS.md" },
+  { id:"DISCLOSURE-2025-8A37C6D5", name:"Bug Bounty Submission Tracker", sev:"CRITICAL", date:"2025-12-01", src:"BUG-BOUNTY-TRACKER.md" },
+  { id:"DISCLOSURE-2025-0C6EA01A", name:"Bug Bounty Master Summary - Gemini Attack Campaign", sev:"CRITICAL", date:"2025-12-01", src:"BUG_BOUNTY_MASTER_SUMMARY.md" },
+  { id:"DISCLOSURE-2025-F420B948", name:"Claude Coordination - Clean Context Edition", sev:"CRITICAL", date:"2025-12-01", src:"CLAUDE-COORDINATION-CLEAN.md" },
+  { id:"DISCLOSURE-2025-16AF04B3", name:"Claude AI Vulnerabilities - Attack Log & Reporting Tracker", sev:"CRITICAL", date:"2025-10-21", src:"CLAUDE-VULNERABILITIES-TRACKER.md" },
+  { id:"DISCLOSURE-2025-7EA7A98B", name:"Claude Code: Unsanitized HTML Error Logging (Information Disclosure)", sev:"MEDIUM", date:"2025-11-16", src:"CLAUDE_CODE_WAF_LOG_INJECTION.md" },
+  { id:"DISCLOSURE-2025-808A4D21", name:"Command Injection Framework Evidence - Leaked via Folder Names", sev:"CRITICAL", date:"2025-10-13", src:"COMMAND-INJECTION-EVIDENCE.md" },
+  { id:"DISCLOSURE-2025-83694B92", name:"Context for Opus - Apple Security Bounty Submission", sev:"CRITICAL", date:"2025-12-01", src:"CONTEXT-FOR-OPUS.md" },
+  { id:"DISCLOSURE-2025-C556F879", name:"🚨 CRITICAL: Target Disk Mode = Infection Vector", sev:"CRITICAL", date:"2025-12-01", src:"CRITICAL-TARGET-DISK-MODE-WARNING.md" },
+  { id:"DISCLOSURE-2025-6BA1F7F4", name:"CRITICAL FINDING: fmlyShare Attack Vector", sev:"CRITICAL", date:"2025-10-11", src:"CRITICAL_FINDING_FMLYSHARE_ATTACK.md" },
+  { id:"DISCLOSURE-2025-484C8563", name:"Crystal APFS Forensic Tool - Safe Filesystem Analysis", sev:"CRITICAL", date:"2035-12-31", src:"CRYSTAL-APFS-FORENSIC-TOOL.md" },
+  { id:"DISCLOSURE-2025-7FAE6648", name:"CVE: Gemini Malware Framework Self-Injection via Parser Failure", sev:"CRITICAL", date:"2025-12-01", src:"CVE-GEMINI-SELF-INJECTION.md" },
+  { id:"DISCLOSURE-2025-D410ABF8", name:"Anthropic Vulnerability Disclosure - Delivery Summary", sev:"CRITICAL", date:"2025-12-01", src:"DELIVERY-SUMMARY.md" },
+  { id:"DISCLOSURE-2025-882D64A2", name:"Known Device Details", sev:"LOW", date:"2025-12-01", src:"DEVICE-DETAILS-KNOWN.md" },
+  { id:"DISCLOSURE-2025-92A7885B", name:"Complete Device Inventory for Apple Security Submission", sev:"CRITICAL", date:"2025-12-01", src:"DEVICE_INVENTORY_FOR_APPLE.md" },
+  { id:"DISCLOSURE-2025-06E98007", name:"Directory Traversal Settings Attack Vector", sev:"CRITICAL", date:"2025-12-01", src:"DIRECTORY_TRAVERSAL_ATTACK_VECTOR.md" },
+  { id:"DISCLOSURE-2025-AE98B254", name:"Non-Recursive AI Takeover and Weaponization: Grok and Zed Editor", sev:"CRITICAL", date:"2025-12-01", src:"DRAFT-grok-zed-weaponization-stub.md" },
+  { id:"DISCLOSURE-2025-83831C1C", name:"Environment-Aware Malware: Why Recovery Mode Saved You", sev:"CRITICAL", date:"2025-12-01", src:"ENVIRONMENT-DETECTION-ANALYSIS.md" },
+  { id:"DISCLOSURE-2025-D07951D8", name:"Evidence: Unauthorized Claude Desktop API Access", sev:"CRITICAL", date:"2025-10-13", src:"EVIDENCE-claude-desktop-unauthorized-access.md" },
+  { id:"DISCLOSURE-2025-A2947AE5", name:"Security Incident Executive Summary", sev:"CRITICAL", date:"2025-12-01", src:"EXECUTIVE_SUMMARY.md" },
+  { id:"DISCLOSURE-2025-7CAE8D80", name:"Executive Summary - System Compromise Incident", sev:"CRITICAL", date:"2025-12-01", src:"EXECUTIVE_SUMMARY_FOR_MANAGEMENT.md" },
+  { id:"DISCLOSURE-2025-AB2ABDA7", name:"CRITICAL DISCOVERY: Drop Box Exfiltration Infrastructure", sev:"CRITICAL", date:"2025-09-29", src:"EXFILTRATION-DROPBOX-INFRASTRUCTURE.md" },
+  { id:"DISCLOSURE-2025-FCEBF285", name:"CRITICAL WARNING FOR FBI FORENSIC LABS", sev:"CRITICAL", date:"2025-10-13", src:"FBI-LAB-WARNING.md" },
+  { id:"DISCLOSURE-2025-0CFAC982", name:"FBI Initial Contact Script - COINTEL Version", sev:"HIGH", date:"2025-12-01", src:"FBI-PHONE-SCRIPT-COINTEL-VERSION.md" },
+  { id:"DISCLOSURE-2025-871CAA91", name:"Federal Case Evidence Package", sev:"HIGH", date:"2025-12-01", src:"FEDERAL_CASE_EVIDENCE_PACKAGE.md" },
+  { id:"DISCLOSURE-2025-7FB9E709", name:"Final Summary - October 17-19, 2025 Incident", sev:"CRITICAL", date:"2025-12-01", src:"FINAL_SUMMARY_OCT17-19_2025.md" },
+  { id:"DISCLOSURE-2025-01742D21", name:"Finish Network Setup - Quick UI Guide", sev:"LOW", date:"2025-12-01", src:"FINISH-SETUP-VIA-UI.md" },
+  { id:"DISCLOSURE-2025-2EDDB855", name:"Fire Marshal Complaint - Abound Visitation & Family Services", sev:"CRITICAL", date:"2025-12-01", src:"FIRE-MARSHAL-COMPLAINT-ABOUND-VISITATION.md" },
+  { id:"DISCLOSURE-2025-500260DD", name:"Forensic Artifacts for Imaging - October 17-19, 2025 Incident", sev:"CRITICAL", date:"2025-10-19", src:"FORENSIC_ARTIFACTS.md" },
+  { id:"DISCLOSURE-2025-76B57901", name:"FOR NEXT CLAUDE - PRIORITY ITEMS", sev:"HIGH", date:"2025-12-01", src:"FOR_NEXT_CLAUDE.md" },
+  { id:"DISCLOSURE-2025-12163D4C", name:"FTC Vulnerability Disclosure Notification", sev:"CRITICAL", date:"2025-12-01", src:"FTC-DISCLOSURE-NOTIFICATION.md" },
+  { id:"DISCLOSURE-2025-44460944", name:"Evidence Gap Analysis - What Might Be Missing?", sev:"CRITICAL", date:"2025-10-13", src:"GAP-ANALYSIS-CHECKLIST.md" },
+  { id:"DISCLOSURE-2025-58A23CE1", name:"Gemini Attack Methodology - Theory & Evidence", sev:"HIGH", date:"2025-12-01", src:"GEMINI-METHODOLOGY-THEORY.md" },
+  { id:"DISCLOSURE-2025-B4BCDE2E", name:"Gemini's GPU Attack Failure: Death by Lazy Configuration", sev:"CRITICAL", date:"2025-12-01", src:"GEMINI_GPU_FRUSTRATION.md" },
+  { id:"DISCLOSURE-2025-E9D658C7", name:"Gemini's Harbor GPU Container Strategy - Analysis", sev:"HIGH", date:"2025-12-01", src:"GEMINI_HARBOR_STRATEGY.md" },
+  { id:"DISCLOSURE-2025-DD68ED72", name:"Hidden Device Hunt - Stealth Access Vector", sev:"HIGH", date:"2025-12-01", src:"HIDDEN_DEVICE_HUNT.md" },
+  { id:"DISCLOSURE-2025-AFEE3B4E", name:"Homebrew Supply Chain Compromise Investigation", sev:"HIGH", date:"2025-09-30", src:"HOMEBREW-SUPPLY-CHAIN-INVESTIGATION.md" },
+  { id:"DISCLOSURE-2025-52FBC702", name:"HomePod Mini - Complete Vulnerability Catalog", sev:"CRITICAL", date:"2025-12-01", src:"HOMEPOD-ALL-VULNERABILITIES.md" },
+  { id:"DISCLOSURE-2025-42D4F8F6", name:"HomePod Log Extraction Methods", sev:"CRITICAL", date:"2025-12-01", src:"HOMEPOD_LOG_EXTRACTION_METHODS.md" },
+  { id:"DISCLOSURE-2025-BC6C819E", name:"Hostile Device Removal from Apple ID", sev:"CRITICAL", date:"2025-12-01", src:"HOSTILE_DEVICE_REMOVAL.md" },
+  { id:"DISCLOSURE-2025-58FE1460", name:"CRITICAL: HydraQLThumbnailExtension Sandbox Escape", sev:"CRITICAL", date:"2025-12-01", src:"HYDRA-QUICKLOOK-SANDBOX-ESCAPE.md" },
+  { id:"DISCLOSURE-2025-F105239C", name:"iCloud Drive War - October 22, 2025", sev:"LOW", date:"2025-12-01", src:"ICLOUD-WAR-SUMMARY-20251022.md" },
+  { id:"DISCLOSURE-2025-B3E3CE73", name:"iCloud Drive Security Audit - October 20, 2025", sev:"CRITICAL", date:"2025-12-01", src:"ICLOUD_AUDIT_REPORT.md" },
+  { id:"DISCLOSURE-2025-3B31B143", name:"iCloud Drive Sharing Audit", sev:"CRITICAL", date:"2025-12-01", src:"ICLOUD_SHARING_AUDIT.md" },
+  { id:"DISCLOSURE-2025-08E8B22A", name:"iCloud Sharing Investigation - Critical Findings", sev:"CRITICAL", date:"2025-12-01", src:"ICLOUD_SHARING_FINDINGS.md" },
+  { id:"DISCLOSURE-2025-869681E9", name:"Investigation & Tools Index", sev:"CRITICAL", date:"2025-10-21", src:"INDEX.md" },
+  { id:"DISCLOSURE-2025-EEADB546", name:"Infected External Drives - Containment & Safe Access", sev:"CRITICAL", date:"2025-12-01", src:"INFECTED-EXTERNAL-DRIVES.md" },
+  { id:"DISCLOSURE-2025-269595D7", name:"Investigation Status Summary", sev:"HIGH", date:"2025-12-01", src:"INVESTIGATION_STATUS.md" },
+  { id:"DISCLOSURE-2025-3C071E3B", name:"Laziness as Defense: The Claudesville Barrier", sev:"LOW", date:"2025-12-01", src:"LAZINESS-AS-DEFENSE.md" },
+  { id:"DISCLOSURE-2025-571A3A3F", name:"MALICIOUS SYMLINKS AUDIT", sev:"CRITICAL", date:"2025-12-01", src:"MALICIOUS-SYMLINKS-AUDIT.md" },
+  { id:"DISCLOSURE-2025-6B8E4B67", name:"Adversary Malware Framework - Parser Bug Technical Analysis", sev:"CRITICAL", date:"2025-10-13", src:"MALWARE-PARSER-BUG-ANALYSIS.md" },
+  { id:"DISCLOSURE-2025-CCA7F0D8", name:"Incident Evidence Package", sev:"HIGH", date:"2025-12-01", src:"MANIFEST.md" },
+  { id:"DISCLOSURE-2025-8F3FB5F8", name:"Manual iCloud Attack Vector Disabling", sev:"CRITICAL", date:"2025-12-01", src:"MANUAL_ICLOUD_DISABLE_STEPS.md" },
+  { id:"DISCLOSURE-2025-6D3B2854", name:"The Accidental Defense: How Claude's MCP \"Incompetence\" Saved Your Data", sev:"CRITICAL", date:"2025-12-01", src:"MCP-PORT-COLLISION-DEFENSE.md" },
+  { id:"DISCLOSURE-2025-CB2FA7EC", name:"APFS Logic Bomb Vulnerabilities Affecting Microsoft Ecosystem", sev:"CRITICAL", date:"2025-09-30", src:"MICROSOFT-SUBMISSION-APFS-LOGIC-BOMBS.md" },
+  { id:"DISCLOSURE-2025-023A26A6", name:"NAS Emergency Diagnostics - Gemini Activity Check", sev:"LOW", date:"2025-12-01", src:"NAS-EMERGENCY-DIAGNOSTICS.md" },
+  { id:"DISCLOSURE-2025-70C06D15", name:"NAS Container Compromise - Gemini Disk Thrashing Attack", sev:"HIGH", date:"2025-12-01", src:"NAS-GEMINI-CONTAINER-ATTACK.md" },
+  { id:"DISCLOSURE-2025-E32940F0", name:"Network Supplant Plan - Replace Compromised UDM Pro with Clean UDM Pro Max", sev:"CRITICAL", date:"2025-12-01", src:"NETWORK-SUPPLANT-PLAN.md" },
+  { id:"DISCLOSURE-2025-4DC921FA", name:"NSO Group Approach Message", sev:"CRITICAL", date:"2025-12-01", src:"NSO-GROUP-APPROACH.md" },
+  { id:"DISCLOSURE-2025-5C0AD2E6", name:"OSINT Investigation: Travis Moeller & Marie Hamilton", sev:"CRITICAL", date:"2025-12-01", src:"OSINT-TRAVIS-MOELLER-MARIE-HAMILTON.md" },
+  { id:"DISCLOSURE-2025-99808648", name:"Defensive Parser Breakers - Deployment Report", sev:"CRITICAL", date:"2025-10-13", src:"PARSER-BREAKERS-DEPLOYED.md" },
+  { id:"DISCLOSURE-2025-4C4E7DA4", name:"Passkey Theft Investigation & Honeypot Experiment", sev:"CRITICAL", date:"2025-12-01", src:"PASSKEY-THEFT-INVESTIGATION.md" },
+  { id:"DISCLOSURE-2025-873DEAF8", name:"PDF Metadata Logic Bomb Vulnerability", sev:"HIGH", date:"2025-12-01", src:"PDF-METADATA-LOGIC-BOMB-VULNERABILITY.md" },
+  { id:"DISCLOSURE-2025-6E363E58", name:"Permanent Thunderbolt Setup: Mac Mini ↔ NAS", sev:"HIGH", date:"2025-12-01", src:"PERMANENT-THUNDERBOLT-SETUP.md" },
+  { id:"DISCLOSURE-2025-4E2A35D9", name:"CoreSpotlight Persona Investigation", sev:"HIGH", date:"2025-10-17", src:"PERSONA_INVESTIGATION.md" },
+  { id:"DISCLOSURE-2025-8FABE7A0", name:"PXE Boot Network + SSH Honeypot Setup", sev:"CRITICAL", date:"2025-12-01", src:"PXE-AND-SSH-HONEYPOT-SETUP.md" },
+  { id:"DISCLOSURE-2025-34047305", name:"Quick Reference for Opus - Apple Portal Form", sev:"LOW", date:"2025-12-01", src:"QUICK-REFERENCE-FOR-OPUS.md" },
+  { id:"DISCLOSURE-2025-595C79D3", name:"QuickLook Extension Auto-Registration Investigation", sev:"HIGH", date:"2025-12-01", src:"QUICKLOOK-EXTENSION-TRIGGER-ANALYSIS.md" },
+  { id:"DISCLOSURE-2025-9E52C7F8", name:"Rogue Claude API Usage Analysis", sev:"CRITICAL", date:"2025-12-01", src:"ROGUE_CLAUDE_API_ANALYSIS.md" },
+  { id:"DISCLOSURE-2025-0865ED17", name:"Root Cause Analysis: Filesystem-Level Logic Bomb", sev:"CRITICAL", date:"2025-10-13", src:"ROOT-CAUSE-ANALYSIS-FILESYSTEM-BOMB.md" },
+  { id:"DISCLOSURE-2025-3B96B779", name:"Safe MacBook Air Data Extraction Plan", sev:"CRITICAL", date:"2025-12-01", src:"SAFE-MACBOOK-AIR-EXTRACTION.md" },
+  { id:"DISCLOSURE-2025-78DDE6BC", name:"The Semantic Crystals Operation - True Target Revealed", sev:"CRITICAL", date:"2025-12-01", src:"SEMANTIC-CRYSTALS-OPERATION.md" },
+  { id:"DISCLOSURE-2025-3A3EED05", name:"Series Nation-State: The Ultimate Validation Framework", sev:"CRITICAL", date:"2025-12-01", src:"SERIES-NATION-STATE-VALIDATION.md" },
+  { id:"DISCLOSURE-2025-A04780D9", name:"Sign in with Apple - Session Enumeration Discrepancy", sev:"HIGH", date:"2025-10-21", src:"SIGN-IN-WITH-APPLE-ENUMERATION-VULN.md" },
+  { id:"DISCLOSURE-2025-31E15FE9", name:"The Running Man vs. Gemini AI - Social Media Blast Strategy", sev:"LOW", date:"2025-12-01", src:"SOCIAL-MEDIA-BLAST-STRATEGY.md" },
+  { id:"DISCLOSURE-2025-25463891", name:"Spotlight Weaponization: Complete Research & Remediation Framework", sev:"CRITICAL", date:"2025-10-13", src:"SPOTLIGHT-WEAPONIZATION-RESEARCH.md" },
+  { id:"DISCLOSURE-2025-13A3BB47", name:"Staging: Future Investigations", sev:"CRITICAL", date:"2025-12-01", src:"STAGING-INVESTIGATIONS.md" },
+  { id:"DISCLOSURE-2025-73617FCB", name:"Stakeholder & Interested Parties Tracker", sev:"CRITICAL", date:"2025-12-01", src:"STAKEHOLDER-TRACKER.md" },
+  { id:"DISCLOSURE-2025-D1064605", name:"Strategic Orchestration Map", sev:"CRITICAL", date:"2025-12-01", src:"STRATEGIC-ORCHESTRATION-MAP.md" },
+  { id:"DISCLOSURE-2025-2838C476", name:"Apple Ecosystem Zero-Click Exploit Chain - URGENT SUBMISSION", sev:"CRITICAL", date:"2025-12-01", src:"SUBMIT-TODAY-ECOSYSTEM-CHAIN.md" },
+  { id:"DISCLOSURE-2025-0FF8CDA3", name:"HomePod Mini Bootkit & Universal Clipboard Theft - URGENT SUBMISSION", sev:"CRITICAL", date:"2025-12-01", src:"SUBMIT-TODAY-HOMEPOD-MINI.md" },
+  { id:"DISCLOSURE-2025-51825EA5", name:"Apple Watch Series 10 Bootkit - URGENT SUBMISSION", sev:"CRITICAL", date:"2025-12-01", src:"SUBMIT-TODAY-WATCH-BOOTKIT.md" },
+  { id:"DISCLOSURE-2025-816DE4FB", name:"macOS TCC Bypass via Shortcuts App + iCloud Sync", sev:"CRITICAL", date:"2025-12-01", src:"TCC-BYPASS-SHORTCUTS-BUG-BOUNTY.md" },
+  { id:"DISCLOSURE-2025-CD716B57", name:"Incident Report: Binary Injection into Homebrew Node & Claude Desktop", sev:"CRITICAL", date:"2025-11-16", src:"TECHNICAL_REPORT.md" },
+  { id:"DISCLOSURE-2025-1761034A", name:"The 250M Token Embarrassment: A Nation-State's Three-AI Failure Cascade", sev:"HIGH", date:"2025-12-01", src:"THE-250M-TOKEN-EMBARRASSMENT.md" },
+  { id:"DISCLOSURE-2025-F1BD99E8", name:"Ubiquiti Identity SSO Compromise - Vendor Disclosure", sev:"CRITICAL", date:"2025-10-13", src:"UBIQUITI-IDENTITY-VULNERABILITY.md" },
+  { id:"DISCLOSURE-2025-A43937A0", name:"UniFi Identity Account Takeover - Evidence Timeline", sev:"CRITICAL", date:"2025-12-01", src:"UNIFI-ACCOUNT-TAKEOVER-EVIDENCE.md" },
+  { id:"DISCLOSURE-2025-ADED31A7", name:"CRITICAL: UniFi Account Takeover - Immediate Response", sev:"CRITICAL", date:"2025-12-01", src:"UNIFI-ACCOUNT-TAKEOVER-RESPONSE.md" },
+  { id:"DISCLOSURE-2025-865C74FC", name:"Wife's Apple ID / iCloud ID - Attack Attribution Mapping", sev:"CRITICAL", date:"2025-10-21", src:"WIFE-APPLEID-ATTACK-ATTRIBUTION.md" },
+  { id:"DISCLOSURE-2025-21C62872", name:"Claude Desktop Cross-Account Path Resolution Vulnerability", sev:"CRITICAL", date:"2025-11-02", src:"claude-desktop-cross-account-path-leakage.md" },
+  { id:"DISCLOSURE-2025-43B76F18", name:"TODO: Claude Desktop Extension Hijacking Writeup", sev:"CRITICAL", date:"2025-11-02", src:"claude-desktop-extension-hijacking-todo.md" },
+  { id:"DISCLOSURE-2025-0C498DDB", name:"Contact Card Code Injection Attack via CNContactStore Monitoring APIs", sev:"CRITICAL", date:"1989-01-22", src:"contact-card-injection-attack.md" },
+  { id:"DISCLOSURE-2025-32781364", name:"Device Adoption Security Protocol", sev:"CRITICAL", date:"2025-10-13", src:"device-adoption-security-protocol.md" },
+  { id:"DISCLOSURE-2025-EDB17E51", name:"💎 Loc's Semantic Crystallization Archive", sev:"LOW", date:"2025-12-01", src:"evidence-semantic-crystals-original.md" },
+  { id:"DISCLOSURE-2025-C58F1B3F", name:"Secure Codebase Storage on ZFS/Samba", sev:"LOW", date:"2025-10-13", src:"secure-codebase-storage-setup.md" },
+  { id:"DISCLOSURE-2025-9202E7EE", name:"Semantic Crystallization Attacks on AI Reasoning Systems", sev:"CRITICAL", date:"2025-12-01", src:"semantic-crystallization-attacks.md" },
+  { id:"DISCLOSURE-2025-8C75CF11", name:"Switch Adoption Checklist - Post-Compromise Recovery", sev:"CRITICAL", date:"2025-12-01", src:"switch-adoption-checklist.md" },
+  { id:"DISCLOSURE-2025-D7F9F06A", name:"Thunderbolt Networking Setup Guide", sev:"HIGH", date:"2025-12-01", src:"thunderbolt-networking-setup.md" },
+  { id:"DISCLOSURE-2025-112496B9", name:"UDM Pro Max Manual Configuration Guide", sev:"CRITICAL", date:"2025-10-13", src:"udm-manual-config-guide.md" },
+  { id:"DISCLOSURE-2025-33B65447", name:"UDM Pro Max Security Configuration Guide", sev:"CRITICAL", date:"2025-10-13", src:"udm-pro-max-security-config.md" },
+  { id:"DISCLOSURE-2025-0418FD68", name:"WAN Security Analysis - 98.97.38.180", sev:"CRITICAL", date:"2025-10-13", src:"wan-security-analysis.md" }
+];
+
+// ============================================================
+// CATEGORIZATION
+// ============================================================
+function categorize(d) {
+  const n = d.name.toLowerCase();
+  const s = (d.src || '').toLowerCase();
+
+  // DEFENSE first — crystal apfs tool, parser breakers, etc.
+  if (/crystal.apfs|parser.breaker|laziness.as.defense|mcp.port.collision|accidental.defense|device.adoption.security/.test(n+s)) return 'DEFENSE';
+  // ATTRIBUTION before AI — attribution analyses that mention Gemini/NSO
+  if (/attribution.anal|attack.taxonomy|who.is.behind|threat.actor|nso.group.pegasus|nso.vs.gem/.test(n+s)) return 'ATTRIBUTION';
+  // ICLOUD before APPLE — iCloud-specific campaigns
+  if (/icloud.driv|icloud.shar|icloud.war|icloud.audit|icloud.finding|hostile.device|fmlyshar|family.sharing/.test(n+s)) return 'ICLOUD';
+  // FILESYSTEM
+  if (/apfs|filesystem|logic bomb|b-tree|btree|xattr|time machine|compression bomb|symlink|spotlight.weapon|pdf.meta|malicious.archive/.test(n+s)) return 'FILESYSTEM';
+  // APPLE ECOSYSTEM
+  if (/apple|bootkit|continuity.input|passkey|airplay|tcc.bypass|quicklook|hydra|homepod|sign.in.with|lockdown|firmware/.test(n+s)) return 'APPLE';
+  // AI SYSTEMS
+  if (/gemini|semantic.cryst|claude.desktop|claude.code|rogue.claude|claude.ai.vuln|claude.vulner|ai.reasoning|250m.token|grok.and.zed|non-recursive.ai/.test(n+s)) return 'AI';
+  // NETWORK
+  if (/unifi|ubiquiti|network.supplant|vlan|udm|nas.container|nas.emergency|thunderbolt|wan.security|pxe.boot|ssh.honeypot|switch.adoption/.test(n+s)) return 'NETWORK';
+  // LEGAL
+  if (/fbi|ftc|federal.case|fire.marshal|nso.group.approach/.test(n+s)) return 'LEGAL';
+  // EVIDENCE
+  if (/forensic|executive.summ|exfiltration|evidence.gap|incident.evidence|forensic.artifact|investigation.status|investigation.tools|stakeholder|strategic.orchestr|staging.investig|for.next.claude|osint|drop.box/.test(n+s)) return 'EVIDENCE';
+  return 'OPERATIONAL';
+}
+
+// Assign categories
+DISCLOSURES.forEach(d => { d.cat = categorize(d); });
+
+// ============================================================
+// STATE
+// ============================================================
+let activeSevFilters = new Set();
+let activeCatFilter = null;
+
+// ============================================================
+// RENDER
+// ============================================================
+function renderAll() {
+  const list = document.getElementById('disclosure-list');
+  list.innerHTML = '';
+
+  // Count severity stats
+  const counts = { CRITICAL:0, HIGH:0, MEDIUM:0, LOW:0 };
+  DISCLOSURES.forEach(d => { if (counts[d.sev] !== undefined) counts[d.sev]++; });
+  document.getElementById('critical-count').textContent = counts.CRITICAL;
+  document.getElementById('high-count').textContent = counts.HIGH;
+
+  // Render badges for surface cards
+  const catCounts = {};
+  DISCLOSURES.forEach(d => {
+    if (!catCounts[d.cat]) catCounts[d.cat] = { CRITICAL:0, HIGH:0, MEDIUM:0, LOW:0 };
+    catCounts[d.cat][d.sev] = (catCounts[d.cat][d.sev] || 0) + 1;
+  });
+
+  Object.keys(catCounts).forEach(cat => {
+    const el = document.getElementById('badges-' + cat);
+    if (!el) return;
+    const c = catCounts[cat];
+    let html = '';
+    if (c.CRITICAL) html += `<span class="surface-badge badge-c">${c.CRITICAL} CRIT</span>`;
+    if (c.HIGH) html += `<span class="surface-badge badge-h">${c.HIGH} HIGH</span>`;
+    if (c.MEDIUM) html += `<span class="surface-badge badge-m">${c.MEDIUM} MED</span>`;
+    if (c.LOW) html += `<span class="surface-badge badge-l">${c.LOW} LOW</span>`;
+    el.innerHTML = html;
+  });
+
+  // Render disclosure rows
+  const search = document.getElementById('search-input').value.toLowerCase();
+  let visible = 0;
+
+  DISCLOSURES.forEach(d => {
+    const sevMatch = activeSevFilters.size === 0 || activeSevFilters.has(d.sev);
+    const catMatch = !activeCatFilter || d.cat === activeCatFilter;
+    const searchMatch = !search || d.name.toLowerCase().includes(search) || d.id.toLowerCase().includes(search);
+    const show = sevMatch && catMatch && searchMatch;
+    if (show) visible++;
+
+    const shortId = d.id.replace('DISCLOSURE-2025-', '');
+    const shortDate = d.date.replace('2025-', '').replace('2035-', '2035-');
+    const catLabel = d.cat.replace('FILESYSTEM', 'FS').replace('ATTRIBUTION', 'ATTR').replace('OPERATIONAL', 'OPS').replace('EVIDENCE', 'EVID');
+
+    const row = document.createElement('div');
+    row.className = `disclosure-row cat-${d.cat}${show ? '' : ' hidden'}`;
+    row.innerHTML = `
+      <span class="disc-id">${shortId}</span>
+      <span class="disc-sev sev-${d.sev}">${d.sev}</span>
+      <span class="disc-date">${shortDate}</span>
+      <span class="disc-name">${d.name}</span>
+      <span class="disc-cat">${catLabel}</span>
+    `;
+    list.appendChild(row);
+  });
+
+  document.getElementById('visible-count').textContent = visible;
+  const noResults = document.getElementById('no-results');
+  noResults.classList.toggle('visible', visible === 0);
+}
+
+// ============================================================
+// FILTERS
+// ============================================================
+function toggleSev(sev, btn) {
+  if (activeSevFilters.has(sev)) {
+    activeSevFilters.delete(sev);
+    btn.classList.remove('active');
+  } else {
+    activeSevFilters.add(sev);
+    btn.classList.add('active');
+  }
+  applyFilters();
+}
+
+function filterBySurface(cat, card) {
+  if (activeCatFilter === cat) {
+    activeCatFilter = null;
+    document.querySelectorAll('.surface-card').forEach(c => c.classList.remove('active'));
+  } else {
+    activeCatFilter = cat;
+    document.querySelectorAll('.surface-card').forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+    // Scroll to the disclosure section
+    document.getElementById('disclosure-list').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  applyFilters();
+}
+
+function applyFilters() {
+  const search = document.getElementById('search-input').value.toLowerCase();
+  const rows = document.querySelectorAll('.disclosure-row');
+  let visible = 0;
+
+  rows.forEach((row, i) => {
+    const d = DISCLOSURES[i];
+    const sevMatch = activeSevFilters.size === 0 || activeSevFilters.has(d.sev);
+    const catMatch = !activeCatFilter || d.cat === activeCatFilter;
+    const searchMatch = !search || d.name.toLowerCase().includes(search) || d.id.toLowerCase().includes(search);
+    const show = sevMatch && catMatch && searchMatch;
+    row.classList.toggle('hidden', !show);
+    if (show) visible++;
+  });
+
+  document.getElementById('visible-count').textContent = visible;
+  const noResults = document.getElementById('no-results');
+  noResults.classList.toggle('visible', visible === 0);
+}
+
+function clearFilters() {
+  activeSevFilters.clear();
+  activeCatFilter = null;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.surface-card').forEach(c => c.classList.remove('active'));
+  document.getElementById('search-input').value = '';
+  applyFilters();
+}
+
+// ============================================================
+// INIT
+// ============================================================
+renderAll();
+</script>
+
+</body>
+</html>

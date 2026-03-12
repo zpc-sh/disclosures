@@ -1,0 +1,55 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/",
+    "avici": "https://corpusloci.com/avici/"
+  },
+  "@type": "sec:SecurityDisclosure",
+  "identifier": "DISCLOSURE-2025-01742D21",
+  "name": "Finish Network Setup - Quick UI Guide",
+  "datePublished": "2025-12-01",
+  "severity": {
+    "cvss": 3.0,
+    "rating": "LOW"
+  },
+  "description": "- 6 VLANs created (Trusted, IoT, Guest, Lab, Testing, Quarantine)",
+  "vulnerability": {
+    "@type": "sec:Vulnerability",
+    "severity": "LOW",
+    "cvssScore": 3.0
+  },
+  "impact": {
+    "@type": "sec:ImpactAssessment",
+    "technicalImpact": "",
+    "scope": "single-user",
+    "attackComplexity": "high"
+  },
+  "mitigation": {
+    "@type": "sec:DefensiveMeasure",
+    "ourDefense": "",
+    "immediateWorkaround": "",
+    "properFix": ""
+  },
+  "innovation": {
+    "@type": "avici:Innovation",
+    "frameworks": [],
+    "techniques": [
+      "quarantine"
+    ],
+    "insights": []
+  },
+  "attribution": {
+    "@type": "sec:Attribution",
+    "campaign": "60-day-siege",
+    "confidence": "medium",
+    "sophistication": 5
+  },
+  "siegeContext": {
+    "@type": "avici:SiegeEvent",
+    "campaign": "60-day-nation-state-siege",
+    "duration": "60 days",
+    "outcome": "defense-successful"
+  },
+  "sourceFile": "FINISH-SETUP-VIA-UI.md",
+  "merkleHash": "7e97fa33a34d6fbe5db4d80c33eeaa77dcb1705ebbd68d475621cda000c6c945"
+}

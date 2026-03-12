@@ -1,0 +1,122 @@
+# Network Reconnaissance - 2025-10-13 21:52 PST
+# IMMEDIATE THREAT ASSESSMENT
+
+## Summary
+- You are on a SHARED network (192.168.12.0/24) with 19 active devices
+- Your UDM Pro Max is exposed to these devices
+- Attacker likely has access to this upstream network
+- HIGH RISK of lateral movement into your new UDM
+
+## Upstream Network Devices (192.168.12.0/24)
+192.168.12.1   - Likely gateway/router (INVESTIGATE)
+192.168.12.20  - Unknown device
+192.168.12.67  - Unknown device
+192.168.12.83  - Unknown device
+192.168.12.87  - YOUR UDM Pro Max (EXPOSED)
+192.168.12.89  - Unknown device
+192.168.12.99  - Unknown device
+192.168.12.109 - Unknown device
+192.168.12.123 - Unknown device
+192.168.12.127 - Unknown device
+192.168.12.128 - Unknown device
+192.168.12.129 - Unknown device
+192.168.12.145 - Unknown device
+192.168.12.178 - Unknown device
+192.168.12.197 - Unknown device
+192.168.12.200 - Unknown device
+192.168.12.217 - Unknown device
+192.168.12.219 - Unknown device
+192.168.12.230 - Unknown device
+
+## Your Network (192.168.1.0/24) - CLEAN
+192.168.1.1   - UDM Pro Max (6c:63:f8:6e:0:83)
+192.168.1.44  - Unknown (6c:63:f8:1c:c8:dd)
+192.168.1.49  - Your Mac "Big-Mac" (64:4b:f0:60:09:da)
+192.168.1.151 - USW Pro XG 10 PoE Switch (1c:b:8b:fe:34:ea)
+192.168.1.171 - UTP-TOUCH (18:e8:29:b7:d1:be) - UniFi Touch Panel?
+192.168.1.172 - Unknown (58:47:ca:7d:cd:57)
+
+## UDM Clients (from API)
+- Big-Mac.localdomain (192.168.1.49) [64:4b:f0:60:09:da] - YOU
+- UTP-TOUCH (192.168.1.171) [18:e8:29:b7:d1:be] - UniFi Touch
+- Unknown (MAC: 32:b8:9e:f3:4e:cd) - No IP
+- Unknown (MAC: 10:66:6a:25:1f:37) - No IP
+- Unknown (MAC: 86:e1:8d:48:54:8d) - IN QUARANTINE VLAN
+
+## Critical Security Findings
+
+1. **Ubiquiti Identity SSO ENABLED**
+   - unifi_idp_enabled: true
+   - Attack vector for compromise
+   - Allows SSO bypass of local auth
+
+2. **Auto-Upgrade ENABLED**
+   - auto_upgrade: true
+   - Attacker can push malicious firmware
+
+3. **Shared Upstream Network**
+   - 19 devices on 192.168.12.x
+   - Any of these could be attacker-controlled
+   - Direct access to your UDM management interface
+
+4. **Device Already in Quarantine**
+   - MAC: 86:e1:8d:48:54:8d
+   - Why is this device quarantined?
+   - Was it compromised before you took over?
+
+## Threat Assessment: CRITICAL
+
+Your new UDM Pro Max is:
+- ✗ Exposed to 18 unknown devices on upstream network
+- ✗ SSO authentication enabled (compromised Identity access)
+- ✗ Auto-upgrade enabled (malicious firmware vector)
+- ✗ No firewall between you and upstream devices
+- ✗ Management interface accessible from 192.168.12.x
+
+## IMMEDIATE ACTIONS REQUIRED
+
+1. **ISOLATE NOW**
+   - Disconnect UDM from 192.168.12.x network
+   - Use phone hotspot or clean connection temporarily
+
+2. **Disable SSO** (via UI - API not working)
+   - Settings → System → Advanced
+   - Unifi Identity → Disable
+
+3. **Disable Auto-Upgrade**
+   - Settings → System → Updates
+   - Auto Update → Off
+
+4. **Change Admin Password**
+   - Strong unique password
+   - Not the same as Ubiquiti cloud account
+
+5. **Identify 192.168.12.1 Router**
+   - Is it yours? ISP's? Compromised from incident?
+   - If compromised: DO NOT RECONNECT
+
+6. **Get Clean Internet Connection**
+   - Direct ISP modem (bridge mode)
+   - Or new known-good router
+   - Eliminate untrusted middlebox
+
+## Next Steps After Isolation
+
+1. Build out VLAN structure on isolated UDM
+2. Create all firewall rules
+3. Test configuration
+4. Only then reconnect to Internet via trusted path
+5. Monitor for reconnection attempts from old compromise
+
+## Evidence Preserved
+
+- Full network scan: /tmp/local-network-scan.txt
+- UDM config backup: /tmp/udm-mgmt-backup.json
+- This reconnaissance log
+
+## Vendor Disclosure
+
+See: ~/workwork/UBIQUITI-IDENTITY-VULNERABILITY.md
+
+---
+END RECONNAISSANCE REPORT

@@ -1,0 +1,56 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/",
+    "avici": "https://corpusloci.com/avici/"
+  },
+  "@type": "sec:SecurityDisclosure",
+  "identifier": "DISCLOSURE-2025-6E363E58",
+  "name": "Permanent Thunderbolt Setup: Mac Mini \u2194 NAS",
+  "datePublished": "2025-12-01",
+  "severity": {
+    "cvss": 7.0,
+    "rating": "HIGH"
+  },
+  "description": "Status: Permanent high-speed connection Connection: Thunderbolt (20-40 Gbps) Protocol: NFS over Thunderbolt network Mac Mini IP: 169.254.1.1 NAS IP: 169.254.1.2 Mount: /Volumes/tank \u2192 tank/* Auto-mount: \u2713 On boot via LaunchDaemon Storage: Work directly from ZFS (no local limits)",
+  "vulnerability": {
+    "@type": "sec:Vulnerability",
+    "severity": "HIGH",
+    "cvssScore": 7.0
+  },
+  "impact": {
+    "@type": "sec:ImpactAssessment",
+    "technicalImpact": "",
+    "scope": "single-user",
+    "attackComplexity": "high"
+  },
+  "mitigation": {
+    "@type": "sec:DefensiveMeasure",
+    "ourDefense": "",
+    "immediateWorkaround": "",
+    "properFix": ""
+  },
+  "innovation": {
+    "@type": "avici:Innovation",
+    "frameworks": [],
+    "techniques": [
+      "compression",
+      "quarantine"
+    ],
+    "insights": []
+  },
+  "attribution": {
+    "@type": "sec:Attribution",
+    "campaign": "60-day-siege",
+    "confidence": "medium",
+    "sophistication": 5
+  },
+  "siegeContext": {
+    "@type": "avici:SiegeEvent",
+    "campaign": "60-day-nation-state-siege",
+    "duration": "60 days",
+    "outcome": "defense-successful"
+  },
+  "sourceFile": "PERMANENT-THUNDERBOLT-SETUP.md",
+  "merkleHash": "42a45a0fe3c9bbe92bd013d0726d29c187dd62442e884a0c0b9d6b53ce32af5f"
+}

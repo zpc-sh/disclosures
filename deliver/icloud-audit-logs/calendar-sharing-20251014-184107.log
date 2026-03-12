@@ -1,0 +1,7 @@
+Filtering the log data using "subsystem CONTAINS "calendar" AND composedMessage CONTAINS "shar""
+Timestamp                       (process)[PID]    
+2025-10-14 18:42:00.304984-0700  localhost calaccessd[4584]: (CalendarNotification) [com.apple.calendar.notification:Calendar] Refreshed shared calendar invitation response notifications in response to database change. Found 0 notifications for changed objects.
+2025-10-14 18:42:00.305688-0700  localhost calaccessd[4584]: (CalendarNotification) [com.apple.calendar.notification:Calendar] Refreshed shared calendar invitation notifications in response to database change. Found 0 notifications for changed objects.
+2025-10-14 18:42:03.363021-0700  localhost calaccessd[4584]: (CalendarNotification) [com.apple.calendar.notification:Calendar] Refreshed shared calendar invitation response notifications in response to database change. Found 0 notifications for changed objects.
+2025-10-14 18:42:03.363529-0700  localhost calaccessd[4584]: (CalendarNotification) [com.apple.calendar.notification:Calendar] Refreshed shared calendar invitation notifications in response to database change. Found 0 notifications for changed objects.
+

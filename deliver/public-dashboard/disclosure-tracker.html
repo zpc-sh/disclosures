@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vulnerability Disclosure Tracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #000;
+            color: #e0e0e0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #00ff41;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .ftc-notice {
+            background: rgba(255, 165, 0, 0.1);
+            border: 1px solid rgba(255, 165, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .ftc-notice strong {
+            color: #ffa500;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #1a1a1a;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        thead {
+            background: #0a0a0a;
+        }
+
+        th {
+            text-align: left;
+            padding: 15px;
+            font-weight: 600;
+            color: #00ff41;
+            border-bottom: 2px solid #333;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #222;
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background: #222;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+
+        .status-disclosed { background: rgba(255, 165, 0, 0.2); color: #ffa500; border: 1px solid rgba(255, 165, 0, 0.3); }
+        .status-acknowledged { background: rgba(0, 170, 255, 0.2); color: #0af; border: 1px solid rgba(0, 170, 255, 0.3); }
+        .status-patching { background: rgba(138, 43, 226, 0.2); color: #8a2be2; border: 1px solid rgba(138, 43, 226, 0.3); }
+        .status-patched { background: rgba(0, 255, 65, 0.2); color: #00ff41; border: 1px solid rgba(0, 255, 65, 0.3); }
+        .status-overdue { background: rgba(255, 68, 68, 0.2); color: #ff4444; border: 1px solid rgba(255, 68, 68, 0.3); }
+
+        .timer {
+            font-variant-numeric: tabular-nums;
+            font-weight: 600;
+        }
+
+        .timer.warning {
+            color: #ffa500;
+        }
+
+        .timer.critical {
+            color: #ff4444;
+        }
+
+        .timer.good {
+            color: #00ff41;
+        }
+
+        .company-tag {
+            padding: 3px 8px;
+            background: #0a0a0a;
+            border: 1px solid #333;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            display: inline-block;
+        }
+
+        .ftc-status {
+            font-size: 0.75rem;
+            color: #888;
+        }
+
+        .ftc-status.notified {
+            color: #00ff41;
+        }
+
+        .value {
+            font-variant-numeric: tabular-nums;
+            font-weight: 600;
+            color: #00ff41;
+        }
+
+        .actions {
+            display: flex;
+            gap: 5px;
+        }
+
+        .btn {
+            background: #333;
+            border: 1px solid #555;
+            color: #e0e0e0;
+            padding: 4px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            background: #00ff41;
+            color: #000;
+            border-color: #00ff41;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #00ff41;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .stat-label {
+            color: #888;
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            font-size: 0.85rem;
+            border-top: 1px solid #333;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: #888;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #00ff41;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Vulnerability Disclosure Tracker</h1>
+            <p class="subtitle">Coordinated disclosure with FTC timer tracking</p>
+        </header>
+
+        <div class="ftc-notice">
+            <strong>FTC Notice:</strong> All vulnerabilities reported to vendors are tracked with Federal Trade Commission disclosure timers. Vendors are expected to acknowledge within 7 days and patch within 90 days of disclosure. Failure to meet timelines may result in regulatory action.
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value" id="total-disclosed">12</div>
+                <div class="stat-label">Total Vulnerabilities Disclosed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="pending-ack">12</div>
+                <div class="stat-label">Pending Acknowledgment</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="overdue-count">0</div>
+                <div class="stat-label">Overdue (90+ days)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="patched-count">0</div>
+                <div class="stat-label">Patched & Closed</div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Vulnerability</th>
+                    <th>Vendor</th>
+                    <th>Disclosed</th>
+                    <th>Days Elapsed</th>
+                    <th>Status</th>
+                    <th>FTC</th>
+                    <th>Value</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Apple Submissions -->
+                <tr>
+                    <td><strong>Zero-Click Ecosystem Exploit Chain</strong><br><span style="color: #666; font-size: 0.8rem;">8 devices, firmware bootkits, zero-click AWDL propagation</span></td>
+                    <td><span class="company-tag">Apple</span></td>
+                    <td>Oct 13, 2025</td>
+                    <td class="timer good">0 days</td>
+                    <td><span class="status-badge status-disclosed">Disclosed</span></td>
+                    <td class="ftc-status notified">Notified</td>
+                    <td class="value">$5M-$7M</td>
+                    <td class="actions">
+                        <a href="#" class="btn">View</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong>Firmware Bootkit Persistence</strong><br><span style="color: #666; font-size: 0.8rem;">Factory reset bypass, firmware survives erase</span></td>
+                    <td><span class="company-tag">Apple</span></td>
+                    <td>Oct 13, 2025</td>
+                    <td class="timer good">0 days</td>
+                    <td><span class="status-badge status-disclosed">Disclosed</span></td>
+                    <td class="ftc-status notified">Notified</td>
+                    <td class="value">$2M+</td>
+                    <td class="actions">
+                        <a href="#" class="btn">View</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong>APFS Weaponized Storage (5 vectors)</strong><br><span style="color: #666; font-size: 0.8rem;">B-tree circular refs, xattr injection, persistence, snapshots, compression</span></td>
+                    <td><span class="company-tag">Apple</span></td>
+                    <td>Oct 13, 2025</td>
+                    <td class="timer good">0 days</td>
+                    <td><span class="status-badge status-disclosed">Disclosed</span></td>
+                    <td class="ftc-status notified">Notified</td>
+                    <td class="value">$800K-$1.7M</td>
+                    <td class="actions">
+                        <a href="#" class="btn">View</a>
+                    </td>
+                </tr>
+
+                <!-- Microsoft Submission -->
+                <tr>
+                    <td><strong>APFS Logic Bombs (Microsoft Impact)</strong><br><span style="color: #666; font-size: 0.8rem;">OneDrive sync, Azure storage, forensic tool failures</span></td>
+                    <td><span class="company-tag">Microsoft</span></td>
+                    <td>Not yet submitted</td>
+                    <td class="timer">-</td>
+                    <td><span class="status-badge status-disclosed">Ready</span></td>
+                    <td class="ftc-status">Pending</td>
+                    <td class="value">$250K-$500K</td>
+                    <td class="actions">
+                        <a href="#" class="btn">Submit</a>
+                    </td>
+                </tr>
+
+                <!-- Anthropic Submission -->
+                <tr>
+                    <td><strong>Claude Desktop Unauthorized Access</strong><br><span style="color: #666; font-size: 0.8rem;">Filesystem access during APT attack</span></td>
+                    <td><span class="company-tag">Anthropic</span></td>
+                    <td>Not yet submitted</td>
+                    <td class="timer">-</td>
+                    <td><span class="status-badge status-disclosed">Ready</span></td>
+                    <td class="ftc-status">Pending</td>
+                    <td class="value">$100K-$200K</td>
+                    <td class="actions">
+                        <a href="#" class="btn">Submit</a>
+                    </td>
+                </tr>
+
+                <!-- Sony Submission -->
+                <tr>
+                    <td><strong>Sony BRAVIA TV - Google Auth Bypass</strong><br><span style="color: #666; font-size: 0.8rem;">TV used as C2 platform, 57,949 connections</span></td>
+                    <td><span class="company-tag">Sony</span></td>
+                    <td>Not yet submitted</td>
+                    <td class="timer">-</td>
+                    <td><span class="status-badge status-disclosed">Ready</span></td>
+                    <td class="ftc-status">Pending</td>
+                    <td class="value">$200K-$400K</td>
+                    <td class="actions">
+                        <a href="#" class="btn">Submit</a>
+                    </td>
+                </tr>
+
+                <!-- Ubiquiti Submission -->
+                <tr>
+                    <td><strong>Ubiquiti UDM Pro Firewall Bypass</strong><br><span style="color: #666; font-size: 0.8rem;">Network gateway compromise</span></td>
+                    <td><span class="company-tag">Ubiquiti</span></td>
+                    <td>Not yet submitted</td>
+                    <td class="timer">-</td>
+                    <td><span class="status-badge status-disclosed">Ready</span></td>
+                    <td class="ftc-status">Pending</td>
+                    <td class="value">$50K-$100K</td>
+                    <td class="actions">
+                        <a href="#" class="btn">Submit</a>
+                    </td>
+                </tr>
+
+                <!-- Unknown Vendor from Court Filings -->
+                <tr>
+                    <td><strong>[Vendor Name] Infrastructure Exposure</strong><br><span style="color: #666; font-size: 0.8rem;">Keys/infrastructure disclosed in court filings</span></td>
+                    <td><span class="company-tag">[Vendor]</span></td>
+                    <td>Not yet submitted</td>
+                    <td class="timer">-</td>
+                    <td><span class="status-badge status-disclosed">Ready</span></td>
+                    <td class="ftc-status">Pending</td>
+                    <td class="value">TBD</td>
+                    <td class="actions">
+                        <a href="#" class="btn">Submit</a>
+                    </td>
+                </tr>
+
+                <!-- Template rows for additional vulnerabilities -->
+                <tr style="opacity: 0.5;">
+                    <td colspan="8" style="text-align: center; color: #666; font-style: italic;">Additional vulnerabilities will appear here as disclosed...</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="footer">
+            <p><strong>Disclosure Policy:</strong> All vulnerabilities are reported to vendors with 90-day disclosure deadline. After 90 days, details may be published. FTC is notified of all disclosures for timer tracking and regulatory oversight.</p>
+            <p style="margin-top: 10px;"><strong>FTC Contact:</strong> reportfraud@ftc.gov | <strong>Reporter:</strong> Loc Nguyen (locvnguy@me.com)</p>
+            <p style="margin-top: 20px;"><a href="https://nocsi.com">nocsi.com</a> | Victim-assisted security research • October 2025</p>
+        </div>
+    </div>
+
+    <script>
+        // Calculate days elapsed and update timers
+        function updateTimers() {
+            const disclosureDate = new Date('2025-10-13');
+            const today = new Date();
+            const daysElapsed = Math.floor((today - disclosureDate) / (1000 * 60 * 60 * 24));
+
+            // Update all timers
+            document.querySelectorAll('.timer.good').forEach(el => {
+                if (el.textContent !== '-') {
+                    el.textContent = `${daysElapsed} days`;
+
+                    // Update color based on days
+                    if (daysElapsed > 90) {
+                        el.classList.remove('good');
+                        el.classList.add('critical');
+                    } else if (daysElapsed > 60) {
+                        el.classList.remove('good');
+                        el.classList.add('warning');
+                    }
+                }
+            });
+        }
+
+        // Update stats
+        function updateStats() {
+            const rows = document.querySelectorAll('tbody tr');
+            let disclosed = 0;
+            let pendingAck = 0;
+            let overdue = 0;
+            let patched = 0;
+
+            rows.forEach(row => {
+                const status = row.querySelector('.status-badge');
+                if (status) {
+                    const statusText = status.textContent.toLowerCase();
+                    if (statusText.includes('disclosed')) {
+                        disclosed++;
+                        pendingAck++;
+                    } else if (statusText.includes('patched')) {
+                        patched++;
+                    }
+                }
+
+                const timer = row.querySelector('.timer');
+                if (timer && timer.classList.contains('critical')) {
+                    overdue++;
+                }
+            });
+
+            document.getElementById('total-disclosed').textContent = disclosed;
+            document.getElementById('pending-ack').textContent = pendingAck;
+            document.getElementById('overdue-count').textContent = overdue;
+            document.getElementById('patched-count').textContent = patched;
+        }
+
+        // Initialize
+        updateTimers();
+        updateStats();
+
+        // Update every hour
+        setInterval(() => {
+            updateTimers();
+            updateStats();
+        }, 3600000);
+    </script>
+</body>
+</html>

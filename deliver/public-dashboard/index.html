@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Bounty Tracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #000;
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        /* Sticky navbar with counter */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 40px;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
+
+        .counter {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #00ff41;
+            text-align: center;
+            font-variant-numeric: tabular-nums;
+            letter-spacing: -0.02em;
+        }
+
+        .counter-label {
+            text-align: center;
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Main content */
+        .content {
+            margin-top: 140px;
+            padding: 40px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #333;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #333;
+            border: 3px solid #000;
+        }
+
+        .timeline-item.pending::before {
+            background: #ffa500;
+            box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+        }
+
+        .timeline-item.acknowledged::before {
+            background: #00ff41;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+        }
+
+        .timeline-item.paid::before {
+            background: #0af;
+            box-shadow: 0 0 20px rgba(0, 170, 255, 0.5);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .item-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .item-amount {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #00ff41;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .item-amount.pending {
+            color: #ffa500;
+        }
+
+        .item-status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+
+        .item-status.pending {
+            background: rgba(255, 165, 0, 0.2);
+            color: #ffa500;
+            border: 1px solid rgba(255, 165, 0, 0.3);
+        }
+
+        .item-status.acknowledged {
+            background: rgba(0, 255, 65, 0.2);
+            color: #00ff41;
+            border: 1px solid rgba(0, 255, 65, 0.3);
+        }
+
+        .item-status.paid {
+            background: rgba(0, 170, 255, 0.2);
+            color: #0af;
+            border: 1px solid rgba(0, 170, 255, 0.3);
+        }
+
+        .item-details {
+            color: #888;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .item-date {
+            color: #666;
+            font-size: 0.8rem;
+            margin-top: 8px;
+        }
+
+        .locked-content {
+            margin-top: 15px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid #222;
+            border-radius: 8px;
+            text-align: center;
+            color: #666;
+        }
+
+        .locked-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 60px 40px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: #888;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #fff;
+        }
+
+        /* Animation */
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .counter {
+            animation: countUp 0.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky counter navbar -->
+    <div class="navbar">
+        <div class="counter" id="totalCounter">$0</div>
+        <div class="counter-label">Total Security Bounties Received</div>
+    </div>
+
+    <!-- Main content -->
+    <div class="content">
+        <div class="timeline">
+            <!-- Vulnerability #1 -->
+            <div class="timeline-item pending">
+                <div class="item-header">
+                    <div class="item-title">Zero-Click Apple Ecosystem Exploit Chain</div>
+                    <div class="item-amount pending">$5M - $7M</div>
+                </div>
+                <div>
+                    <span class="item-status pending">Disclosed • Awaiting Review</span>
+                </div>
+                <div class="item-date">Submitted: October 13, 2025</div>
+                <div class="locked-content">
+                    <div class="locked-icon">🔒</div>
+                    <div>Details will be revealed upon acknowledgment</div>
+                </div>
+            </div>
+
+            <!-- Vulnerability #2 -->
+            <div class="timeline-item pending">
+                <div class="item-header">
+                    <div class="item-title">Firmware Bootkit Persistence</div>
+                    <div class="item-amount pending">$2M+</div>
+                </div>
+                <div>
+                    <span class="item-status pending">Disclosed • Awaiting Review</span>
+                </div>
+                <div class="item-date">Submitted: October 13, 2025</div>
+                <div class="locked-content">
+                    <div class="locked-icon">🔒</div>
+                    <div>Details will be revealed upon acknowledgment</div>
+                </div>
+            </div>
+
+            <!-- Vulnerability #3 -->
+            <div class="timeline-item pending">
+                <div class="item-header">
+                    <div class="item-title">APFS Extended Attribute Command Injection</div>
+                    <div class="item-amount pending">$150K - $400K</div>
+                </div>
+                <div>
+                    <span class="item-status pending">Disclosed • Awaiting Review</span>
+                </div>
+                <div class="item-date">Submitted: October 13, 2025</div>
+                <div class="locked-content">
+                    <div class="locked-icon">🔒</div>
+                    <div>Details will be revealed upon acknowledgment</div>
+                </div>
+            </div>
+
+            <!-- Vulnerability #4 -->
+            <div class="timeline-item pending">
+                <div class="item-header">
+                    <div class="item-title">APFS B-Tree Circular Reference DoS</div>
+                    <div class="item-amount pending">$100K - $300K</div>
+                </div>
+                <div>
+                    <span class="item-status pending">Disclosed • Awaiting Review</span>
+                </div>
+                <div class="item-date">Submitted: October 13, 2025</div>
+                <div class="locked-content">
+                    <div class="locked-icon">🔒</div>
+                    <div>Details will be revealed upon acknowledgment</div>
+                </div>
+            </div>
+
+            <!-- Vulnerability #5 -->
+            <div class="timeline-item pending">
+                <div class="item-header">
+                    <div class="item-title">NFS Extended Attribute DoS via Malicious Archive</div>
+                    <div class="item-amount pending">$50K - $100K</div>
+                </div>
+                <div>
+                    <span class="item-status pending">Disclosed • Awaiting Review</span>
+                </div>
+                <div class="item-date">Submitted: October 13, 2025</div>
+                <div class="locked-content">
+                    <div class="locked-icon">🔒</div>
+                    <div>Details will be revealed upon acknowledgment</div>
+                </div>
+            </div>
+
+            <!-- More vulnerabilities pending -->
+            <div class="timeline-item pending">
+                <div class="item-header">
+                    <div class="item-title">Additional Vulnerabilities</div>
+                    <div class="item-amount pending">$500K - $2M</div>
+                </div>
+                <div>
+                    <span class="item-status pending">In Progress</span>
+                </div>
+                <div class="item-date">Expected: October 2025</div>
+                <div class="locked-content">
+                    <div class="locked-icon">🔒</div>
+                    <div>Additional disclosures in progress</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Victim-assisted security research • October 2025</p>
+        <p><a href="https://nocsi.com">nocsi.com</a></p>
+    </div>
+
+    <script>
+        // Calculate and display total
+        function updateTotal() {
+            // For now, show expected range
+            // Update this manually as payments come in
+            const counter = document.getElementById('totalCounter');
+            counter.textContent = '$0';
+
+            // When you get paid, update like this:
+            // counter.textContent = '$2,000,000';
+        }
+
+        updateTotal();
+
+        // Optional: Add real-time updates via API
+        // setInterval(updateTotal, 60000); // Check every minute
+    </script>
+</body>
+</html>

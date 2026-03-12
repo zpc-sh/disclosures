@@ -1,0 +1,188 @@
+=== 2025-10-08 18:24:15 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:24:26 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:24:36 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:24:46 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:24:56 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:25:06 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:25:16 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:25:26 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:25:36 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:25:46 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:25:56 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:26:06 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:26:16 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:26:26 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:26:36 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:26:46 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:26:56 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:27:06 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:27:16 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:27:26 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:27:36 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:27:46 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:27:56 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:28:06 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:28:16 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:28:26 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:28:36 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:28:46 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:28:56 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:29:06 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:29:16 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:29:26 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:29:36 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:29:46 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:29:56 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:30:06 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:30:16 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:30:26 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:30:36 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:30:46 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:30:56 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:31:06 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:31:17 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:31:27 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:31:37 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:31:47 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+
+=== 2025-10-08 18:31:57 ===
+sharingd   2273 locnguyen    4u  IPv4 0xa5ed39f8bd79f5f6      0t0  UDP *:*
+sharingd   2273 locnguyen   11u  IPv6 0x61aba050e3e19883      0t0  UDP *:53556
+

@@ -1,0 +1,53 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/",
+    "avici": "https://corpusloci.com/avici/"
+  },
+  "@type": "sec:SecurityDisclosure",
+  "identifier": "DISCLOSURE-2025-7EA7A98B",
+  "name": "Claude Code: Unsanitized HTML Error Logging (Information Disclosure)",
+  "datePublished": "2025-11-16",
+  "severity": {
+    "cvss": 5.0,
+    "rating": "MEDIUM"
+  },
+  "description": "Claude Code writes unsanitized HTML error pages directly into debug logs (`~/.claude/debug/*.txt`), leaking sensitive information including user IP addresses, Cloudflare Ray IDs, and full HTTP error responses.",
+  "vulnerability": {
+    "@type": "sec:Vulnerability",
+    "severity": "MEDIUM",
+    "cvssScore": 5.0
+  },
+  "impact": {
+    "@type": "sec:ImpactAssessment",
+    "technicalImpact": "",
+    "scope": "single-user",
+    "attackComplexity": "high"
+  },
+  "mitigation": {
+    "@type": "sec:DefensiveMeasure",
+    "ourDefense": "",
+    "immediateWorkaround": "",
+    "properFix": ""
+  },
+  "innovation": {
+    "@type": "avici:Innovation",
+    "frameworks": [],
+    "techniques": [],
+    "insights": []
+  },
+  "attribution": {
+    "@type": "sec:Attribution",
+    "campaign": "60-day-siege",
+    "confidence": "medium",
+    "sophistication": 5
+  },
+  "siegeContext": {
+    "@type": "avici:SiegeEvent",
+    "campaign": "60-day-nation-state-siege",
+    "duration": "60 days",
+    "outcome": "defense-successful"
+  },
+  "sourceFile": "CLAUDE_CODE_WAF_LOG_INJECTION.md",
+  "merkleHash": "4330aa56596f537949c9e68c616feafaef99e8e63047a2ba03d243e7aa0a4440"
+}

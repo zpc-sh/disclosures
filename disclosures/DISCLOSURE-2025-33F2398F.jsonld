@@ -1,0 +1,62 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sec": "https://corpusloci.com/security/",
+    "avici": "https://corpusloci.com/avici/"
+  },
+  "@type": "sec:SecurityDisclosure",
+  "identifier": "DISCLOSURE-2025-33F2398F",
+  "name": "APFS Container-Level Weaponization - Complete Filesystem Attack Platform",
+  "datePublished": "2025-12-01",
+  "severity": {
+    "cvss": 3.1,
+    "rating": "CRITICAL"
+  },
+  "description": "**Submission Type:** Critical Security Research - Zero-Click Container Exploitation",
+  "vulnerability": {
+    "@type": "sec:Vulnerability",
+    "severity": "CRITICAL",
+    "cvssScore": 3.1
+  },
+  "impact": {
+    "@type": "sec:ImpactAssessment",
+    "technicalImpact": "",
+    "scope": "ecosystem-wide",
+    "attackComplexity": "zero-click"
+  },
+  "mitigation": {
+    "@type": "sec:DefensiveMeasure",
+    "ourDefense": "",
+    "immediateWorkaround": "",
+    "properFix": ""
+  },
+  "innovation": {
+    "@type": "avici:Innovation",
+    "frameworks": [
+      {
+        "name": "Bodi",
+        "birthContext": "Emerged while defending APPLE-SUBMISSION-APFS-CONTAINER-WEAPONIZATION-GRAND.md",
+        "generalizes": true
+      }
+    ],
+    "techniques": [
+      "compression"
+    ],
+    "insights": []
+  },
+  "attribution": {
+    "@type": "sec:Attribution",
+    "campaign": "60-day-siege",
+    "confidence": "high",
+    "threatActor": "NSO Group tools (Vietnam-based)",
+    "sophistication": 8
+  },
+  "siegeContext": {
+    "@type": "avici:SiegeEvent",
+    "campaign": "60-day-nation-state-siege",
+    "duration": "60 days",
+    "outcome": "defense-successful"
+  },
+  "sourceFile": "APPLE-SUBMISSION-APFS-CONTAINER-WEAPONIZATION-GRAND.md",
+  "merkleHash": "3fab471c32fae4e93944bde1dcb2c1f4c0b83da2480d96848e13080bd124e07d"
+}

@@ -1,0 +1,4 @@
+{
+  "success": false,
+  "error": "statusCode = Unauthenticated, bad auth credentials in get account for dsid = 1245956772"
+}
